@@ -1,0 +1,35 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"background_video": {
+				"key": "127668ff-5bae-4a8e-abc6-a5591b07d16c",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "headed"
+				}
+			},
+			"showreel_video": {
+				"__TYPE__": "LinkContent",
+				"key": "6fccd021-fd21-442f-bc23-70d64db58ce5",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "instrument"
+				}
+			}
+		},
+		"items": []
+	}
+]

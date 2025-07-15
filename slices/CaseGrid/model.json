@@ -1,0 +1,76 @@
+{
+  "id": "case_grid",
+  "type": "SharedSlice",
+  "name": "CaseGrid",
+  "description": "CaseGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "cases": {
+          "type": "Group",
+          "config": {
+            "label": "cases",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Название"
+                }
+              },
+              "video1": {
+                "type": "Link",
+                "config": {
+                  "label": "Видео 1",
+                  "select": "media"
+                }
+              },
+              "video2": {
+                "type": "Link",
+                "config": {
+                  "label": "Видео 2",
+                  "select": "media"
+                }
+              },
+              "category": {
+                "type": "Select",
+                "config": {
+                  "label": "Категория",
+                  "placeholder": "",
+                  "options": [
+                    "РЕКЛАМА",
+                    "КИНО",
+                    "АВАТАРЫ"
+                  ]
+                }
+              },
+              "tags": {
+                "type": "Group",
+                "config": {
+                  "label": "Теги",
+                  "repeat": true,
+                  "fields": {
+                    "tag": {
+                      "type": "Text",
+                      "config": {
+                        "label": "Тег",
+                        "placeholder": "например: РЕКЛАМА"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

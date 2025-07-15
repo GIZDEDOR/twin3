@@ -1,0 +1,24 @@
+/* базовый fade для одного элемента */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease-out, transform .7s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* children-fade (используется для стаггера) */
+.fade-child {
+  opacity: 0;
+  transform: translateY(24px);
+  /* время берем из CSS-переменной, чтобы сделать лесенку */
+  transition:
+    opacity .7s ease-out var(--d,0s),
+    transform .7s ease-out var(--d,0s);
+}
+.fade-child.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

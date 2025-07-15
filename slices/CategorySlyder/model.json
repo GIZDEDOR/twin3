@@ -1,0 +1,33 @@
+{
+  "id": "case_slyder",
+  "type": "SharedSlice",
+  "name": "CategorySlyder",
+  "description": "CaseSlyder",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "",
+      "version": "1.0",
+      "description": "Категории и карточки в одном слайсе",
+      "primary": {},
+      "items": {
+        "category_key": {
+          "type": "Select",
+          "config": {
+            "label": "Category Key",
+            "placeholder": "Выберите категорию",
+            "options": ["scan", "avatars", "cg", "ai-avatars", "ai-cg"],
+            "default_value": "scan"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Изображение карточки"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Druk';
+  src: url('/fonts/DrukCyr-700-normal-0.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FranklinGothicCondensed';
+  src: url('/fonts/FRAMDCN(cond)-400-normal-1.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FRADMCN';
+  src: url('/fonts/FRADMCN-med-500-normal-1.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FranklinGothicBook';
+  src: url('/fonts/franklin-gothic-book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Standard';
+  src: url('/fonts/RG-StandardBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-standard {
+  font-family: 'Standard', sans-serif;
+}
+
+@font-face {
+  font-family: 'ProtoMono';
+  src: url('/fonts/ProtoMono-Light.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 800s linear infinite;
+}
+
+.bg-border-gradient {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0c0c0c, #0c0c0c), linear-gradient(90deg, #1FA2FF 0%, #12D8FA 50%, #7BB3F4 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 10px;
+}
+
+.bg-border-gradient-green {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0c0c0c, #0c0c0c), linear-gradient(90deg, #34FA56 0%, #4CE15A 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 10px;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  background: linear-gradient(to right, #1FA2FF, #1ADBFC);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: 'franklin', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  font-size: 23px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  animation: scrollMarquee 40s linear infinite;
+  width: max-content;
+}
+
+.marquee-part {
+  display: flex;
+}
+
+.marquee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+@keyframes gradient-border-pulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient-border-pulse 3s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+.gradient-border-bg {
+  background: conic-gradient(
+    #ff00cc 0deg,
+    #333399 60deg,
+    #00ffcc 120deg,
+    #ff00cc 360deg
+  );
+  filter: blur(20px);
+  position: absolute;
+  inset: -8px;
+  z-index: 0;
+  border-radius: 1.5rem;
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glare-card {
+  --glare-x: 50%;
+  --glare-y: 50%;
+}
+
+.gradient-text-active {
+  background: linear-gradient(90deg, #C3C3C3 0%, #A5A5A5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-text-inactive {
+  background: linear-gradient(90deg, #C3C3C3 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.7;
+}
+
+html, body {
+  background-color: #141414; /* fallback если вдруг Tailwind не сработает */
+}
+
+:root {
+  /* --vh = 1% высоты viewport без address bar */
+  --vh: 1vh;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    /* если браузер понимает dynamic vh, используем его */
+    --vh: 1dvh;
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;                /* Safari & Chrome */
+}
+
+
+.full-vh {
+  height: calc(var(--vh) * 100);
+}
+
+html, body {
+  overscroll-behavior: none;
+  height: 100%;
+  margin: 0;
+}
+
+@keyframes spin-z {
+  to { transform: rotateZ(360deg); }
+}
+

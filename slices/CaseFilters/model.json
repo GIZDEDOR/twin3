@@ -1,0 +1,93 @@
+{
+  "id": "case_filters",
+  "type": "SharedSlice",
+  "name": "CaseFilters",
+  "description": "CaseFilters",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Заголовок (title)",
+            "placeholder": "Например: MONTI"
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Логотип (logo)"
+          }
+        },
+        "category": {
+          "type": "Select",
+          "config": {
+            "label": "Категория (category)",
+            "options": ["АВАТАРЫ", "РЕКЛАМА", "КИНО"],
+            "default_value": "РЕКЛАМА"
+          }
+        },
+        "tags": {
+          "type": "Text",
+          "config": {
+            "label": "Теги (tags)",
+            "placeholder": "Например: CG-ПРОДАКШН, 3D-СКАНИРОВАНИЕ"
+          }
+        },
+        "video1": {
+          "type": "Link",
+          "config": {
+            "label": "Hover-видео (video1)",
+            "select": "media"
+          }
+        },
+        "fullVideo": {
+          "type": "Link",
+          "config": {
+            "label": "Полное видео (fullVideo)",
+            "select": "media"
+          }
+        },
+        "company": {
+          "type": "Text",
+          "config": {
+            "label": "Название компании (company)"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Описание (description)",
+            "multi": "paragraph, strong, em"
+          }
+        },
+        "companyLogo": {
+          "type": "Image",
+          "config": {
+            "label": "Логотип компании (companyLogo)"
+          }
+        },
+        "poster": {
+          "type": "Image",
+          "config": {
+            "label": "Постер (poster)"
+          }
+        },
+        "link": {
+    "type": "Link",
+    "config": {
+      "label": "Ссылка на кейс (link)",
+      "select": null
+    }
+  }
+      }
+    }
+  ]
+}

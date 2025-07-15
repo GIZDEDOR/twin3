@@ -1,0 +1,37 @@
+{
+  "id": "hero_slice",
+  "type": "SharedSlice",
+  "name": "HeroSlice",
+  "description": "HeroSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_video": {
+          "type": "Link",
+          "config": {
+            "label": "Видео фон",
+            "placeholder": "",
+            "select": "media",
+            "allowText": true
+          }
+        },
+        "showreel_video": {
+          "type": "Link",
+          "config": {
+            "label": "Showreel видео",
+            "placeholder": "",
+            "select": "media",
+            "allowText": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

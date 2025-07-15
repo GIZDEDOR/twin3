@@ -1,0 +1,93 @@
+{
+  "id": "news_grid_slice",
+  "type": "SharedSlice",
+  "name": "NewsGridSlice",
+  "description": "NewsGridSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "news": {
+          "type": "Group",
+          "config": {
+            "label": "News",
+            "repeat": true,
+            "fields": {
+              "images": {
+                "type": "Image",
+                "config": {
+                  "label": "Desktop Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "mobileImage": {
+                "type": "Image",
+                "config": {
+                  "label": "mobile Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "title",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "single": "heading1"
+                }
+              },
+              "excerpt": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "excerpt",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "multi": "paragraph"
+                }
+              },
+              "full": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "full",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "multi": "paragraph"
+                }
+              },
+              "date": {
+                "type": "Date",
+                "config": {
+                  "label": "date",
+                  "placeholder": "YYYY-MM-DD"
+                }
+              },
+              "tag": {
+                "type": "Text",
+                "config": {
+                  "label": "tag",
+                  "placeholder": "e.g. AI-продакшн"
+                }
+              },
+              "circle_image": {
+                "type": "Image",
+                "config": {
+                  "label": "circle_image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
