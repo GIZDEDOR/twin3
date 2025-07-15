@@ -1,0 +1,28 @@
+{
+  "id": "showreel",
+  "type": "SharedSlice",
+  "name": "Showreel",
+  "description": "Showreel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "video": {
+          "type": "Link",
+          "config": {
+            "label": "video",
+            "placeholder": "",
+            "select": "media",
+            "allowText": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

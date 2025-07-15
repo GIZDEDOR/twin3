@@ -757,6 +757,50 @@ export type NewsGridSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Showreel → Default → Primary*
+ */
+export interface ShowreelSliceDefaultPrimary {
+  /**
+   * video field in *Showreel → Default → Primary*
+   *
+   * - **Field Type**: file
+   * - **Placeholder**: *None*
+   * - **API ID Path**: showreel.default.primary.video
+   */
+  video: unknown;
+}
+
+/**
+ * Default variation for Showreel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ShowreelSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ShowreelSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Showreel*
+ */
+type ShowreelSliceVariation = ShowreelSliceDefault;
+
+/**
+ * Showreel Shared Slice
+ *
+ * - **API ID**: `showreel`
+ * - **Description**: Showreel
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ShowreelSlice = prismic.SharedSlice<
+  "showreel",
+  ShowreelSliceVariation
+>;
+
+/**
  * Primary content in *StatsGrid → Items*
  */
 export interface StatsGridSliceDefaultItem {
@@ -960,6 +1004,10 @@ declare module "@prismicio/client" {
       NewsGridSliceSliceDefaultPrimary,
       NewsGridSliceSliceVariation,
       NewsGridSliceSliceDefault,
+      ShowreelSlice,
+      ShowreelSliceDefaultPrimary,
+      ShowreelSliceVariation,
+      ShowreelSliceDefault,
       StatsGridSlice,
       StatsGridSliceDefaultItem,
       StatsGridSliceVariation,
