@@ -105,7 +105,7 @@ if (window.innerWidth >= 800) {
             scrollTrigger: {
               trigger: containerRef.current!,
               start: 'top top',
-              end: '1500',
+              end: '1490',
               scrub: true,
               pin: true,
               invalidateOnRefresh: true,
