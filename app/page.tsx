@@ -28,13 +28,13 @@ export default async function Home() {
 
   return (
     <main>
-      {/*<Hero />*/}
+      
       <SliceZone slices={otherSlices} components={components} />
-      {/*<StatsGrid/>*/}
+      
       <MainRevealBlock/>
-      {/*<CategorySlider/>*/}
+      
       <SliceZone slices={caseSlices} components={components} />
-      {/*<CaseGrid/>*/}
+      
       <LogoMarquee/>
       <Footermain/>
     </main>
