@@ -129,7 +129,7 @@ interface BlogDocumentData {
 export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
-type ProjectsDocumentDataSlicesSlice = CaseFiltersSlice;
+type ProjectsDocumentDataSlicesSlice = ShowreelSlice | CaseFiltersSlice;
 
 /**
  * Content for Projects documents
@@ -763,11 +763,12 @@ export interface ShowreelSliceDefaultPrimary {
   /**
    * video field in *Showreel → Default → Primary*
    *
-   * - **Field Type**: file
+   * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
    * - **API ID Path**: showreel.default.primary.video
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
    */
-  video: unknown;
+  video: prismic.LinkToMediaField<prismic.FieldState, never>;
 }
 
 /**

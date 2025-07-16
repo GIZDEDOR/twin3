@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import OverlayWrapper from "@/components/OverlayWrapper"; // <-- добавь
-
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 
 export const metadata: Metadata = {
   title: "TWIN3D",
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Header />
           {/*<OverlayWrapper>*/}{children}{/*</OverlayWrapper>*/}
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
