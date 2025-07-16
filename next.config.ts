@@ -25,6 +25,8 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
+  productionBrowserSourceMaps: true,
+
   // остальные ваши опции...
 };
 
