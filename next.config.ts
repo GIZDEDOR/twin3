@@ -1,31 +1,31 @@
-// next.config.ts или next.config.js
+// next.config.ts
 
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // вот здесь — раздел для картинок:
-  images: {
-    domains: [
-      'images.prismic.io',     // разрешаем брать src из Prismic
-      // при необходимости можно добавить:
-      // 'images.unsplash.com',
-      // 'cdn.example.com',
-    ],
-  },
+  // Включаем source maps для браузера в продакшене
+  productionBrowserSourceMaps: true,
 
-  // добавляем игнорирование ошибок линтера при сборке
+  // Если у вас были ошибки ESLint при билде — не фаталить сборку
   eslint: {
     ignoreDuringBuilds: true,
   },
 
-  // (опционально) игнорировать TypeScript‑ошибки при сборке
+  // Если TypeScript выдаёт ошибки — тоже не останавливаем билд
   typescript: {
     ignoreBuildErrors: true,
   },
 
-  productionBrowserSourceMaps: true,
+  // Разрешённые домены для <Image>
+  images: {
+    domains: [
+      'images.prismic.io',
+      // 'images.unsplash.com',
+      // 'cdn.example.com',
+    ],
+  },
 
   // остальные ваши опции...
 };
