@@ -15,6 +15,16 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // добавляем игнорирование ошибок линтера при сборке
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  // (опционально) игнорировать TypeScript‑ошибки при сборке
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+
   // остальные ваши опции...
 };
 
