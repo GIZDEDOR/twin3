@@ -187,14 +187,9 @@ if (window.innerWidth >= 800) {
     );
   }
 
-  /* -------------------------------------------------------- ссылки на видео */
-  const bgVideoUrl = isFilled.linkToMedia(slice.primary.background_video)
-    ? (slice.primary.background_video as FilledLinkToMediaField).url
-    : '/video/hero-1.webm';
-
-  const showreelUrl = isFilled.linkToMedia(slice.primary.showreel_video)
-    ? (slice.primary.showreel_video as FilledLinkToMediaField).url
-    : '/video/showreel.webm';
+  // Вот здесь берём URL прямо из Prismic CDN:
+  const bgVideoUrl = (slice.primary.background_video as FilledLinkToMediaField)?.url;
+  const showreelUrl = (slice.primary.showreel_video as FilledLinkToMediaField)?.url;
 
   /* ---------------------------------------------------------------- phrases */
   const phrases = ['CG-ПРОДАКШН', '3D АВАТАРЫ', 'ЦИФРОВЫЕ ДВОЙНИКИ'];
