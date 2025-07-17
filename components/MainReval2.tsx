@@ -262,13 +262,12 @@ export default function MainRevealBlock() {
                 }}
               >
                 <Image
-                  src={src}
-                  width={700}
-                  height={700}
-                  priority
-                  className="avatar-image w-full h-full object-cover object-bottom"
-                  alt=""
-                />
+                      src={src}
+                      fill
+                      unoptimized
+                      className="avatar-image w-full h-full object-cover object-bottom"
+                      alt=""
+                    />
               </div>
             ))}
           </div>
