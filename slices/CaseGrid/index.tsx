@@ -86,7 +86,17 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
     ? 'border-green-400'
     : 'border-[#444444]';
 
-  // Логотипы и иконки оставляем без изменений
+  // Цвет текста (для замены, если нужно)
+  const textColor = borderColor.replace('border-', 'text-');
+
+  // Генерация градиента (еще можно использовать в других местах, если потребуется)
+  const gradientClass = isYota
+    ? 'from-[#1FA2FF] via-[#12D8FA] to-[#7BB3F4]'
+    : isPerek
+    ? 'from-[#34FA56] to-[#4CE15A]'
+    : '';
+
+  // Логотипы и иконки
   const logo = isYota
     ? '/images/yota_466415.svg'
     : isFeduk
@@ -94,6 +104,7 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
     : isPerek
     ? '/images/x5_540202.svg'
     : '';
+
   const icon = isYota
     ? '/images/logosmobyota.svg'
     : isFeduk
@@ -120,7 +131,7 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
             <CaseVideo src={video2} borderColor={borderColor} />
           </div>
           <div className="flex flex-col items-start pr-0 pt-1">
-            <div className="hidden sm:flex flex-col items-start text-[15px] font-proto font-bold uppercase tracking-wide leading-[15px] text-left text-transparent bg-clip-text bg-gradient-to-b from-[#C3C3C3] to-[#999999] writing-vertical opacity-20 h-auto min-h-[170px] w-[44px] whitespace-nowrap justify-center">
+            <div className="hidden sm:flex flex-col items-start text-[15px] font-proto font-bold uppercase tracking-wide leading-[15px] text-left text-transparent bg-clip-text bg-gradient-to-b from-[#C3C3C3] to-[#999999] rotate-360 writing-vertical opacity-20 h-auto min-h-[170px] w-[44px] min-w-[44px] whitespace-nowrap justify-center">
               <span>Who: Twin3D x {title.replace('FEDUK FEAT ', '')}</span>
               <span>Task: Digital Ad</span>
             </div>
@@ -149,26 +160,41 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
               <h3
                 className={`hidden sm:block min-w-0 truncate px-[2px] font-extrabold font-franklin text-[33px] tracking-tight ${
                   isYota
-                    ? 'text-blue-400'
+                    ? 'bg-gradient-to-r from-[#1FA2FF] via-[#12D8FA] to-[#7BB3F4] text-transparent bg-clip-text'
                     : isPerek
-                    ? 'text-green-400'
+                    ? 'bg-gradient-to-r from-[#34FA56] to-[#4CE15A] text-transparent bg-clip-text'
                     : isFeduk
                     ? 'text-[#7c7c81]'
-                    : 'text-[#444444]'
+                    : textColor
                 }`}
               >
                 {title}
               </h3>
             </div>
             <div className="flex gap-2">
-              {tags.map((tag: string, i: number) => (
-                <span
-                  key={i}
-                  className={`whitespace-nowrap rounded-[6px] px-3 py-[4px] text-[18px] font-franklin uppercase font-bold leading-none ${borderColor} ${borderColor.replace('border-', 'text-')} border`}
-                >
-                  {tag}
-                </span>
-              ))}
+              {tags.map((tag: string, i: number) => {
+                const isLeft = isYota && i === 0;
+                const isRight = isYota && i === 1;
+
+                return (
+                  <span
+                    key={i}
+                    className={`whitespace-nowrap rounded-[6px] px-3 py-[4px] text-[18px] font-franklin uppercase font-bold leading-none ${
+                      isLeft
+                        ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#1FA2FF] via-[#12D8FA] to-[#7BB3F4] border border-[#1FA2FF]'
+                        : isRight
+                        ? 'text-[#7c7c81] border border-[#7c7c81]'
+                        : isFeduk
+                        ? 'text-[#7c7c81] border border-[#7c7c81]'
+                        : isPerek
+                        ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#34FA56] to-[#4CE15A] border border-[#34FA56]'
+                        : `${borderColor} ${textColor} border`
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -176,7 +202,6 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
     </div>
   );
 }
-
 
 function CaseVideo({ src, borderColor }: { src: string; borderColor: string }) {
   const ref = useRef<HTMLVideoElement>(null);
