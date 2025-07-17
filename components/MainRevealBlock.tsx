@@ -271,8 +271,8 @@ if (isMobile) {
   >
     <Image
       src={src}
-      width={200}
-      height={200}
+      fill
+      unoptimized
       className="avatar-image w-full h-full object-cover object-bottom"
       alt=""
     />
