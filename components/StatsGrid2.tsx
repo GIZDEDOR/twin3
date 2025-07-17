@@ -100,8 +100,8 @@ export default function StatsGrid2() {
                     <Image
                       src={src}
                       alt={`Award ${i + 1}`}
-                      width={64}
-                      height={90}
+                      width={356}
+                      height={641}
                       className="object-contain h-[90px] w-[64px] md:h-[142px] md:w-[100px]"
                     />
                   </div>
