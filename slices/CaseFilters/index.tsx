@@ -225,7 +225,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                 <div className="relative w-full h-[240px] md:h-[345px] rounded-[18px] overflow-hidden mb-[20px]">
                   <CaseVideo src={item.video1 || ''} poster={item.poster || undefined} />
                   <div className="absolute bottom-2 sm:bottom-5 right-2 sm:right-5 z-20 flex gap-1 sm:gap-2">
-                    <div className="flex bg-[#A5A5A5]/65 rounded-[6px]  sm:rounded-[12px] px-2 py-[3px] sm:px-5 sm:py-[9px] font-franklin text-[12px] sm:text-[18px] text-white/95 font-extrabold uppercase shadow-md gap-1 sm:gap-2 tracking-tight backdrop-blur-[2px]">
+                    <div className="flex bg-white/10 rounded-[6px]  sm:rounded-[12px] px-2 py-[3px] sm:px-5 sm:py-[9px] font-franklin text-[12px] sm:text-[18px] text-white/100 uppercase shadow-md gap-1 sm:gap-2 tracking-tight backdrop-blur-[1px]">
                       {item.tags.map(shortTag).join(' | ')}
                     </div>
                   </div>

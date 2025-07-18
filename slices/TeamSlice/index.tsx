@@ -105,7 +105,7 @@ const TeamSlice: React.FC<TeamSliceProps> = ({ slice: { primary } }) => {
                   {/* Роль */}
                   <div className="mt-2 px-2 h-[48px] flex items-center justify-center text-center">
                     <p className="
-                      text-[5px] sm:text-2xl text-[#8F8F8F] font-standard leading-[1.1]
+                      text-[5px] sm:text-2xl text-[#8F8F8F] font-standard leading-[1.0]
                       whitespace-pre-line line-clamp-2 overflow-hidden
                     ">
                       {member.role ?? ''}
