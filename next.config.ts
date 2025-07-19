@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['images.prismic.io'],
   },
+  output: 'export',
 };
 
 export default nextConfig;
