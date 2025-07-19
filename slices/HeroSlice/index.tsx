@@ -50,7 +50,7 @@ const HeroSlice: FC<HeroSliceProps> = ({ slice }) => {
 if (window.innerWidth >= 800) {
   top = headerHeight + DESKTOP_GAP; // desktop
 } else {
-  top = 500; // фиксированная позиция на мобилке
+  top = 550; // фиксированная позиция на мобилке
 }
 
       const ctrHeight = containerRef.current.getBoundingClientRect().height;
