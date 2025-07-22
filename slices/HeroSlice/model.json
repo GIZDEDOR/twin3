@@ -17,7 +17,7 @@
           "config": {
             "label": "Видео фон",
             "placeholder": "",
-            "select": "media",
+            "select": "media,web",
             "allowText": true
           }
         },
@@ -26,7 +26,7 @@
           "config": {
             "label": "Showreel видео",
             "placeholder": "",
-            "select": "media",
+            "select": "media,web",
             "allowText": true
           }
         }
