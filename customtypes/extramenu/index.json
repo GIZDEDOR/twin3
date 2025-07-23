@@ -1,0 +1,22 @@
+{
+  "format": "custom",
+  "id": "extramenu",
+  "label": "EXTRAMENU",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "header_overlay": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

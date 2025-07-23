@@ -129,6 +129,40 @@ interface BlogDocumentData {
 export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
+type ExtramenuDocumentDataSlicesSlice = HeaderOverlaySlice;
+
+/**
+ * Content for EXTRAMENU documents
+ */
+interface ExtramenuDocumentData {
+  /**
+   * Slice Zone field in *EXTRAMENU*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: extramenu.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ExtramenuDocumentDataSlicesSlice>;
+}
+
+/**
+ * EXTRAMENU document from Prismic
+ *
+ * - **API ID**: `extramenu`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ExtramenuDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ExtramenuDocumentData>,
+    "extramenu",
+    Lang
+  >;
+
 type ProjectsDocumentDataSlicesSlice = ShowreelSlice | CaseFiltersSlice;
 
 /**
@@ -246,6 +280,7 @@ export type WelcomeDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | AboutDocument
   | BlogDocument
+  | ExtramenuDocument
   | ProjectsDocument
   | WelcomeDocument;
 
@@ -297,22 +332,28 @@ export interface CaseFiltersSliceDefaultItem {
   /**
    * Hover-видео (video1) field in *CaseFilters → Items*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: case_filters.items[].video1
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video1: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video1: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
   /**
    * Полное видео (fullVideo) field in *CaseFilters → Items*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: case_filters.items[].fullVideo
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  fullVideo: prismic.LinkToMediaField<prismic.FieldState, never>;
+  fullVideo: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Название компании (company) field in *CaseFilters → Items*
@@ -427,22 +468,22 @@ export interface CaseGridSliceDefaultPrimaryCasesItem {
   /**
    * Видео 1 field in *CaseGrid → Default → Primary → cases*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: case_grid.default.primary.cases[].video1
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video1: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video1: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
   /**
    * Видео 2 field in *CaseGrid → Default → Primary → cases*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: case_grid.default.primary.cases[].video2
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video2: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video2: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
   /**
    * Категория field in *CaseGrid → Default → Primary → cases*
@@ -572,28 +613,129 @@ export type CaseSlyderSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *HeaderOverlay → Default → Primary → Left videos*
+ */
+export interface HeaderOverlaySliceDefaultPrimaryLeftVideosItem {
+  /**
+   * Video field in *HeaderOverlay → Default → Primary → Left videos*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_overlay.default.primary.left_videos[].video
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   */
+  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+}
+
+/**
+ * Item in *HeaderOverlay → Default → Primary → Center videos*
+ */
+export interface HeaderOverlaySliceDefaultPrimaryCenterVideosItem {
+  /**
+   * Video field in *HeaderOverlay → Default → Primary → Center videos*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_overlay.default.primary.center_videos[].video
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   */
+  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+}
+
+/**
+ * Primary content in *HeaderOverlay → Default → Primary*
+ */
+export interface HeaderOverlaySliceDefaultPrimary {
+  /**
+   * Left videos field in *HeaderOverlay → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_overlay.default.primary.left_videos[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  left_videos: prismic.GroupField<
+    Simplify<HeaderOverlaySliceDefaultPrimaryLeftVideosItem>
+  >;
+
+  /**
+   * Center videos field in *HeaderOverlay → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_overlay.default.primary.center_videos[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  center_videos: prismic.GroupField<
+    Simplify<HeaderOverlaySliceDefaultPrimaryCenterVideosItem>
+  >;
+}
+
+/**
+ * Default variation for HeaderOverlay Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeaderOverlaySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeaderOverlaySliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HeaderOverlay*
+ */
+type HeaderOverlaySliceVariation = HeaderOverlaySliceDefault;
+
+/**
+ * HeaderOverlay Shared Slice
+ *
+ * - **API ID**: `header_overlay`
+ * - **Description**: HeaderOverlay
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeaderOverlaySlice = prismic.SharedSlice<
+  "header_overlay",
+  HeaderOverlaySliceVariation
+>;
+
+/**
  * Primary content in *HeroSlice → Default → Primary*
  */
 export interface HeroSliceSliceDefaultPrimary {
   /**
    * Видео фон field in *HeroSlice → Default → Primary*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: hero_slice.default.primary.background_video
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  background_video: prismic.LinkToMediaField<prismic.FieldState, never>;
+  background_video: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 
   /**
    * Showreel видео field in *HeroSlice → Default → Primary*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: hero_slice.default.primary.showreel_video
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  showreel_video: prismic.LinkToMediaField<prismic.FieldState, never>;
+  showreel_video: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
@@ -763,12 +905,12 @@ export interface ShowreelSliceDefaultPrimary {
   /**
    * video field in *Showreel → Default → Primary*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: showreel.default.primary.video
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -818,12 +960,18 @@ export interface StatsGridSliceDefaultItem {
   /**
    * Видеофайл field in *StatsGrid → Items*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: stats_grid.items[].video_file
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video_file: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video_file: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
@@ -975,6 +1123,9 @@ declare module "@prismicio/client" {
       BlogDocument,
       BlogDocumentData,
       BlogDocumentDataSlicesSlice,
+      ExtramenuDocument,
+      ExtramenuDocumentData,
+      ExtramenuDocumentDataSlicesSlice,
       ProjectsDocument,
       ProjectsDocumentData,
       ProjectsDocumentDataSlicesSlice,
@@ -996,6 +1147,12 @@ declare module "@prismicio/client" {
       CaseSlyderSliceDefaultItem,
       CaseSlyderSliceVariation,
       CaseSlyderSliceDefault,
+      HeaderOverlaySlice,
+      HeaderOverlaySliceDefaultPrimaryLeftVideosItem,
+      HeaderOverlaySliceDefaultPrimaryCenterVideosItem,
+      HeaderOverlaySliceDefaultPrimary,
+      HeaderOverlaySliceVariation,
+      HeaderOverlaySliceDefault,
       HeroSliceSlice,
       HeroSliceSliceDefaultPrimary,
       HeroSliceSliceVariation,

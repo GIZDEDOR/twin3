@@ -7,8 +7,9 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
-import HeaderOverlay from './HeaderOverlay';
+import HeaderOverlay from '@/slices/HeaderOverlay';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import type { Content } from '@prismicio/client';
 
 const navItems = [
   { name: 'WELCOME', href: '/' },
@@ -17,7 +18,11 @@ const navItems = [
   { name: 'БЛОГ', href: '/blog' },
 ];
 
-export default function Header() {
+export default function Header({
+  headerOverlaySlice,
+}: {
+  headerOverlaySlice: Content.HeaderOverlaySlice | null;
+}) {
   const pathname = usePathname();
   const [isClient, setIsClient] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,8 +147,8 @@ export default function Header() {
       </header>
 
       {/* Оверлей меню */}
-      {menuOpen && (
-        <HeaderOverlay onClose={() => setMenuOpen(false)} showBackButton />
+      {menuOpen && headerOverlaySlice && (
+        <HeaderOverlay slice={headerOverlaySlice} onClose={() => setMenuOpen(false)} showBackButton />
       )}
     </>
   );

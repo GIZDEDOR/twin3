@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import HeaderOverlay from './HeaderOverlay';
+import HeaderOverlay from './HeaderOverlayHARD';
 
 export default function OverlayWrapper({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(true);

@@ -6,6 +6,7 @@ export const components = {
   case_filters: dynamic(() => import("./CaseFilters")),
   case_grid: dynamic(() => import("./CaseGrid")),
   case_slyder: dynamic(() => import("./CategorySlyder")),
+  header_overlay: dynamic(() => import("./HeaderOverlay")),
   hero_slice: dynamic(() => import("./HeroSlice")),
   news_grid_slice: dynamic(() => import("./NewsGridSlice")),
   showreel: dynamic(() => import("./Showreel")),
