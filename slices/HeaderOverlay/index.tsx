@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Content } from '@prismicio/client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -241,8 +240,12 @@ export default function HeaderOverlay({
                 <span
                   onMouseEnter={() => {
                     if (!isMobile) {
-                      setLeftVideo(getRandomVideo(leftVideo, leftPool));
-                      setCenterVideo(getRandomVideo(centerVideo, centerPool));
+                      if (item.name === 'WELCOME' || item.name === 'ПРОЕКТЫ') {
+                        setLeftVideo(getRandomVideo(leftVideo, leftPool));
+                      }
+                      if (item.name === 'КТО МЫ' || item.name === 'БЛОГ') {
+                        setCenterVideo(getRandomVideo(centerVideo, centerPool));
+                      }
                     }
                   }}
                   className="max-[639px]:text-[30vw] inline-block origin-left transition-all text-transparent bg-gradient-to-r from-[#343434] to-[#626262] bg-clip-text group-hover:from-[#1FA2FF] group-hover:via-[#12D8FA] group-hover:to-[#7BB3F4] text-[30vw] sm:text-[15vw] md:text-[7vw] xl:text-[130px]"
