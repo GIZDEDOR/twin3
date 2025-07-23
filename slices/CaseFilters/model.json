@@ -45,14 +45,14 @@
           "type": "Link",
           "config": {
             "label": "Hover-видео (video1)",
-            "select": "media"
+            "select": "media,web"
           }
         },
         "fullVideo": {
           "type": "Link",
           "config": {
             "label": "Полное видео (fullVideo)",
-            "select": "media"
+            "select": "media,web"
           }
         },
         "company": {

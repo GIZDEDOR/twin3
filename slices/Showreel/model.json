@@ -17,7 +17,7 @@
           "config": {
             "label": "video",
             "placeholder": "",
-            "select": "media",
+            "select": "media,web",
             "allowText": false
           }
         }

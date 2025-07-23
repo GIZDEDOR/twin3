@@ -23,7 +23,7 @@
           "type": "Link",
           "config": {
             "label": "Видеофайл",
-            "select": "media"
+            "select": "media,web"
           }
         }
       }

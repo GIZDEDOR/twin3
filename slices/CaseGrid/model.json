@@ -28,14 +28,14 @@
                 "type": "Link",
                 "config": {
                   "label": "Видео 1",
-                  "select": "media"
+                  "select": "media,web"
                 }
               },
               "video2": {
                 "type": "Link",
                 "config": {
                   "label": "Видео 2",
-                  "select": "media"
+                  "select": "media,web"
                 }
               },
               "category": {
