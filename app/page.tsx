@@ -1,4 +1,5 @@
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 import Footermain from "@/components/Footermain";
 import Hero from "@/components/Hero";
@@ -27,6 +28,8 @@ export default async function Home() {
     s => s.slice_type !== 'case_slyder' && s.slice_type !== 'case_grid'
   );
 
+  console.log('Prismic slices:', page.data.slices)
+  
   return (
     <main>
       
