@@ -10,6 +10,7 @@ import { twMerge } from 'tailwind-merge';
 import HeaderOverlay from '@/slices/HeaderOverlay';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import type { Content } from '@prismicio/client';
+import OverlayWrapper from '@/components/OverlayWrapper';
 
 const navItems = [
   { name: 'WELCOME', href: '/' },
@@ -148,7 +149,9 @@ export default function Header({
 
       {/* Оверлей меню */}
       {menuOpen && headerOverlaySlice && (
-        <HeaderOverlay slice={headerOverlaySlice} onClose={() => setMenuOpen(false)} showBackButton />
+        <OverlayWrapper>
+          <HeaderOverlay slice={headerOverlaySlice} onClose={() => setMenuOpen(false)} showBackButton />
+        </OverlayWrapper>
       )}
     </>
   );

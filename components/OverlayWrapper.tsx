@@ -1,42 +1,29 @@
+// components/OverlayWrapper.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
-import HeaderOverlay from './HeaderOverlayHARD';
+import { useEffect, useState, ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
-export default function OverlayWrapper({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [hydrated, setHydrated] = useState(false); // SSR-safe флаг
+interface OverlayWrapperProps {
+  children: ReactNode;
+}
+
+export default function OverlayWrapper({ children }: OverlayWrapperProps) {
+  const [mounted, setMounted] = useState(false);
+  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    setHydrated(true); // ждём client-side
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
-    const updateMatch = () => setIsDesktop(mediaQuery.matches);
-
-    updateMatch();
-    mediaQuery.addEventListener('change', updateMatch);
-    return () => mediaQuery.removeEventListener('change', updateMatch);
+    setMounted(true);
+    let root = document.getElementById('overlay-root');
+    if (!root) {
+      root = document.createElement('div');
+      root.id = 'overlay-root';
+      document.body.appendChild(root);
+    }
+    setPortalRoot(root);
   }, []);
 
-  useEffect(() => {
-    if (isDesktop && isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [isDesktop, isOpen]);
+  if (!mounted || !portalRoot) return null;
 
-  if (!hydrated) return null; // блокируем до client-side
-
-  // ✅ десктоп: overlay -> потом children
-  // ✅ мобилка: сразу children
-  return (
-    <>
-      {isDesktop && isOpen ? (
-        <HeaderOverlay onClose={() => setIsOpen(false)} />
-      ) : (
-        children
-      )}
-    </>
-  );
+  return createPortal(children, portalRoot);
 }

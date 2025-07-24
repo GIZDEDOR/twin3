@@ -4,8 +4,9 @@ import { Content } from '@prismicio/client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import CityTime from '@/components/CityTime';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import useLockBodyScroll from '@/hooks/useLockBodyScroll';
+
 
 export type HeaderOverlayProps = {
   slice: Content.HeaderOverlaySlice;
@@ -147,6 +148,8 @@ export default function HeaderOverlay({
       {!isMobile && (
         <>
           <div className="w-1/3 h-full relative overflow-hidden">
+          <AnimatePresence>
+
             {prevLeftVideo && prevLeftVideo !== leftVideo && (
               <motion.video
                 key={prevLeftVideo}
@@ -173,9 +176,12 @@ export default function HeaderOverlay({
             >
               <source src={leftVideo} type="video/webm" />
             </motion.video>
+          </AnimatePresence>
           </div>
 
           <div className="w-1/3 h-full relative overflow-hidden">
+          <AnimatePresence>
+
             {prevCenterVideo && prevCenterVideo !== centerVideo && (
               <motion.video
                 key={prevCenterVideo}
@@ -202,6 +208,7 @@ export default function HeaderOverlay({
             >
               <source src={centerVideo} type="video/webm" />
             </motion.video>
+          </AnimatePresence>
           </div>
         </>
       )}
