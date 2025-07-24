@@ -7,6 +7,9 @@ import { repositoryName, createClient } from '@/prismicio';
 import type { Content } from '@prismicio/client';
 
 import Header from '@/components/Header';
+import VhSetter from '@/components/VhSetter';
+
+
 
 export const metadata: Metadata = {
   title: 'TWIN3D',
@@ -28,6 +31,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ru" suppressHydrationWarning>
       <body className="font-druk antialiased">
+        <VhSetter />
         {/* dedicated portal root for overlays */}
         <div id="overlay-root" />
 

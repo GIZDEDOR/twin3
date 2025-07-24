@@ -12,6 +12,7 @@ import {
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Head from 'next/head';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -197,12 +198,16 @@ if (window.innerWidth >= 800) {
   /* ---------------------------------------------------------------- render */
   return (
     <>
+      <Head>
+        <link rel="preload" as="video" href={bgVideoUrl} type="video/webm" />
+        <link rel="preload" as="video" href={bgVideoUrl.replace('.webm','.mp4')} type="video/mp4" />
+      </Head>
       {/* ---------- hero-секция ---------- */}
       <section
         ref={containerRef}
         className="relative z-10 w-full overflow-hidden bg-black text-white"
         style={{
-  height: '100dvh',
+  height: 'calc(var(--vh, 1vh) * 100)',
   paddingBottom: 'env(safe-area-inset-bottom)',
   paddingTop: 'env(safe-area-inset-top)',
 }}
@@ -211,6 +216,7 @@ if (window.innerWidth >= 800) {
       >
         {/* фоновое видео */}
         <video
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover z-0"
           autoPlay
           muted
