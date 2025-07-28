@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { PrismicRichText } from '@prismicio/react';
 import { RichTextField } from '@prismicio/client';
+import { Children } from 'react';
 
 type NewsItem = {
   images: { url: string; alt?: string };
@@ -61,29 +62,32 @@ export default function NewsGridSlice({ slice }: Props) {
             <div className="mb-6 text-4xl sm:text-5xl font-druk font-extrabold mix-blend-difference uppercase leading-tight tracking-wide text-white whitespace-pre-line">
               <PrismicRichText field={latest.title} />
             </div>
-            <div className="mb-8 whitespace-pre-line text-base sm:text-2xl font-standard leading-tight text-white">
-  <PrismicRichText
-    field={latest.full}
-    components={{
-      hyperlink: ({ node, children }) => (
-        <a
-          href={node.data.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline text-[#42a5f5] hover:text-white transition"
-        >
-          {children}
-        </a>
-      ),
-      paragraph: ({ children }) => (
-        <p className="opacity-45">
-          {children}
-        </p>
-      ),
-    }}
-  />
-</div>
+            <PrismicRichText
+  field={latest.full}
+  components={{
+    hyperlink: ({ node, children }) => (
+      <a
+        href={node.data.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline text-[#42a5f5] hover:text-white transition"
+      >
+        {children}
+      </a>
+    ),
+    paragraph: ({ children }) => (
+  <p className="text-white sm:text-2xl font-standard leading-tight">
+    {Children.toArray(children).map((child, index) => {
+      if (typeof child === 'object' && 'type' in child && child.type === 'a') {
+        return <span key={index}>{child}</span>;
+      }
+      return <span key={index} className="opacity-45">{child}</span>;
+    })}
+  </p>
+),
 
+  }}
+/>
             {latest.tag && latest.circle_image?.url && (
               <span className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg">
                 <Image
