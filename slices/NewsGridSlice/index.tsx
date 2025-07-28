@@ -61,23 +61,29 @@ export default function NewsGridSlice({ slice }: Props) {
             <div className="mb-6 text-4xl sm:text-5xl font-druk font-extrabold mix-blend-difference uppercase leading-tight tracking-wide text-white whitespace-pre-line">
               <PrismicRichText field={latest.title} />
             </div>
-            <div className="mb-8 whitespace-pre-line text-base sm:text-2xl font-standard text-white opacity-45 leading-tight">
-              <PrismicRichText
-  field={latest.full}
-  components={{
-    hyperlink: ({ node, children }) => (
-      <a
-        href={node.data.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline text-[#42a5f5] hover:text-white transition"
-      >
-        {children}
-      </a>
-    ),
-  }}
-/>
-            </div>
+            <div className="mb-8 whitespace-pre-line text-base sm:text-2xl font-standard leading-tight text-white">
+  <PrismicRichText
+    field={latest.full}
+    components={{
+      hyperlink: ({ node, children }) => (
+        <a
+          href={node.data.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-[#42a5f5] hover:text-white transition"
+        >
+          {children}
+        </a>
+      ),
+      paragraph: ({ children }) => (
+        <p className="opacity-45">
+          {children}
+        </p>
+      ),
+    }}
+  />
+</div>
+
             {latest.tag && latest.circle_image?.url && (
               <span className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg">
                 <Image
