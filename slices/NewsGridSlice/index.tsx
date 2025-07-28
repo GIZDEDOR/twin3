@@ -16,7 +16,7 @@ type NewsItem = {
   full: RichTextField;
   date: string;
   tag_text?: string;
-  tag_link?: {
+  tag?: {
     url?: string;
     target?: string;
   };
@@ -92,10 +92,10 @@ export default function NewsGridSlice({ slice }: Props) {
 
   }}
 />
-            {latest.tag_text && latest.tag_link?.url && (
+            {latest.tag_text && latest.tag?.url && (
   <a
-    href={latest.tag_link.url}
-    target={latest.tag_link.target ?? '_self'}
+    href={latest.tag.url}
+    target={latest.tag.target ?? '_self'}
     rel="noopener noreferrer"
     className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
   >
@@ -199,10 +199,10 @@ export default function NewsGridSlice({ slice }: Props) {
                   <PrismicRichText field={opened.full} />
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  {opened.tag_text && opened.tag_link?.url && (
+                  {opened.tag_text && opened.tag?.url && (
   <a
-    href={opened.tag_link.url}
-    target={opened.tag_link.target ?? '_self'}
+    href={opened.tag.url}
+    target={opened.tag.target ?? '_self'}
     rel="noopener noreferrer"
     className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-white/5 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
   >
