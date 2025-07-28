@@ -58,7 +58,7 @@
                   "label": "full",
                   "placeholder": "",
                   "allowTargetBlank": false,
-                  "multi": "paragraph"
+                  "multi": "paragraph, hyperlink"
                 }
               },
               "date": {
