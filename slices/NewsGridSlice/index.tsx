@@ -97,7 +97,7 @@ export default function NewsGridSlice({ slice }: Props) {
     href={latest.tag.url}
     target={latest.tag.target ?? '_self'}
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
+    className="mt-6 inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
   >
     {latest.circle_image?.url && (
       <Image
