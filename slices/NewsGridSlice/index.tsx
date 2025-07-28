@@ -53,7 +53,7 @@ export default function NewsGridSlice({ slice }: Props) {
             sizes="100vw"
             className="block sm:hidden object-cover object-top"
           />
-          <div className="hidden sm:block absolute inset-0 bg-black/40 mix-blend-multiply" />
+          <div className="hidden sm:block absolute inset-0 bg-transparent" />
         </div>
 
         <div className="relative z-10 -mt-[30vw] sm:-mt-[300px] w-full max-w-[1250px] mx-auto px-4 sm:px-8">
