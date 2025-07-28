@@ -15,7 +15,11 @@ type NewsItem = {
   excerpt: RichTextField;
   full: RichTextField;
   date: string;
-  tag?: string;
+  tag_text?: string;
+  tag_link?: {
+    url?: string;
+    target?: string;
+  };
   circle_image?: { url: string; alt?: string };
 };
 
@@ -88,18 +92,26 @@ export default function NewsGridSlice({ slice }: Props) {
 
   }}
 />
-            {latest.tag && latest.circle_image?.url && (
-              <span className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg">
-                <Image
-                  src={latest.circle_image.url}
-                  alt={latest.circle_image.alt ?? 'icon'}
-                  width={40}
-                  height={40}
-                  className="rounded-full object-cover"
-                />
-                {latest.tag}
-              </span>
-            )}
+            {latest.tag_text && latest.tag_link?.url && (
+  <a
+    href={latest.tag_link.url}
+    target={latest.tag_link.target ?? '_self'}
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-[#141414]/80 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
+  >
+    {latest.circle_image?.url && (
+      <Image
+        src={latest.circle_image.url}
+        alt={latest.circle_image.alt ?? 'icon'}
+        width={40}
+        height={40}
+        className="rounded-full object-cover"
+      />
+    )}
+    {latest.tag_text}
+  </a>
+)}
+
           </article>
           <div className="block sm:hidden pointer-events-none absolute inset-x-0 top-full h-[0vh] bg-[#141414] z-0" />
         </div>
@@ -187,18 +199,25 @@ export default function NewsGridSlice({ slice }: Props) {
                   <PrismicRichText field={opened.full} />
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  {opened.tag && opened.circle_image?.url && (
-                    <span className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-white/5 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg">
-                      <Image
-                        src={opened.circle_image.url}
-                        alt={opened.circle_image.alt ?? 'icon'}
-                        width={48}
-                        height={48}
-                        className="rounded-full object-cover"
-                      />
-                      {opened.tag}
-                    </span>
-                  )}
+                  {opened.tag_text && opened.tag_link?.url && (
+  <a
+    href={opened.tag_link.url}
+    target={opened.tag_link.target ?? '_self'}
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-4 rounded-[15px] border border-white/20 bg-white/5 px-6 py-3 font-franklin text-base font-medium text-white backdrop-blur-lg hover:bg-white/10 transition"
+  >
+    {opened.circle_image?.url && (
+      <Image
+        src={opened.circle_image.url}
+        alt={opened.circle_image.alt ?? 'icon'}
+        width={48}
+        height={48}
+        className="rounded-full object-cover"
+      />
+    )}
+    {opened.tag_text}
+  </a>
+)}
                   <div className="font-proto text-sm uppercase text-[#999]">{opened.date}</div>
                 </div>
                 <div className="h-px w-full bg-[#333]" />

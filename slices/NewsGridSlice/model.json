@@ -69,10 +69,19 @@
                 }
               },
               "tag": {
+                "type": "Link",
+                "config": {
+                  "label": "tag link",
+                  "select": "web",
+                  "placeholder": "e.g. AI-продакшн"
+                }
+              },
+              "tag_text": {
                 "type": "Text",
                 "config": {
-                  "label": "tag",
-                  "placeholder": "e.g. AI-продакшн"
+                  "label": "Tag Label",
+                  "select": "web",
+                  "placeholder": "Например: CG-ПРОДАКШН"
                 }
               },
               "circle_image": {
