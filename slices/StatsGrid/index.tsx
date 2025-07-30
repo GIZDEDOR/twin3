@@ -11,7 +11,8 @@ import Image from 'next/image';
 
 import {
   Content,
-  isFilled,         // <- type-guard для полей Prismic
+  isFilled,
+  ImageFieldImage,         // <- type-guard для полей Prismic
 } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 
@@ -22,19 +23,20 @@ import '@/app/styles/fade.css';
 /* -------------------------------------------------------------------------- */
 /*  Константы и утилиты                                                       */
 /* -------------------------------------------------------------------------- */
+type AwardImageItem = {
+  image?: ImageFieldImage;
+};
+
+type StatsGridSliceWithAwards = Omit<Content.StatsGridSlice, 'primary'> & {
+  primary: {
+    award_images: AwardImageItem[];
+  };
+};
 
 const VALID_VIDEO_SLOTS = [1, 3, 5, 7] as const;
 
 /** Иконки наград (в public/images/…) */
-const AWARD_IMAGES = [
-  '/images/award-1.webp',
-  '/images/award-2.webp',
-  '/images/award-3.webp',
-  '/images/award-4.webp',
-  '/images/award-5.webp',
-  '/images/award-6.webp',
-  '/images/award-7.webp',
-];
+
 
 /** Изображения, которые «накладываются» поверх первой плитки на мобильном */
 const HERO_IMAGES = [
@@ -82,7 +84,7 @@ function isValidSlotIndex(
 /* -------------------------------------------------------------------------- */
 
 export default function StatsGrid(
-  { slice }: SliceComponentProps<Content.StatsGridSlice>
+  { slice }: SliceComponentProps<StatsGridSliceWithAwards>
 ) {
   /* ---------- 1. Собираем карту «номер слота → URL видео» ----------------- */
 
@@ -101,6 +103,8 @@ export default function StatsGrid(
 
     return map;
   }, [slice.items]);
+
+  
 
   /* ---------- 2. Прочие локальные хуки ----------------------------------- */
 
@@ -185,10 +189,11 @@ export default function StatsGrid(
           /* =============================================================== */
           if (idx === 8) {
             const imageSize = 96; // 80 px + отступы
-            const { containerRef, repeatCount } = useAutoRepeat(
-              AWARD_IMAGES.length,
-              imageSize
-            );
+            const awardImages = slice.primary.award_images ?? [];
+const { containerRef, repeatCount } = useAutoRepeat(
+  awardImages.length,
+  imageSize
+);
 
             return (
               <aside
@@ -202,23 +207,24 @@ export default function StatsGrid(
                     className="flex gap-0 md:gap-[6px] items-center animate-marquee min-w-max"
                     style={{ willChange: 'transform' }}
                   >
-                    {Array.from({ length: repeatCount }).flatMap(
-                      (_, repeatIndex) =>
-                        AWARD_IMAGES.map((src, i) => (
-                          <div
-                            key={`${repeatIndex}-${i}`}
-                            className="flex items-center justify-center"
-                          >
-                            <Image
-                              src={src}
-                              alt={`Award ${i + 1}`}
-                              width={356}
-                              height={641}
-                              className="object-contain h-[90px] w-[64px] md:h-[142px] md:w-[100px]"
-                            />
-                          </div>
-                        ))
-                    )}
+                    {Array.from({ length: repeatCount }).flatMap((_, repeatIndex) =>
+  awardImages.map((item, i) =>
+    isFilled.image(item.image) ? (
+      <div
+        key={`${repeatIndex}-${i}`}
+        className="flex items-center justify-center"
+      >
+        <Image
+          src={item.image.url}
+          alt={`Award ${i + 1}`}
+          width={356}
+          height={641}
+          className="object-contain h-[90px] w-[64px] md:h-[142px] md:w-[100px]"
+        />
+      </div>
+    ) : null
+  )
+)}
                   </div>
                 </div>
 

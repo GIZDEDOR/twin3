@@ -198,9 +198,9 @@ export type ProjectsDocument<Lang extends string = string> =
   >;
 
 type WelcomeDocumentDataSlicesSlice =
+  | StatsGridSlice
   | CaseSlyderSlice
   | CaseGridSlice
-  | StatsGridSlice
   | HeroSliceSlice;
 
 /**
@@ -619,12 +619,12 @@ export interface HeaderOverlaySliceDefaultPrimaryLeftVideosItem {
   /**
    * Video field in *HeaderOverlay → Default → Primary → Left videos*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: header_overlay.default.primary.left_videos[].video
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -634,12 +634,12 @@ export interface HeaderOverlaySliceDefaultPrimaryCenterVideosItem {
   /**
    * Video field in *HeaderOverlay → Default → Primary → Center videos*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: header_overlay.default.primary.center_videos[].video
-   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+  video: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -833,14 +833,24 @@ export interface NewsGridSliceSliceDefaultPrimaryNewsItem {
   date: prismic.DateField;
 
   /**
-   * tag field in *NewsGridSlice → Default → Primary → News*
+   * tag link field in *NewsGridSlice → Default → Primary → News*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Link
    * - **Placeholder**: e.g. AI-продакшн
    * - **API ID Path**: news_grid_slice.default.primary.news[].tag
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  tag: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Tag Label field in *NewsGridSlice → Default → Primary → News*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Например: CG-ПРОДАКШН
+   * - **API ID Path**: news_grid_slice.default.primary.news[].tag_text
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  tag: prismic.KeyTextField;
+  tag_text: prismic.KeyTextField;
 
   /**
    * circle_image field in *NewsGridSlice → Default → Primary → News*
@@ -944,6 +954,38 @@ export type ShowreelSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *StatsGrid → Default → Primary → award_images*
+ */
+export interface StatsGridSliceDefaultPrimaryAwardImagesItem {
+  /**
+   * Изображение награды field in *StatsGrid → Default → Primary → award_images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: stats_grid.default.primary.award_images[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *StatsGrid → Default → Primary*
+ */
+export interface StatsGridSliceDefaultPrimary {
+  /**
+   * award_images field in *StatsGrid → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: stats_grid.default.primary.award_images[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  award_images: prismic.GroupField<
+    Simplify<StatsGridSliceDefaultPrimaryAwardImagesItem>
+  >;
+}
+
+/**
  * Primary content in *StatsGrid → Items*
  */
 export interface StatsGridSliceDefaultItem {
@@ -983,7 +1025,7 @@ export interface StatsGridSliceDefaultItem {
  */
 export type StatsGridSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<StatsGridSliceDefaultPrimary>,
   Simplify<StatsGridSliceDefaultItem>
 >;
 
@@ -1167,6 +1209,8 @@ declare module "@prismicio/client" {
       ShowreelSliceVariation,
       ShowreelSliceDefault,
       StatsGridSlice,
+      StatsGridSliceDefaultPrimaryAwardImagesItem,
+      StatsGridSliceDefaultPrimary,
       StatsGridSliceDefaultItem,
       StatsGridSliceVariation,
       StatsGridSliceDefault,

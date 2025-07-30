@@ -20,13 +20,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "stats_grid": {
+              "type": "SharedSlice"
+            },
             "case_slyder": {
               "type": "SharedSlice"
             },
             "case_grid": {
-              "type": "SharedSlice"
-            },
-            "stats_grid": {
               "type": "SharedSlice"
             },
             "hero_slice": {

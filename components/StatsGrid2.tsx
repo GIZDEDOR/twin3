@@ -11,6 +11,7 @@ const AWARD_IMAGES = [
   '/images/award-5.webp',
   '/images/award-6.webp',
   '/images/award-7.webp',
+  '/images/award-8.webp',
 ];
 
 function useAutoRepeat(imagesLength: number, imageWidth: number) {
