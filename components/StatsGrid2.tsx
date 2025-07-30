@@ -10,7 +10,6 @@ const AWARD_IMAGES = [
   '/images/award-4.webp',
   '/images/award-5.webp',
   '/images/award-6.webp',
-  '/images/award-7.webp',
   '/images/award-8.webp',
 ];
 
