@@ -16,19 +16,33 @@ interface CaseData {
 }
 
 const mapPrismicCase = (item: any): CaseData => ({
-  title: item.title ?? '',
-  video1: item.video1?.url ?? '',
-  video2: item.video2?.url ?? '',
-  category: item.category ?? '',
-  tags: Array.isArray(item.tags) ? item.tags.map((t: any) => t.tag) : [],
+  title: item?.title ?? '',
+  video1: item?.video1?.url ?? '',
+  video2: item?.video2?.url ?? '',
+  category: item?.category ?? '',
+  tags: Array.isArray(item?.tags) ? item.tags.map((t: any) => t?.tag).filter(Boolean) : [],
 });
+
+// ===== СТАТИЧЕСКИЕ ФОЛЛБЕКИ ДЛЯ КЕЙСОВ ПО title =====
+// Положи реальные файлы в /public/icons или /public/images
+const STATIC_FALLBACKS: Record<string, { logo?: string; icon?: string }> = {
+  'ДОКТОР ДИНОЗАВРОВ': {
+    logo: '/icons/Variant17.svg',
+    icon: '/icons/Variant17.svg',
+  },
+  // Примеры:
+  // 'HUSTLE & MUSCLE': { logo: '/images/hustle_logo.svg', icon: '/images/hustle_icon.svg' },
+};
 
 export default function CaseGrid({ slice }: SliceComponentProps<Content.CaseGridSlice>) {
   const { category } = useCaseFilter();
   const [visible, setVisible] = useState(3);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
-  const ALL_CASES = slice.primary.cases.map(mapPrismicCase);
+  const ALL_CASES = Array.isArray(slice?.primary?.cases)
+    ? slice.primary.cases.map(mapPrismicCase)
+    : [];
+
   const filtered = category ? ALL_CASES.filter((c) => c.category === category) : ALL_CASES;
   const visibleCases = filtered.slice(0, visible);
 
@@ -86,32 +100,41 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
     ? 'border-green-400'
     : 'border-[#444444]';
 
-  // Цвет текста (для замены, если нужно)
+  // Цвет текста
   const textColor = borderColor.replace('border-', 'text-');
 
-  // Генерация градиента (еще можно использовать в других местах, если потребуется)
+  // Градиент (пока не используется внизу, но оставляю)
   const gradientClass = isYota
     ? 'from-[#1FA2FF] via-[#12D8FA] to-[#7BB3F4]'
     : isPerek
     ? 'from-[#34FA56] to-[#4CE15A]'
     : '';
 
-  // Логотипы и иконки
-  const logo = isYota
-    ? '/images/yota_466415.svg'
-    : isFeduk
-    ? '/images/red_353562.svg'
-    : isPerek
-    ? '/images/x5_540202.svg'
-    : '';
+  // Фоллбеки по title
+  const fallback = STATIC_FALLBACKS[title] ?? {};
 
-  const icon = isYota
-    ? '/images/logosmobyota.svg'
-    : isFeduk
-    ? '/images/logosmobred.svg'
-    : isPerek
-    ? '/images/logosmob55.svg'
-    : '';
+  // Базовые пути
+  const baseLogo =
+    isYota
+      ? '/images/yota_466415.svg'
+      : isFeduk
+      ? '/images/red_353562.svg'
+      : isPerek
+      ? '/images/x5_540202.svg'
+      : '';
+
+  const baseIcon =
+    isYota
+      ? '/images/logosmobyota.svg'
+      : isFeduk
+      ? '/images/logosmobred.svg'
+      : isPerek
+      ? '/images/logosmob55.svg'
+      : '';
+
+  // Итоговые пути с учётом фоллбеков и запретом пустой строки
+  const computedLogo = (baseLogo && baseLogo.trim().length > 0 ? baseLogo : undefined) ?? fallback.logo;
+  const computedIcon = (baseIcon && baseIcon.trim().length > 0 ? baseIcon : undefined) ?? fallback.icon;
 
   return (
     <div
@@ -130,33 +153,42 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
           <div className="hidden md:block">
             <CaseVideo src={video2} borderColor={borderColor} />
           </div>
+
           <div className="flex flex-col items-start pr-0 pt-1">
             <div className="hidden sm:flex flex-col items-start text-[15px] font-proto font-bold uppercase tracking-wide leading-[15px] text-left text-transparent bg-clip-text bg-gradient-to-b from-[#C3C3C3] to-[#999999] rotate-360 writing-vertical opacity-20 h-auto min-h-[170px] w-[44px] min-w-[44px] whitespace-nowrap justify-center">
               <span>Who: Twin3D x {title.replace('FEDUK FEAT ', '')}</span>
               <span>Task: Digital Ad</span>
             </div>
-            <div className="hidden sm:block mt-2">
-              <img
-                src={logo}
-                alt="case logo"
-                className={`mx-2 my-1 opacity-20 ${isPerek ? 'h-[24px] w-[30px]' : 'h-[70px] w-auto'}`}
-              />
-            </div>
+
+            {/* Рендерим логотип только если есть валидный src */}
+            {computedLogo ? (
+              <div className="hidden sm:block mt-2">
+                <img
+                  src={computedLogo}
+                  alt="case logo"
+                  className={`mx-2 my-1 opacity-20 ${isPerek ? 'h-[24px] w-[30px]' : 'h-[70px] w-auto'}`}
+                />
+              </div>
+            ) : null}
           </div>
         </div>
 
         <div className={`mt-3 rounded-[12px] pl-[16px] pr-[10px] border ${borderColor} overflow-visible`}>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2 w-full">
-              <div className={`block sm:hidden ${isPerek ? 'ml-[0px]' : 'ml-[1px]'} ${isFeduk ? 'pt-[6px] pb-[6px]' : 'pt-[2px] pb-[2px]'}`}>
-                <Image
-                  src={icon}
-                  alt={`${title} icon`}
-                  width={isFeduk ? 36 : 52}
-                  height={isFeduk ? 36 : 52}
-                  className={`${isFeduk ? 'h-8' : 'h-14'} w-auto`}
-                />
-              </div>
+              {/* Мобильная иконка — только при наличии src */}
+              {computedIcon ? (
+                <div className={`block sm:hidden ${isPerek ? 'ml-[0px]' : 'ml-[1px]'} ${isFeduk ? 'pt-[6px] pb-[6px]' : 'pt-[2px] pb-[2px]'}`}>
+                  <Image
+                    src={computedIcon}
+                    alt={`${title} icon`}
+                    width={isFeduk ? 36 : 52}
+                    height={isFeduk ? 36 : 52}
+                    className={`${isFeduk ? 'h-8' : 'h-14'} w-auto`}
+                  />
+                </div>
+              ) : null}
+
               <h3
                 className={`hidden sm:block min-w-0 truncate px-[2px] font-extrabold font-franklin text-[33px] tracking-tight ${
                   isYota
@@ -171,6 +203,7 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
                 {title}
               </h3>
             </div>
+
             <div className="flex gap-2">
               {tags.map((tag: string, i: number) => {
                 const isLeft = isYota && i === 0;
@@ -243,6 +276,17 @@ function CaseVideo({ src, borderColor }: { src: string; borderColor: string }) {
       ref.current.currentTime = 0;
     }
   };
+
+  // Если src пустой — не рендерим <video>, чтобы не создавать запросов и ошибок
+  if (!src || src.trim().length === 0) {
+    return (
+      <div
+        className={`relative w-full h-[440px] overflow-hidden rounded-[18.65px] border bg-dark ${borderColor} flex items-center justify-center`}
+      >
+        <span className="text-xs text-neutral-500">Нет видео</span>
+      </div>
+    );
+  }
 
   return (
     <div
