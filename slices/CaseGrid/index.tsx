@@ -28,7 +28,7 @@ const mapPrismicCase = (item: any): CaseData => ({
 const STATIC_FALLBACKS: Record<string, { logo?: string; icon?: string }> = {
   'ДОКТОР ДИНОЗАВРОВ': {
     logo: '/icons/Variant17.svg',
-    icon: '/icons/Variant17.svg',
+    icon: '/icons/dino.png',
   },
   // Примеры:
   // 'HUSTLE & MUSCLE': { logo: '/images/hustle_logo.svg', icon: '/images/hustle_icon.svg' },
