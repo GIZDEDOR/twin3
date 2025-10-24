@@ -50,9 +50,9 @@ export default function StatsGrid2() {
           <span className="text-[#939393] font-proto opacity-55">[ABOUT]</span>
         </div>
         <div className="text-lg leading-snug max-w-[900px] mx-auto bg-gradient-to-r from-[#C3C3C3] to-[#999999] bg-clip-text text-transparent">
-          Создаем цифровых героев, маскотов и контент с ними.
-Используем собственный 3D-сканер человека и нейросети.
-Награды EPlus, Red Apple и Silver Mercury. Резидент Сколково.
+          Мы — продакшн-студия полного цикла, создаём цифровых персонажей и контент для брендов. 
+          Соединяем креатив и технологии, используя собственный 3D-сканер, AI и CGI. 
+          Наши кейсы получают престижные награды и приносят измеримую бизнес-отдачу.
         </div>
       </div>
 
