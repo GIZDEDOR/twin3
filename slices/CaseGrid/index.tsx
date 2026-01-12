@@ -30,6 +30,14 @@ const STATIC_FALLBACKS: Record<string, { logo?: string; icon?: string }> = {
     logo: '/icons/Variant17.svg',
     icon: '/icons/dino.png',
   },
+  'VK Видео': {
+    logo: '/icons/vk-vkthai1.svg',
+    icon: '/icons/vk-vkthai.png',
+  },
+  'COOLCOLA': {
+    logo: '/icons/coolcola-icon1.svg',
+    icon: '/icons/coolcola-icon.png',
+  },
   // Примеры:
   // 'HUSTLE & MUSCLE': { logo: '/images/hustle_logo.svg', icon: '/images/hustle_icon.svg' },
 };
