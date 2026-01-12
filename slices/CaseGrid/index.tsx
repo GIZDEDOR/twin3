@@ -31,8 +31,8 @@ const STATIC_FALLBACKS: Record<string, { logo?: string; icon?: string }> = {
     icon: '/icons/dino.png',
   },
   'VK Видео': {
-    logo: '/icons/vk-vkthai1.svg',
-    icon: '/icons/vk-vkthai.png',
+    logo: '/icons/vkthai1.svg',
+    icon: '/icons/vkthai.png',
   },
   'COOLCOLA': {
     logo: '/icons/coolcola-icon1.svg',
