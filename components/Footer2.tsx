@@ -118,7 +118,7 @@ export default function FooterWithMap() {
   </div>
 </div>
 
-            <p className=' leading-[1px]'>Юр. адрес: 129085, г. Москва, Пр-т Мира, д. 101с1, пом. 1, ком. 7, оф. 4</p>
+            <p className=' leading-[1px]'>129626, Г.МОСКВА , УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМЕЩ. 6/6А/1</p>
             <p className=' leading-[1px]'>Факт. адрес: 129223, г. Москва, Пр-т Мира, д. 119с318, оф. 207</p>
             <p className=' leading-[1px]'>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
