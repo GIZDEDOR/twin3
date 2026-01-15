@@ -222,7 +222,7 @@ export default function FooterWithMap() {
         {/* адреса + логотип (desktop) */}
         <div className="hidden sm:flex justify-between items-start md:items-center mt-1">
           <div className="space-y-[4px] font-standard text-white/65 text-[24px] leading-[100%]">
-            <p>ЮР. АДРЕС: 129085, г. МОСКВА, ПР-Т МИРА, Д.101С1, ПОМ.1, КОМ. 7, ОФ. 4</p>
+            <p>129626, Г.МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМЕЩ. 6/6А/1</p>
             <p>ФАКТ. АДРЕС: 129223, г. МОСКВА, ПР-Т МИРА, Д.119С318, ОФ. 207</p>
             <p>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
