@@ -22,6 +22,16 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh deploy@85.198.101.197 << 'EOF'
+            set -e
+
+            # ---- load NVM (ВАЖНО) ----
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+            echo "Node: $(node -v)"
+            echo "NPM: $(npm -v)"
+            echo "PM2: $(pm2 -v)"
+
             cd /home/deploy/twin3
 
             git fetch origin
@@ -29,5 +39,6 @@ jobs:
 
             npm install
             npm run build
+
             pm2 restart twin3
           EOF
