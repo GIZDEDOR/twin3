@@ -272,7 +272,6 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
 
       rounded-[7px] sm:rounded-[12px]
       border border-[#545454]
-      bg-[#141414]
       overflow-hidden
 
       transition-transform duration-300
