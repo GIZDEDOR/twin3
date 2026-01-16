@@ -259,20 +259,32 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                       <CaseButton disabled>ВИДЕО</CaseButton>
                     )}
                     {/* НАГРАДА */}
-  {item.award && (
-    <div className="flex items-center justify-center
-                    h-[42px] w-[42px]
-                    rounded-[10px]
-                    border border-white/20
-                    bg-white/5
-                    backdrop-blur-sm">
-      <img
-        src={item.award}
-        alt="Award"
-        className="h-[28px] w-auto object-contain"
-      />
-    </div>
-  )}
+                    {item.award && (
+  <div
+    className="
+      group
+      relative
+      flex items-center justify-center
+      h-[50px] sm:h-[58px]
+      w-[50px] sm:w-[58px]
+      rounded-[7px] sm:rounded-[12px]
+      border border-[#545454]
+      bg-[#141414]
+      overflow-hidden
+      transition-all duration-300
+      hover:scale-105
+    "
+  >
+    
+
+    <img
+      src={item.award}
+      alt="award"
+      className="relative z-10 w-full h-full object-contain p-1"
+    />
+  </div>
+)}
+
                   </div>
                   {item.companyLogo && (
                     <img src={item.companyLogo} alt={item.company} className="h-[40px] w-auto opacity-90" />
