@@ -264,14 +264,18 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     className="
       group
       relative
+      flex-shrink-0
       flex items-center justify-center
-      h-[50px] sm:h-[58px]
-      w-[50px] sm:w-[58px]
+
+      h-[36px] w-[55px]        
+      sm:h-[55px] sm:w-[55px] 
+
       rounded-[7px] sm:rounded-[12px]
       border border-[#545454]
       bg-[#141414]
       overflow-hidden
-      transition-all duration-300
+
+      transition-transform duration-300
       hover:scale-105
     "
   >
