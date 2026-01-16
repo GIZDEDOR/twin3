@@ -244,8 +244,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  {/* Кнопки */}
+                <div className="flex justify-between items-end gap-2 mt-auto">
                   <div className="flex gap-[12.8px]">
                     {item.link ? (
                       <a href={item.link} className="inline-block">
@@ -254,31 +253,31 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                     ) : (
                       <CaseButton primary disabled>ПОКАЗАТЬ КЕЙС</CaseButton>
                     )}
-
                     {fullVideoSrc ? (
                       <CaseButton onClick={() => openModal(fullVideoSrc)}>ВИДЕО</CaseButton>
                     ) : (
                       <CaseButton disabled>ВИДЕО</CaseButton>
                     )}
+                    {/* НАГРАДА */}
+  {item.award && (
+    <div className="flex items-center justify-center
+                    h-[42px] w-[42px]
+                    rounded-[10px]
+                    border border-white/20
+                    bg-white/5
+                    backdrop-blur-sm">
+      <img
+        src={item.award}
+        alt="Award"
+        className="h-[28px] w-auto object-contain"
+      />
+    </div>
+  )}
                   </div>
-
-                  {/* НАГРАДА */}
-                  {item.award && (
-                    <div className="flex items-center justify-center
-                                    h-[42px] w-[42px]
-                                    rounded-[10px]
-                                    border border-white/20
-                                   bg-white/5
-                                    backdrop-blur-sm">
-                      <img
-                        src={item.award}
-                        alt="Award"
-                        className="h-[28px] w-auto object-contain"
-                      />
-                    </div>
+                  {item.companyLogo && (
+                    <img src={item.companyLogo} alt={item.company} className="h-[40px] w-auto opacity-90" />
                   )}
                 </div>
-
               </div>
             );
           })}
