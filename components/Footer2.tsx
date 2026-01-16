@@ -118,7 +118,7 @@ export default function FooterWithMap() {
   </div>
 </div>
 
-            <p className=' leading-[1px]'>129626, Г.МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМЕЩ. 6/6А/1</p>
+            <p className=' leading-[1px]'>ЮР.АДРЕС: 129626, г.МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМ. 6/6А/1</p>
             <p className=' leading-[1px]'>Факт. адрес: 129223, г. Москва, Пр-т Мира, д. 119с318, оф. 207</p>
             <p className=' leading-[1px]'>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
@@ -222,7 +222,7 @@ export default function FooterWithMap() {
         {/* адреса + логотип (desktop) */}
         <div className="hidden sm:flex justify-between items-start md:items-center mt-1">
           <div className="space-y-[4px] font-standard text-white/65 text-[24px] leading-[100%]">
-            <p>129626, Г.МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМЕЩ. 6/6А/1</p>
+            <p>ЮР.АДРЕС: 129626, г.МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМ. 6/6А/1</p>
             <p>ФАКТ. АДРЕС: 129223, г. МОСКВА, ПР-Т МИРА, Д.119С318, ОФ. 207</p>
             <p>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
