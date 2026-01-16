@@ -280,7 +280,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     <img
       src={item.award}
       alt="award"
-      className="relative z-10 w-full h-full object-contain p-1"
+      className="relative z-10 w-full h-full object-cover"
     />
   </div>
 )}
