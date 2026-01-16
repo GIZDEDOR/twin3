@@ -30,7 +30,11 @@
           "type": "Select",
           "config": {
             "label": "Категория (category)",
-            "options": ["АВАТАРЫ", "РЕКЛАМА", "КИНО"],
+            "options": [
+              "АВАТАРЫ",
+              "РЕКЛАМА",
+              "КИНО"
+            ],
             "default_value": "РЕКЛАМА"
           }
         },
@@ -45,14 +49,14 @@
           "type": "Link",
           "config": {
             "label": "Hover-видео (video1)",
-            "select": "media,web"
+            "select": null
           }
         },
         "fullVideo": {
           "type": "Link",
           "config": {
             "label": "Полное видео (fullVideo)",
-            "select": "media,web"
+            "select": null
           }
         },
         "company": {
@@ -65,7 +69,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Описание (description)",
-            "multi": "paragraph, strong, em"
+            "multi": "paragraph,strong,em"
           }
         },
         "companyLogo": {
@@ -81,12 +85,20 @@
           }
         },
         "link": {
-    "type": "Link",
-    "config": {
-      "label": "Ссылка на кейс (link)",
-      "select": null
-    }
-  }
+          "type": "Link",
+          "config": {
+            "label": "Ссылка на кейс (link)",
+            "select": null
+          }
+        },
+        "award": {
+          "type": "Image",
+          "config": {
+            "label": "award",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
       }
     }
   ]

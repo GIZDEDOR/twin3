@@ -25,6 +25,7 @@ type PrismicCaseItem = {
   companyLogo: { url: string } | null;
   poster: { url: string } | null;
   link: { url: string } | null;
+  award: { url: string } | null;
 };
 
 export type Case = {
@@ -39,6 +40,7 @@ export type Case = {
   companyLogo: string | null;
   poster: string | null;
   link: string | null;
+  award: string | null;
 };
 
 const shortTag = (tag: string): string => {
@@ -68,6 +70,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     companyLogo: item.companyLogo?.url || null,
     poster: item.poster?.url || null,
     link: item.link?.url || null,
+    award: item.award?.url || null,
   }));
 
   const categories = Array.from(new Set(cases.map((c) => c.category))).map(
@@ -241,7 +244,8 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-end gap-2 mt-auto">
+                <div className="flex items-center gap-3">
+                  {/* Кнопки */}
                   <div className="flex gap-[12.8px]">
                     {item.link ? (
                       <a href={item.link} className="inline-block">
@@ -250,16 +254,31 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                     ) : (
                       <CaseButton primary disabled>ПОКАЗАТЬ КЕЙС</CaseButton>
                     )}
+
                     {fullVideoSrc ? (
                       <CaseButton onClick={() => openModal(fullVideoSrc)}>ВИДЕО</CaseButton>
                     ) : (
                       <CaseButton disabled>ВИДЕО</CaseButton>
                     )}
                   </div>
-                  {item.companyLogo && (
-                    <img src={item.companyLogo} alt={item.company} className="h-[40px] w-auto opacity-90" />
+
+                  {/* НАГРАДА */}
+                  {item.award && (
+                    <div className="flex items-center justify-center
+                                    h-[42px] w-[42px]
+                                    rounded-[10px]
+                                    border border-white/20
+                                   bg-white/5
+                                    backdrop-blur-sm">
+                      <img
+                        src={item.award}
+                        alt="Award"
+                        className="h-[28px] w-auto object-contain"
+                      />
+                    </div>
                   )}
                 </div>
+
               </div>
             );
           })}

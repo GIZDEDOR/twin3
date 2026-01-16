@@ -227,7 +227,7 @@ interface WelcomeDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<WelcomeDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<WelcomeDocumentDataSlicesSlice>; /**
    * Meta Title field in *WELCOME*
    *
    * - **Field Type**: Text
@@ -235,7 +235,7 @@ interface WelcomeDocumentData {
    * - **API ID Path**: welcome.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
+   */
   meta_title: prismic.KeyTextField;
 
   /**
@@ -404,6 +404,16 @@ export interface CaseFiltersSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
   link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * award field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].award
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  award: prismic.ImageField<never>;
 }
 
 /**
