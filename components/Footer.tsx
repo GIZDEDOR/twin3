@@ -13,7 +13,7 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', href: 'https://t.me/twin_3d' },
+  { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', href: 'https://t.me/D_Twin3D' },
   { icon: '/icons/wa-icon.svg', name: 'WHATSAPP', href: 'https://api.whatsapp.com/send?phone=79067244645' },
   { icon: '/icons/bh-icon.svg', name: 'BEHANCE', href: 'https://behance.net/twin3dproduction' },
 ];

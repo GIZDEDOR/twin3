@@ -31,19 +31,16 @@ export default function Footermain() {
 
   const socialLinks: Record<string, string> = {
   bh: 'https://behance.net/twin3dproduction',
-  tg: 'https://t.me/twin_3d',
-  wa: 'https://api.whatsapp.com/send?phone=79067244645',
+  tg: 'https://t.me/D_Twin3D',
 };
 const desktopSocials = [
   { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', key: 'tg' },
   { icon: '/icons/bh-icon.svg', name: 'BEHANCE',  key: 'bh' },
-  { icon: '/icons/wa-icon.svg', name: 'WHATSAPP', key: 'wa' },
 ];
 
 const mobileSocials = [
   { key: 'bh', icon: '/icons/bh-icon.svg', name: 'BEHANCE' },
   { key: 'tg', icon: '/icons/tg-icon.svg', name: 'TELEGRAM' },
-  { key: 'wa', icon: '/icons/wa-icon.svg', name: 'WHATSAPP' },
 ];
 
 
