@@ -267,7 +267,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
       flex-shrink-0
       flex items-center justify-center
 
-      h-[36px] w-[36px]        
+      h-[36px] w-[55px]        
       sm:h-[55px] sm:w-[55px] 
 
       rounded-[7px] sm:rounded-[12px]
