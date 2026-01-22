@@ -267,8 +267,8 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
       flex-shrink-0
       flex items-center justify-center
 
-      h-[36px] w-[55px]        
-      sm:h-[55px] sm:w-[55px] 
+      w-[36px] sm:w-[55px]
+      aspect-square
 
       rounded-[7px] sm:rounded-[12px]
       border border-[#545454]
@@ -278,12 +278,10 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
       hover:scale-105
     "
   >
-    
-
     <img
       src={item.award}
       alt="award"
-      className="relative z-10 w-full h-full object-cover"
+      className="w-full h-full object-cover"
     />
   </div>
 )}
