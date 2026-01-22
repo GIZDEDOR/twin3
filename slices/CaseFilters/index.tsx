@@ -267,7 +267,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
       flex-shrink-0
       flex items-center justify-center
 
-      w-[36px] sm:w-[55px]
+      w-[40px] sm:w-[55px]
       aspect-square
 
       rounded-[7px] sm:rounded-[12px]
@@ -281,7 +281,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     <img
       src={item.award}
       alt="award"
-      className="w-full h-full object-cover"
+      className="w-full h-full object-feel"
     />
   </div>
 )}
