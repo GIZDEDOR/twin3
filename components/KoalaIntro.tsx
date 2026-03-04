@@ -8,16 +8,27 @@ export default function KoalaIntro() {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        // Попытка программно воспроизвести видео
-        if (videoRef.current) {
-            const playPromise = videoRef.current.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    // Если браузер заблокировал autoplay, можно ждать клика
-                    console.log("Autoplay заблокирован на мобильном");
+        const tryPlayVideo = () => {
+            if (videoRef.current) {
+                videoRef.current.play().catch(() => {
+                    // Safari/iOS заблокировал autoplay, ждем первого взаимодействия
+                    console.log("Autoplay заблокирован, ждем взаимодействия пользователя");
                 });
             }
-        }
+        };
+
+        // Пытаемся воспроизвести сразу
+        tryPlayVideo();
+
+        // На случай iOS: воспроизвести при первом взаимодействии пользователя
+        const userGesturePlay = () => {
+            tryPlayVideo();
+            window.removeEventListener("touchstart", userGesturePlay);
+            window.removeEventListener("click", userGesturePlay);
+        };
+
+        window.addEventListener("touchstart", userGesturePlay, { passive: true });
+        window.addEventListener("click", userGesturePlay, { passive: true });
     }, []);
 
     if (!isVisible) return null;
