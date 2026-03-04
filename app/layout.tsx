@@ -9,6 +9,8 @@ import type { Content } from '@prismicio/client';
 import Header from '@/components/Header';
 import VhSetter from '@/components/VhSetter';
 
+import KoalaIntro from "@/components/KoalaIntro";
+
 
 
 export const metadata: Metadata = {
@@ -32,6 +34,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     <html lang="ru" suppressHydrationWarning>
       <body className="font-druk antialiased">
         <VhSetter />
+         <KoalaIntro />
         {/* dedicated portal root for overlays */}
         <div id="overlay-root" />
 
