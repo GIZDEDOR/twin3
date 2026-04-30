@@ -35,7 +35,7 @@ export default function StatsGrid2() {
     { id: 0, title: '#1', subtitle: 'ПО СОЗДАНИЮ 3D АВАТАРОВ\nИ ЦИФРОВЫХ ДВОЙНИКОВ' },
     { id: 1, title: '12+', subtitle: 'БОЛЕЕ 12 ЛЕТ\nНА РЫНКЕ' },
     { id: 2, title: '11 000+', subtitle: 'ЦИФРОВЫХ 3D АВАТАРОВ\nДЛЯ КИНО И РЕКЛАМЫ' },
-    { id: 3, title: '30+', subtitle: 'CG-ПРОФЕССИОНАЛОВ\nВ КОМАНДЕ' },
+    { id: 3, title: '30+', subtitle: 'ПРОФЕССИОНАЛОВ\nВ КОМАНДЕ' },
     { id: 4, title: '1000+', subtitle: 'УСПЕШНО\nРЕАЛИЗОВАННЫХ\nПРОЕКТОВ' },
   ];
 
@@ -47,12 +47,12 @@ export default function StatsGrid2() {
       <div className="text-center text-[#B3B3B3] font-standard uppercase tracking-wider mb-10">
         <div className="text-sm mb-1">
           <span className="text-[#939393] font-proto">[TWIN3D]</span>{' '}
-          <span className="text-[#939393] font-proto opacity-55">[ABOUT]</span>
+          <span className="text-[#939393] font-proto opacity-55">[О НАС]</span>
         </div>
         <div className="text-lg leading-snug max-w-[900px] mx-auto bg-gradient-to-r from-[#C3C3C3] to-[#999999] bg-clip-text text-transparent">
-          Мы — продакшн-студия полного цикла, создаём цифровых персонажей и контент для брендов. 
-          Соединяем креатив и технологии, используя собственный 3D-сканер, AI и CGI. 
-          Наши кейсы получают престижные награды и приносят измеримую бизнес-отдачу.
+          Мы — технологичная студия полного цикла, создаём цифровых персонажей и контент для брендов. 
+          ОБЪЕДИНЯЕМ КРЕАТИВ И ИННОВАЦИИ: ИСПОЛЬЗУЕМ СОБСТВЕННЫЙ 3D-СКАНЕР, НЕЙРОСЕТИ И ПЕРЕДОВУЮ ГРАФИКУ. 
+          НАШИ ПРОЕКТЫ БЕРУТ ПРЕСТИЖНЫЕ НАГРАДЫ И ПРИНОСЯТ ИЗМЕРИМЫЙ БИЗНЕС-РЕЗУЛЬТАТ.
         </div>
       </div>
 

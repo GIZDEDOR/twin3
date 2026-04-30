@@ -79,10 +79,10 @@ const mobileSocials = [
     </div>
     <div className="flex flex-col leading-[0.9] mb-2">
       <p className="uppercase text-xl font-franklin leading-[1.1]">Москва,</p>
-      <p className="uppercase text-xl font-franklin leading-[1.1]">пр-т Мира</p>
-      <p className="uppercase text-xl font-franklin leading-[1.1]">д.119 стр. 318</p>
-      <p className="text-white uppercase opacity-30 font-franklin mb-0">2 этаж, офис 207</p>
-        <p className="text-white uppercase opacity-30 font-franklin">(Арт-Техноград)</p>
+      <p className="uppercase text-xl font-franklin leading-[1.1]">БОЛЬШОЙ БУЛЬВАР</p>
+      <p className="uppercase text-xl font-franklin leading-[1.1]">д.40 к. 4</p>
+      <p className="text-white uppercase opacity-30 font-franklin mb-0"></p>
+        <p className="text-white uppercase opacity-30 font-franklin">(БЦ "АMAЛЬТЕЯ")</p>
     </div>
     <div className="flex flex-col leading-[0.9] mb-2">
       <p className="uppercase text-xl font-franklin leading-[1.1]">часы работы:</p>
@@ -252,10 +252,10 @@ const mobileSocials = [
   <div className="grid grid-cols-3 gap-x-5 gap-y-4 items-start w-full max-w-[500px]">
     <div className="leading-[0.9] mb-2">
       <p className="uppercase text-xl font-franklin leading-[1.1]">Москва,</p>
-      <p className="uppercase text-xl font-franklin leading-[1.1]">пр-т Мира</p>
-      <p className="uppercase text-xl font-franklin leading-[1.1]">д.119 стр. 318</p>
-      <p className="text-white opacity-30 font-franklin mb-0">2 этаж, офис 207</p>
-        <p className="text-white opacity-30 font-franklin">(Арт-Техноград)</p>
+      <p className="uppercase text-xl font-franklin leading-[1.1]">БОЛЬШОЙ БУЛЬВАР</p>
+      <p className="uppercase text-xl font-franklin leading-[1.1]">д.40 к. 4</p>
+      <p className="text-white opacity-30 font-franklin mb-0"></p>
+        <p className="text-white opacity-30 font-franklin">(БЦ "АMAЛЬТЕЯ")</p>
     </div>
     {/* Соцсети */}
     <div className="flex flex-col gap-[11.5px] items-start">

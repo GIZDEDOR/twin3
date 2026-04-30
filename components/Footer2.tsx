@@ -8,7 +8,7 @@ import gsap from 'gsap';
 /* ─────────── data ─────────── */
 const SOCIALS = [
   { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', href: 'https://t.me/D_Twin3D' },
-  { icon: '/icons/wa-icon.svg', name: 'WHATSAPP', href: 'https://api.whatsapp.com/send?phone=79067244645' },
+  { icon: '/icons/ma-icon.svg', name: 'MAX', href: 'https://max.ru/u/f9LHodD0cOL5ySNgO2iRRxzkGSN6aIMu3_r3wUEeI71lOKt5GLyqXRNo7qY' },
   { icon: '/icons/bh-icon.svg', name: 'BEHANCE', href: 'https://behance.net/twin3dproduction' },
 ];
 
@@ -43,10 +43,10 @@ export default function FooterWithMap() {
 
             <div className="flex flex-col leading-[0.9]">
               <p className="font-franklin text-xl uppercase">Москва,</p>
-              <p className="font-franklin text-xl uppercase">пр-т Мира</p>
-              <p className="font-franklin text-xl uppercase">д.119 стр. 318</p>
+              <p className="font-franklin text-xl uppercase">Большой бульвар</p>
+              <p className="font-franklin text-xl uppercase">д.40 к. 4</p>
               <p className="text-white/50 text-sm leading-[1.1]">
-                2 этаж, офис 207<br />(Арт-Техноград)
+                (БЦ "Амальтея")
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function FooterWithMap() {
 
           {/* соцсети */}
           <div className="grid grid-cols-3 gap-3">
-            {['bh', 'tg', 'wa'].map((k) => {
+            {['bh', 'tg', 'ma'].map((k) => {
               const soc = SOCIALS.find((s) => s.icon.includes(`${k}-icon`))!;
               return (
                 <a
@@ -90,7 +90,7 @@ export default function FooterWithMap() {
 
           {/* карта */}
           <iframe
-            src="https://yandex.ru/map-widget/v1/?ll=37.632983%2C55.834872&z=17&pt=37.632983,55.834872,pm2rdm"
+            src="https://yandex.ru/map-widget/v1/?ll=37.347120%2C55.695451&z=17&pt=37.347120,55.695451,pm2rdm"
             width="100%" height="495"
             className="w-full h-[495px] rounded-[24px] border-none"
             loading="lazy"
@@ -119,7 +119,6 @@ export default function FooterWithMap() {
 </div>
 
             <p className=' leading-[1px]'>ЮР.АДРЕС: 129626, г. МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМ. 6/6А/1</p>
-            <p className=' leading-[1px]'>Факт. адрес: 129223, г. Москва, Пр-т Мира, д. 119с318, оф. 207</p>
             <p className=' leading-[1px]'>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
 
@@ -161,16 +160,21 @@ export default function FooterWithMap() {
         {/* =============== Desktop-секция (оставлена без изменений) =============== */}
 
         {/* адрес + часы (desktop) */}
-        <div className="hidden sm:flex justify-between items-start text-[20px] lg:text-[24px] leading-[100%] font-franklin uppercase">
-          <div className="space-y-[2px] max-w-[55%]">
-            <p>Москва, пр-т Мира д.119 стр. 318</p>
-            <p className="opacity-70">2 этаж, офис 207 (Арт-Техноград)</p>
-          </div>
-          <div className="space-y-[2px] text-right opacity-70 shrink-0">
-            <p>ПН – ПТ: 10:00 – 19:00</p>
-            <p>СБ, ВС и праздники: выходные</p>
-          </div>
-        </div>
+        <div className="hidden sm:flex justify-between items-end text-[20px] lg:text-[24px] leading-[100%] font-franklin ">
+  
+  {/* ЛЕВО — прижато вниз */}
+  <p className="self-end text-[40px] lg:text-[52px] leading-[90%] w-[45%] whitespace-nowrap">
+    ХОТИТЕ ОБСУДИТЬ ПРОЕКТ?
+  </p>
+
+  {/* ПРАВО — реально у правого края */}
+  <div className="space-y-[2px] w-[55%] text-right">
+    <p>Москва, БЦ "Амальтея", Большой </p>
+    <p>бульвар, д. 40, Инновационный центр</p>
+    <p>"Сколково", 4 этаж, помещение XXXIV</p>
+  </div>
+
+</div>
 
         {/* соцсети (desktop) */}
         <div className="hidden sm:grid grid-cols-5 gap-[12px] text-xl mt-[1px]">
@@ -190,7 +194,7 @@ export default function FooterWithMap() {
 
         {/* карта для desktop такая же */}
         <iframe
-          src="https://yandex.ru/map-widget/v1/?ll=37.632983%2C55.834872&z=17&pt=37.632983,55.834872,pm2rdm"
+          src="https://yandex.ru/map-widget/v1/?ll=37.347120%2C55.695451&z=17&pt=37.347120,55.695451,pm2rdm"
           width="100%" height="495"
           className="hidden sm:block w-full h-[495px] rounded-[24px] border-none mb-8"
           loading="lazy"
@@ -223,7 +227,6 @@ export default function FooterWithMap() {
         <div className="hidden sm:flex justify-between items-start md:items-center mt-1">
           <div className="space-y-[4px] font-standard text-white/65 text-[24px] leading-[100%]">
             <p>ЮР.АДРЕС: 129626, г. МОСКВА, УЛ БОРИСА ГАЛУШКИНА, Д. 26 , ПОМ. 6/6А/1</p>
-            <p>ФАКТ. АДРЕС: 129223, г. МОСКВА, ПР-Т МИРА, Д.119С318, ОФ. 207</p>
             <p>Р/С: 40702810801770000327 в АО «АЛЬФА-БАНК»</p>
           </div>
           <Image

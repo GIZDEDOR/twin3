@@ -47,11 +47,16 @@ const shortTag = (tag: string): string => {
   const map: Record<string, string> = {
     '3D-СКАНИРОВАНИЕ': '3D-СKАН',
     'АВАТАРЫ': 'АВАТАР',
-    'CG-ПРОДАКШН': 'CG-ПРОДАКШН',
+    '3D-ПРОДАКШН': '3D-ПРОДАКШН',
     'ИИ-АВАТАРЫ': 'ИИ-АВАТАРЫ',
     'ИИ-ПРОДАКШН': 'ИИ-ПРОДАКШН',
   };
   return map[tag] || tag;
+};
+
+const normalizeTag = (tag: string): string => {
+  if (tag === 'CG-ПРОДАКШН') return '3D-ПРОДАКШН';
+  return tag;
 };
 
 export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
@@ -62,7 +67,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     title: item.title || '',
     logo: item.logo?.url || null,
     category: item.category || '',
-    tags: item.tags?.split(',').map((t) => t.trim()) || [],
+    tags: item.tags?.split(',').map((t) => normalizeTag(t.trim())) || [],
     video1: item.video1?.url || null,
     fullVideo: item.fullVideo?.url || null,
     company: item.company || '',
@@ -142,7 +147,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                     isActive ? 'text-[#C3C3C3]' : 'text-[#949494]/35'
                   } text-[0.6rem] leading-none mt-[0.1rem]`}
                 >
-                  [{cat.count} CASES]
+                  [{cat.count} КЕЙСОВ]
                 </span>
               </button>
             );
@@ -174,7 +179,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                     isActive ? 'text-[#C3C3C3]' : 'text-[#949494]/35'
                   }`}
                 >
-                  [{cat.count} CASES]
+                  [{cat.count} КЕЙСОВ]
                 </span>
               </button>
             );
@@ -236,7 +241,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
 
                 <div className="w-full text-left mb-[20px]">
                   <div className="text-[#727272] font-proto text-[15px] mb-[2px] uppercase flex gap-2 leading-8">
-                    <span>[CASE {item.company.toUpperCase()}]</span>
+                    <span>[КЕЙС {item.company.toUpperCase()}]</span>
                     <span className="opacity-35">[ABOUT]</span>
                   </div>
                   <div className="text-[16px] sm:text-[20px] text-[#8F8F8F] font-standard leading-[1.4] sm:leading-[1] break-words mb-[72px] whitespace-pre-line ml-[2px]">

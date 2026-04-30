@@ -13,7 +13,7 @@ type HeaderOverlayProps = {
 };
 
 const navItems = [
-  { name: 'WELCOME', href: '/' },
+  { name: 'ИНТРО', href: '/' },
   { name: 'ПРОЕКТЫ', href: '/projects' },
   { name: 'КТО МЫ', href: '/about' },
   { name: 'БЛОГ', href: '/blog' },
@@ -239,7 +239,7 @@ export default function HeaderOverlay({ onClose, showBackButton = false }: Heade
                 <span
                   onMouseEnter={() => {
                     if (!isMobile) {
-                      if (item.name === 'WELCOME' || item.name === 'ПРОЕКТЫ') {
+                      if (item.name === 'ИНТРО' || item.name === 'ПРОЕКТЫ') {
                         setLeftVideo(getRandomVideo(leftVideo, leftVideos));
                       }
                       if (item.name === 'КТО МЫ' || item.name === 'БЛОГ') {

@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import Link from 'next/link';
 
 const NAV = [
-  { label: 'WELCOME', href: '/' },
+  { label: 'ИНТРО', href: '/' },
   { label: 'ПРОЕКТЫ', href: '/projects' },
   { label: 'КТО МЫ', href: '/about' },
   { label: 'БЛОГ', href: '/blog' },
@@ -14,7 +14,7 @@ const NAV = [
 
 const SOCIALS = [
   { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', href: 'https://t.me/D_Twin3D' },
-  { icon: '/icons/wa-icon.svg', name: 'WHATSAPP', href: 'https://api.whatsapp.com/send?phone=79067244645' },
+  { icon: '/icons/ma-icon.svg', name: 'MAX', href: 'https://max.ru/u/f9LHodD0cOL5ySNgO2iRRxzkGSN6aIMu3_r3wUEeI71lOKt5GLyqXRNo7qY' },
   { icon: '/icons/bh-icon.svg', name: 'BEHANCE', href: 'https://behance.net/twin3dproduction' },
 ];
 
@@ -90,10 +90,10 @@ export default function Footer() {
             {/* адрес */}
             <div className="flex flex-col leading-[0.9]">
               <p className="uppercase text-xl font-franklin">Москва,</p>
-              <p className="uppercase text-xl font-franklin">пр-т&nbsp;Мира</p>
-              <p className="uppercase text-xl font-franklin">д.119&nbsp;стр.&nbsp;318</p>
+              <p className="uppercase text-xl font-franklin">БОЛЬШОЙ&nbsp;БУЛЬВАР</p>
+              <p className="uppercase text-xl font-franklin">Д. 40&nbsp;К.&nbsp;4</p>
               <p className="text-white opacity-30 font-franklin text-sm">
-                2&nbsp;этаж, офис&nbsp;207<br />(Арт-Техноград)
+                (БЦ "АMAЛЬТЕЯ")
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* соцсети */}
           <div className="grid grid-cols-3 gap-3 mt-3">
-            {['bh','tg','wa'].map(key => {
+            {['bh','tg','ma'].map(key => {
               const soc = SOCIALS.find(s => s.icon.includes(`${key}-icon`))!;
               return (
                 <a
@@ -192,10 +192,10 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row gap-20 mx-auto ">                  
                 <div className="flex flex-col leading-tighter text-left ml-6 lg:ml-12 xl:ml-[72px]">
                   <span className="uppercase font-franklin text-xl">Москва,</span>
-                  <span className="uppercase font-franklin text-xl">ПР-Т&nbsp;МИРА</span>
-                  <span className="uppercase font-franklin text-xl">Д.119&nbsp;СТР.&nbsp;318</span>
+                  <span className="uppercase font-franklin text-xl">БОЛЬШОЙ&nbsp;БУЛЬВАР</span>
+                  <span className="uppercase font-franklin text-xl">Д. 40&nbsp;К.&nbsp;4</span>
                   <span className="text-white opacity-30 font-franklin text-sm mt-1">
-                    2&nbsp;этаж, офис&nbsp;207<br />(Арт-Техноград)
+                    (БЦ "АMAЛЬТЕЯ")
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-20 items-start sm:items-end ml-6 lg:ml-12 xl:ml-[72px]">

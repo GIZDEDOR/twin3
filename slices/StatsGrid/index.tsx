@@ -133,7 +133,7 @@ export default function StatsGrid(
             [TWIN3D]
           </span>{' '}
           <span className="text-[#939393] tracking-tighter font-proto opacity-55">
-            [ABOUT]
+            [О НАС]
           </span>
         </div>
 
@@ -265,7 +265,7 @@ const { containerRef, repeatCount } = useAutoRepeat(
               break;
             case 4:
               title    = '30+';
-              subtitle = 'CG-ПРОФЕССИОНАЛОВ\nВ КОМАНДЕ';
+              subtitle = 'ПРОФЕССИОНАЛОВ\nВ КОМАНДЕ';
               break;
             case 6:
               title    = '11 000+';

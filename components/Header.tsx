@@ -13,7 +13,7 @@ import type { Content } from '@prismicio/client';
 import OverlayWrapper from '@/components/OverlayWrapper';
 
 const navItems = [
-  { name: 'WELCOME', href: '/' },
+  { name: 'ИНТРО', href: '/' },
   { name: 'ПРОЕКТЫ', href: '/projects' },
   { name: 'КТО МЫ', href: '/about' },
   { name: 'БЛОГ', href: '/blog' },
