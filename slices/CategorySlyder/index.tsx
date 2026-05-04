@@ -13,10 +13,10 @@ const slidesMeta: Record<string, {
   label: string;
 }> = {
   cg: {
-    tag: '[CG-PRODUCTION]',
+    tag: '[3D-PRODUCTION]',
     about: '[О НАС]',
     desc: 'Полный цикл производства рекламных\nкреативов с персонажем для кампаний\n360°: от идеи и сценариев до продакшна\nвидеоматериалов любой сложности',
-    label: 'CG-ПРОДАКШН',
+    label: '3D-ПРОДАКШН',
   },
   avatars: {
     tag: '[CG-AVATARS]',

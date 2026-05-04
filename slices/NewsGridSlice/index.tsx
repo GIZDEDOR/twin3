@@ -154,7 +154,7 @@ export default function NewsGridSlice({ slice }: Props) {
                       </div>
                     </div>
                     <div className="mt-4 flex items-center justify-center gap-x-4 border-t border-[#333] pt-3 text-xs font-proto uppercase text-[#939393]">
-                      <span>[READ ALL]</span>
+                      <span>[ЧИТАТЬ]</span>
                       <span className="opacity-55">{post.date}</span>
                     </div>
                   </Tilt>
@@ -226,7 +226,7 @@ export default function NewsGridSlice({ slice }: Props) {
                     onClick={() => setOpened(null)}
                     className="font-proto text-sm uppercase text-[#999] hover:text-white transition"
                   >
-                    [BACK]
+                    [НАЗАД]
                   </button>
                 </div>
               </div>
