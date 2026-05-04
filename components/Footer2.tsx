@@ -163,12 +163,12 @@ export default function FooterWithMap() {
         <div className="hidden sm:flex justify-between items-end text-[20px] lg:text-[24px] leading-[100%] font-franklin ">
   
   {/* ЛЕВО — прижато вниз */}
-  <p className="self-end text-[40px] lg:text-[52px] leading-[90%] w-[45%] whitespace-nowrap">
-    ХОТИТЕ ОБСУДИТЬ ПРОЕКТ?
+  <p className="self-end text-[30px] lg:text-[42px] leading-[90%] w-[45%] whitespace-nowrap">
+    Хотите обсудить проект?
   </p>
 
   {/* ПРАВО — реально у правого края */}
-  <div className="space-y-[2px] w-[55%] text-right">
+  <div className="space-y-[2px] w-[55%] text-right text-white/80">
     <p>Москва, БЦ "Амальтея", Большой </p>
     <p>бульвар, д. 40, Инновационный центр</p>
     <p>"Сколково", 4 этаж, помещение XXXIV</p>
@@ -177,10 +177,8 @@ export default function FooterWithMap() {
 </div>
 
         {/* соцсети (desktop) */}
-        <div className="hidden sm:grid grid-cols-5 gap-[12px] text-xl mt-[1px]">
-          <a href="tel:+74951253435" className="w-full flex items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition">
-            +7 495 125-34-35
-          </a>
+        <div className="hidden sm:grid grid-cols-4 gap-[12px] text-xl mt-[1px]">
+          
           <a href="mailto:info@twin3d.ru" className="w-full flex items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition">
             INFO@TWIN3D.RU
           </a>
