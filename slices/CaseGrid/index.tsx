@@ -164,8 +164,8 @@ function CaseRow({ title, video1, video2, tags }: CaseData) {
 
           <div className="flex flex-col items-start pr-0 pt-1">
             <div className="hidden sm:flex flex-col items-start text-[15px] font-proto font-bold uppercase tracking-wide leading-[15px] text-left text-transparent bg-clip-text bg-gradient-to-b from-[#C3C3C3] to-[#999999] rotate-360 writing-vertical opacity-20 h-auto min-h-[170px] w-[44px] min-w-[44px] whitespace-nowrap justify-center">
-              <span>Who: Twin3D x {title.replace('FEDUK FEAT ', '')}</span>
-              <span>Task: Digital Ad</span>
+              <span>Проект: Twin3D x {title.replace('FEDUK FEAT ', '')}</span>
+              <span>Задача: Цифровая Реклама</span>
             </div>
 
             {/* Рендерим логотип только если есть валидный src */}
