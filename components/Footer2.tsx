@@ -184,7 +184,7 @@ export default function FooterWithMap() {
           </a>
           {SOCIALS.map((s) => (
             <a key={s.name} href={s.href} className="w-full flex items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition">
-              <img src={s.icon} alt={s.name} className="w-7 h-70" />
+              <img src={s.icon} alt={s.name} className="w-7 h-7" />
               {s.name}
             </a>
           ))}
