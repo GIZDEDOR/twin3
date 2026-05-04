@@ -225,7 +225,7 @@ export default function HeaderOverlay({
             className="flex items-center gap-3 text-[#797979] hover:text-white transition text-[18px] px-4 py-2"
           >
             <img src="/icons/back.svg" alt="Back" className="w-7 h-7" />
-            <span className="uppercase font-franklin text-[24px]">Back</span>
+            <span className="uppercase font-franklin text-[24px]">Назад</span>
           </button>
           <img
             src="/images/logo-header.png"
