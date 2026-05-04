@@ -30,7 +30,7 @@ export default function TechFeaturesBlock() {
   return (
     <section className="bg-[#141414] text-white px-4 md:px-8 py-12 md:py-20 max-w-[1213px] mx-auto">
       <div className="text-center text-[#999999] text-sm font-proto mb-4">
-        [OUR TECHNOLOGIES] <span className="opacity-40">[1-3]</span>
+        [НАШИ ТЕХНОЛОГИИ] <span className="opacity-40">[1-3]</span>
       </div>
 
       {/* Line separator below title */}
