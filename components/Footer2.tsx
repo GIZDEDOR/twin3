@@ -177,14 +177,14 @@ export default function FooterWithMap() {
 </div>
 
         {/* соцсети (desktop) */}
-        <div className="hidden sm:grid grid-cols-4 gap-[12px] text-xl mt-[1px]">
+        <div className="hidden sm:grid grid-cols-4 gap-[12px] text-3xl mt-[1px]">
           
-          <a href="mailto:info@twin3d.ru" className="w-full flex items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition">
+          <a href="mailto:info@twin3d.ru" className="w-full flex-1 text-center items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition ">
             INFO@TWIN3D.RU
           </a>
           {SOCIALS.map((s) => (
             <a key={s.name} href={s.href} className="w-full flex items-center justify-center gap-2 px-5 py-2 border border-white/20 rounded-[17.52px] font-franklin font-bold text-white/70 hover:text-white hover:bg-white/20 transition">
-              <img src={s.icon} alt={s.name} className="w-5 h-5" />
+              <img src={s.icon} alt={s.name} className="w-7 h-70" />
               {s.name}
             </a>
           ))}
