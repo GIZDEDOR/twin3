@@ -160,7 +160,7 @@ export default function FooterWithMap() {
         {/* =============== Desktop-секция (оставлена без изменений) =============== */}
 
         {/* адрес + часы (desktop) */}
-        <div className="hidden sm:flex justify-between items-end text-[20px] lg:text-[24px] leading-[100%] font-franklin ">
+        <div className="hidden sm:flex justify-between items-end text-[20px] lg:text-[28px] leading-[100%] font-franklin ">
   
   {/* ЛЕВО — прижато вниз */}
   <p className="self-end text-[30px] lg:text-[42px] leading-[90%] w-[45%] whitespace-nowrap">
@@ -168,7 +168,7 @@ export default function FooterWithMap() {
   </p>
 
   {/* ПРАВО — реально у правого края */}
-  <div className="space-y-[2px] w-[55%] text-right text-white/80">
+  <div className="space-y-[2px] w-[55%] text-right text-white/50">
     <p>Москва, БЦ "Амальтея", Большой </p>
     <p>бульвар, д. 40, Инновационный центр</p>
     <p>"Сколково", 4 этаж, помещение XXXIV</p>
