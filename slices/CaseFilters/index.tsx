@@ -242,7 +242,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
                 <div className="w-full text-left mb-[20px]">
                   <div className="text-[#727272] font-proto text-[15px] mb-[2px] uppercase flex gap-2 leading-8">
                     <span>[КЕЙС {item.company.toUpperCase()}]</span>
-                    <span className="opacity-35">[О НАС]</span>
+                    
                   </div>
                   <div className="text-[16px] sm:text-[20px] text-[#8F8F8F] font-standard leading-[1.4] sm:leading-[1] break-words mb-[72px] whitespace-pre-line ml-[2px]">
                     <PrismicRichText field={item.description} />

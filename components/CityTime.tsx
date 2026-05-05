@@ -31,7 +31,7 @@ export default function CityTime() {
       className="w-4 h-4 animate-z-slow"
     />
     <strong className="text-[#939393] text-[17px] font-franklin font-normal uppercase whitespace-nowrap">
-      Moscow 10 — 19
+      Москва 10 — 19
     </strong>
 
     <svg
