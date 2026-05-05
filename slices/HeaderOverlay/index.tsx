@@ -141,7 +141,7 @@ export default function HeaderOverlay({
           className="absolute -top-1 left-5 z-[101] flex items-center gap-2 cursor-pointer mix-blend-difference text-white transition-opacity hover:opacity-80"
           onClick={onClose}
         >
-          <img src="/icons/backiconmenu.svg" alt="Close" className="w-20 h-20 sm:w-20 sm:h-20" />
+          <img src="/icons/backiconmenu1.svg" alt="Close" className="w-20 h-20 sm:w-20 sm:h-20" />
         </div>
       )}
 

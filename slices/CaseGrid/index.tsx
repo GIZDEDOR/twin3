@@ -42,6 +42,7 @@ const STATIC_FALLBACKS: Record<string, { logo?: string; icon?: string }> = {
   // 'HUSTLE & MUSCLE': { logo: '/images/hustle_logo.svg', icon: '/images/hustle_icon.svg' },
 };
 
+
 export default function CaseGrid({ slice }: SliceComponentProps<Content.CaseGridSlice>) {
   const { category } = useCaseFilter();
   const [visible, setVisible] = useState(3);
