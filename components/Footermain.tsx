@@ -32,15 +32,18 @@ export default function Footermain() {
   const socialLinks: Record<string, string> = {
   bh: 'https://behance.net/twin3dproduction',
   tg: 'https://t.me/D_Twin3D',
+  max: "https://max.ru/u/f9LHodD0cOL5ySNgO2iRRxzkGSN6aIMu3_r3wUEeI71lOKt5GLyqXRNo7qY",
 };
 const desktopSocials = [
   { icon: '/icons/tg-icon.svg', name: 'TELEGRAM', key: 'tg' },
   { icon: '/icons/bh-icon.svg', name: 'BEHANCE',  key: 'bh' },
+  { icon: '/icons/ma-icon.svg', name: 'MAX', key: 'max' },
 ];
 
 const mobileSocials = [
   { key: 'bh', icon: '/icons/bh-icon.svg', name: 'BEHANCE' },
   { key: 'tg', icon: '/icons/tg-icon.svg', name: 'TELEGRAM' },
+  { icon: '/icons/ma-icon.svg', name: 'MAX', key: 'max' },
 ];
 
 
