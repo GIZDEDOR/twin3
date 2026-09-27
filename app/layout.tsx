@@ -14,8 +14,8 @@ import KoalaIntro from "@/components/KoalaIntro";
 
 
 export const metadata: Metadata = {
-  title: 'TWIN3D',
-  description: 'Делаем реальность цифровой',
+  title: 'Twin3D — креативный AI CGI продакшн',
+  description: 'AI CGI продакшн полного цикла: рекламные ролики, 3D-аватары, цифровые двойники и маскоты для брендов. Нейросети + 3D-графика. Кейсы, шоурил, расчёт проекта.',
 };
 
 interface RootLayoutProps {
