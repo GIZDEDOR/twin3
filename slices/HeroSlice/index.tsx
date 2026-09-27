@@ -193,7 +193,7 @@ if (window.innerWidth >= 800) {
   const showreelUrl = (slice.primary.showreel_video as FilledLinkToMediaField)?.url;
 
   /* ---------------------------------------------------------------- phrases */
-  const phrases = ['CG-ПРОДАКШН', '3D АВАТАРЫ', 'ЦИФРОВЫЕ ДВОЙНИКИ'];
+  const phrases = ['AI CGI-ПРОДАКШН', '3D АВАТАРЫ', 'ЦИФРОВЫЕ ДВОЙНИКИ'];
 
   /* ---------------------------------------------------------------- render */
   return (
