@@ -45,7 +45,7 @@ export type Case = {
 
 const shortTag = (tag: string): string => {
   const map: Record<string, string> = {
-    '3D-СКАНИРОВАНИЕ': '3D-СKАН',
+    '3D-СКАНИРОВАНИЕ': '3D-СКАН',
     'АВАТАРЫ': 'АВАТАР',
     '3D-ПРОДАКШН': '3D-ПРОДАКШН',
     'ИИ-АВАТАРЫ': 'ИИ-АВАТАРЫ',
