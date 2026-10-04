@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "codegen": "prismic-ts-codegen"
+    "codegen": "prismic-ts-codegen",
+    "test:cases": "node --experimental-strip-types --test tests/project-content.test.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

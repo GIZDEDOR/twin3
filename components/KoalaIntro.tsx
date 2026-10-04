@@ -1,13 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function KoalaIntro() {
+    const isProjectPage = usePathname().startsWith('/projects/');
     const [isVisible, setIsVisible] = useState(true);
     const [isFading, setIsFading] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
+        if (isProjectPage) {
+            setIsVisible(false);
+            return;
+        }
         const tryPlayVideo = () => {
             if (videoRef.current) {
                 videoRef.current.play().catch(() => {
@@ -29,9 +35,13 @@ export default function KoalaIntro() {
 
         window.addEventListener("touchstart", userGesturePlay, { passive: true });
         window.addEventListener("click", userGesturePlay, { passive: true });
-    }, []);
+        return () => {
+            window.removeEventListener("touchstart", userGesturePlay);
+            window.removeEventListener("click", userGesturePlay);
+        };
+    }, [isProjectPage]);
 
-    if (!isVisible) return null;
+    if (!isVisible || isProjectPage) return null;
 
     return (
         <div

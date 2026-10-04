@@ -6,9 +6,11 @@ import { components } from '@/slices';
 
 interface ProjectsClientProps {
   slices: any[];  // при желании можно заменить на конкретный тип из Prismic
+  projectLinks?: Record<string, string>;
+  projectSlugs?: string[];
 }
 
-export default function ProjectsClient({ slices }: ProjectsClientProps) {
+export default function ProjectsClient({ slices, projectLinks = {}, projectSlugs = [] }: ProjectsClientProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   // Определяем мобильное устройство
@@ -28,7 +30,7 @@ export default function ProjectsClient({ slices }: ProjectsClientProps) {
   return (
     <main className="overflow-hidden bg-dark text-white min-h-screen">
       <section className="relative z-10 py-12">
-        <SliceZone slices={displaySlices} components={components} />
+        <SliceZone slices={displaySlices} components={components} context={{ projectLinks, projectSlugs }} />
       </section>
     </main>
   );
