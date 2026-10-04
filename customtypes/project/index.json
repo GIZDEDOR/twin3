@@ -1,0 +1,253 @@
+{
+  "format": "custom",
+  "id": "project",
+  "label": "Кейс",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Основное": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Адрес кейса",
+          "placeholder": "yota"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Заголовок H1",
+          "placeholder": "Yota: bullet time через 3D-скан всей сцены"
+        }
+      },
+      "summary": {
+        "type": "Text",
+        "config": {
+          "label": "Краткое описание",
+          "placeholder": ""
+        }
+      },
+      "cover": {
+        "type": "Image",
+        "config": {
+          "label": "Обложка кейса",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "client_name": {
+        "type": "Text",
+        "config": {
+          "label": "Клиент",
+          "placeholder": ""
+        }
+      },
+      "agency": {
+        "type": "Text",
+        "config": {
+          "label": "Агентство",
+          "placeholder": ""
+        }
+      },
+      "year": {
+        "type": "Number",
+        "config": {
+          "label": "Год"
+        }
+      },
+      "formats": {
+        "type": "Text",
+        "config": {
+          "label": "Формат и носители",
+          "placeholder": ""
+        }
+      },
+      "production_time": {
+        "type": "Text",
+        "config": {
+          "label": "Срок производства",
+          "placeholder": ""
+        }
+      },
+      "category": {
+        "type": "Select",
+        "config": {
+          "label": "Категория",
+          "options": [
+            "РЕКЛАМА",
+            "АВАТАРЫ",
+            "КИНО"
+          ]
+        }
+      },
+      "directions": {
+        "type": "Group",
+        "config": {
+          "label": "Направления",
+          "fields": {
+            "direction": {
+              "type": "Select",
+              "config": {
+                "label": "Направление",
+                "options": [
+                  "3D-продакшн",
+                  "ИИ-продакшн",
+                  "3D-сканирование",
+                  "Аватары"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "task": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Задача",
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,heading3",
+          "allowTargetBlank": true
+        }
+      },
+      "solution": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Решение",
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,heading3",
+          "allowTargetBlank": true
+        }
+      },
+      "result": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Результат",
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,heading3",
+          "allowTargetBlank": true
+        }
+      }
+    },
+    "Видео и кадры": {
+      "videos": {
+        "type": "Group",
+        "config": {
+          "label": "Ролики (первый будет главным)",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Название ролика",
+                "placeholder": ""
+              }
+            },
+            "video": {
+              "type": "Link",
+              "config": {
+                "label": "Прямая ссылка на MP4 или WebM",
+                "select": "web"
+              }
+            },
+            "poster": {
+              "type": "Image",
+              "config": {
+                "label": "Постер ролика",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "Описание видео для поиска",
+                "placeholder": ""
+              }
+            },
+            "upload_date": {
+              "type": "Timestamp",
+              "config": {
+                "label": "Дата публикации видео"
+              }
+            },
+            "duration_seconds": {
+              "type": "Number",
+              "config": {
+                "label": "Длительность в секундах"
+              }
+            }
+          }
+        }
+      },
+      "gallery": {
+        "type": "Group",
+        "config": {
+          "label": "Кадры и making-of",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Кадр",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "caption": {
+              "type": "Text",
+              "config": {
+                "label": "Подпись",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Title (название в поиске)",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Description (описание в поиске)",
+          "placeholder": ""
+        }
+      },
+      "og_image": {
+        "type": "Image",
+        "config": {
+          "label": "Превью ссылки 1200 × 630",
+          "constraint": {
+            "width": 1200,
+            "height": 630
+          },
+          "thumbnails": []
+        }
+      },
+      "noindex": {
+        "type": "Boolean",
+        "config": {
+          "label": "Скрыть от поисковиков",
+          "default_value": false
+        }
+      }
+    },
+    "Ссылки": {
+      "behance_link": {
+        "type": "Link",
+        "config": {
+          "label": "Полная версия на Behance",
+          "select": "web"
+        }
+      },
+      "contact_link": {
+        "type": "Link",
+        "config": {
+          "label": "Ссылка кнопки «Хочу похожий проект» (необязательно)",
+          "select": "web"
+        }
+      }
+    }
+  }
+}

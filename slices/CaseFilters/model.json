@@ -98,6 +98,16 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "project": {
+          "type": "Link",
+          "config": {
+            "label": "Страница кейса (выберите опубликованный Кейс)",
+            "select": "document",
+            "customtypes": [
+              "project"
+            ]
+          }
         }
       }
     }

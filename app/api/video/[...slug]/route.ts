@@ -2,9 +2,9 @@
 import { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-export async function GET(request: NextRequest, { params }: { params: { slug: string[] } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ slug: string[] }> }) {
   // собираем путь в CDN из params.slug, например: ["twin3","aHbVbEMqNJQqH8Rf_showreel.webm"]
-  const cdnPath = params.slug.join('/');
+  const cdnPath = (await params).slug.join('/');
   const upstreamUrl = `https://twin3.cdn.prismic.io/${cdnPath}`;
 
   // берём оригинальный Range‑заголовок (или пустую строку)

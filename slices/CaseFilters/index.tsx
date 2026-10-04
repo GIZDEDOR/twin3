@@ -9,11 +9,15 @@ import { JSX } from 'react';
 import { RichTextField } from '@prismicio/client';
 import { PrismicRichText } from '@prismicio/react';
 import React from 'react'; // ← добавили этот импорт
+import { ProjectLink } from '@/components/projects/ProjectNavigation';
+import { projectCardDestination } from '@/lib/project-card';
+import styles from './case-filters.module.css';
 
-export type CaseFiltersProps = SliceComponentProps<Content.CaseFiltersSlice>;
+export type CaseFiltersProps = SliceComponentProps<Content.CaseFiltersSlice, { projectLinks?: Record<string, string>; projectSlugs?: string[] }>;
 
 /* ---------------------- Типизация элемента items ---------------------- */
 type PrismicCaseItem = {
+  project?: { id?: string; isBroken?: boolean };
   title: string | null;
   logo: { url: string } | null;
   category: string | null;
@@ -29,6 +33,7 @@ type PrismicCaseItem = {
 };
 
 export type Case = {
+  projectUrl: string | null;
   title: string;
   logo: string | null;
   category: string;
@@ -59,11 +64,12 @@ const normalizeTag = (tag: string): string => {
   return tag;
 };
 
-export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
+export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.Element {
   const { category, setCategory, subfilter, setSubfilter } = useCaseFilter();
   const items = slice.items as unknown as PrismicCaseItem[];
 
   const cases: Case[] = items.map((item) => ({
+    projectUrl: projectCardDestination(item, context?.projectLinks, context?.projectSlugs).projectUrl,
     title: item.title || '',
     logo: item.logo?.url || null,
     category: item.category || '',
@@ -74,7 +80,7 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     description: item.description || '',
     companyLogo: item.companyLogo?.url || null,
     poster: item.poster?.url || null,
-    link: item.link?.url || null,
+    link: projectCardDestination(item, context?.projectLinks, context?.projectSlugs).externalUrl,
     award: item.award?.url || null,
   }));
 
@@ -251,12 +257,16 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
 
                 <div className="flex justify-between items-end gap-2 mt-auto">
                   <div className="flex gap-[12.8px]">
-                    {item.link ? (
-                      <a href={item.link} className="inline-block">
-                        <CaseButton primary>ПОКАЗАТЬ КЕЙС</CaseButton>
+                    {item.projectUrl ? (
+                      <ProjectLink href={item.projectUrl} className={caseLinkClass}>
+                        ПОКАЗАТЬ КЕЙС
+                      </ProjectLink>
+                    ) : item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className={caseLinkClass}>
+                        ПОКАЗАТЬ КЕЙС
                       </a>
                     ) : (
-                      <CaseButton primary disabled>ПОКАЗАТЬ КЕЙС</CaseButton>
+                      <button disabled className={caseLinkClass}>ПОКАЗАТЬ КЕЙС</button>
                     )}
                     {fullVideoSrc ? (
                       <CaseButton onClick={() => openModal(fullVideoSrc)}>ВИДЕО</CaseButton>
@@ -325,6 +335,8 @@ export default function CaseFilters({ slice }: CaseFiltersProps): JSX.Element {
     </main>
   );
 }
+
+const caseLinkClass = styles.caseLink + ' flex items-center justify-center rounded-[7px] sm:rounded-[12px] font-franklin font-extrabold uppercase tracking-tight text-[14px] px-3 py-1 sm:text-[20px] sm:px-[12.82px] sm:py-[9.6px] min-w-0';
 
 function CaseButton({
   children,
