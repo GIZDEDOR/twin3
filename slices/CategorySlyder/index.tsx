@@ -36,12 +36,6 @@ const slidesMeta: Record<string, {
     desc: `СОЗДАЁМ ВЫСОКОДЕТАЛИЗИРОВАННЫЕ\n3D ДВОЙНИКИ ЛЮДЕЙ И ОБЪЕКТОВ\nС ПОМОЩЬЮ СОБСТВЕННЫХ 3D-СКАНЕРОВ.`,
     label: '3D-СКАНИРОВАНИЕ',
   },
-  'ai-avatars': {
-    tag: '[AI-AVATARS]',
-    about: '[О НАС]',
-    desc: 'Нейросетевые аватары любой сложности:\n от вымышленных героев до фотореализма.\n Интеграция в CG и Al-контент без искажения\n визуального образа персонажа.',
-    label: 'ИИ-АВАТАРЫ',
-  },
 };
 
 export default function CategorySlyder({ slice }: SliceComponentProps<CaseSlyderSlice>) {

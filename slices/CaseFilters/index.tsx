@@ -12,6 +12,7 @@ import React from 'react'; // ← добавили этот импорт
 import { ProjectLink } from '@/components/projects/ProjectNavigation';
 import { projectCardDestination } from '@/lib/project-card';
 import styles from './case-filters.module.css';
+import { buildProjectCatalogue, caseCountLabel, type CatalogueVideo } from '@/lib/project-catalogue';
 
 export type CaseFiltersProps = SliceComponentProps<Content.CaseFiltersSlice, { projectLinks?: Record<string, string>; projectSlugs?: string[] }>;
 
@@ -33,6 +34,7 @@ type PrismicCaseItem = {
 };
 
 export type Case = {
+  videos: CatalogueVideo[];
   projectUrl: string | null;
   title: string;
   logo: string | null;
@@ -59,30 +61,30 @@ const shortTag = (tag: string): string => {
   return map[tag] || tag;
 };
 
-const normalizeTag = (tag: string): string => {
-  if (tag === 'CG-ПРОДАКШН') return '3D-ПРОДАКШН';
-  return tag;
-};
-
 export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.Element {
   const { category, setCategory, subfilter, setSubfilter } = useCaseFilter();
   const items = slice.items as unknown as PrismicCaseItem[];
 
-  const cases: Case[] = items.map((item) => ({
-    projectUrl: projectCardDestination(item, context?.projectLinks, context?.projectSlugs).projectUrl,
+  const cases: Case[] = buildProjectCatalogue(items).map(({ item, videos, destinationSource, isFilm, synthetic }) => {
+    const destination = projectCardDestination(destinationSource, context?.projectLinks, context?.projectSlugs);
+    const kinoUrl = context?.projectSlugs?.includes('kino') ? '/projects/kino' : null;
+    return ({
+    videos,
+    projectUrl: isFilm || synthetic ? kinoUrl : destination.projectUrl,
     title: item.title || '',
     logo: item.logo?.url || null,
     category: item.category || '',
-    tags: item.tags?.split(',').map((t) => normalizeTag(t.trim())) || [],
+    tags: item.tags?.split(',').map(t => t.trim()) || [],
     video1: item.video1?.url || null,
     fullVideo: item.fullVideo?.url || null,
     company: item.company || '',
     description: item.description || '',
     companyLogo: item.companyLogo?.url || null,
     poster: item.poster?.url || null,
-    link: projectCardDestination(item, context?.projectLinks, context?.projectSlugs).externalUrl,
+    link: isFilm || synthetic ? null : destination.externalUrl || (!destination.projectUrl ? item.link?.url || null : null),
     award: item.award?.url || null,
-  }));
+  });
+  });
 
   const categories = Array.from(new Set(cases.map((c) => c.category))).map(
     (label) => ({
@@ -111,15 +113,18 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
   }, [category, subfilter, activeSubfilters, setSubfilter]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalVideoSrc, setModalVideoSrc] = useState<string | null>(null);
+  const [modalVideos, setModalVideos] = useState<CatalogueVideo[]>([]);
+  const [modalVideoIndex, setModalVideoIndex] = useState(0);
+  const modalVideo = modalVideos[modalVideoIndex];
 
-  const openModal = (src: string) => {
-    setModalVideoSrc(src);
+  const openModal = (videos: CatalogueVideo[]) => {
+    setModalVideos(videos);
+    setModalVideoIndex(0);
     setIsModalOpen(true);
   };
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalVideoSrc(null);
+    setModalVideos([]);
   };
 
 
@@ -153,7 +158,7 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
                     isActive ? 'text-[#C3C3C3]' : 'text-[#949494]/35'
                   } text-[0.6rem] leading-none mt-[0.1rem]`}
                 >
-                  [{cat.count} КЕЙСОВ]
+                  [{cat.count} {caseCountLabel(cat.count)}]
                 </span>
               </button>
             );
@@ -185,7 +190,7 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
                     isActive ? 'text-[#C3C3C3]' : 'text-[#949494]/35'
                   }`}
                 >
-                  [{cat.count} КЕЙСОВ]
+                  [{cat.count} {caseCountLabel(cat.count)}]
                 </span>
               </button>
             );
@@ -232,7 +237,8 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
             const fullVideoSrc = item.fullVideo;
             return (
               <div
-                key={i}
+                key={`${item.video1 || item.title}-${item.title}-${i}`}
+                data-project-card={item.title}
                 className="bg-[#1A1A1A] border border-[#767676] rounded-[20px] w-full px-[20px] pb-[23px] pt-[20px] flex flex-col shadow-lg"
                 style={{ boxShadow: '0 0 0 1.2px #363636' }}
               >
@@ -265,11 +271,9 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
                       <a href={item.link} target="_blank" rel="noopener noreferrer" className={caseLinkClass}>
                         ПОКАЗАТЬ КЕЙС
                       </a>
-                    ) : (
-                      <button disabled className={caseLinkClass}>ПОКАЗАТЬ КЕЙС</button>
-                    )}
+                    ) : null}
                     {fullVideoSrc ? (
-                      <CaseButton onClick={() => openModal(fullVideoSrc)}>ВИДЕО</CaseButton>
+                      <CaseButton onClick={() => openModal(item.videos)}>ВИДЕО</CaseButton>
                     ) : (
                       <CaseButton disabled>ВИДЕО</CaseButton>
                     )}
@@ -314,14 +318,22 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
 
       {/* Модалка */}
       {isModalOpen &&
-        modalVideoSrc &&
+        modalVideo &&
         createPortal(
           <div
             className="fixed inset-0 z-[120] flex items-center justify-center bg-black/80 backdrop-blur-sm"
             onClick={closeModal}
           >
             <div className="relative w-full max-w-3xl aspect-video" onClick={(e) => e.stopPropagation()}>
-              <video src={modalVideoSrc} controls autoPlay className="w-full h-full object-cover rounded-lg" />
+              <video key={modalVideo.src} src={modalVideo.src} poster={modalVideo.poster} aria-label={modalVideo.name} controls autoPlay playsInline className="w-full h-full object-cover rounded-lg" />
+              {modalVideos.length > 1 && (
+                <div className="flex flex-wrap gap-2 mt-3" aria-label="Ролики проекта">
+                  {modalVideos.map((video, index) => (
+                    <button key={video.src} type="button" className={caseLinkClass} aria-pressed={index === modalVideoIndex}
+                      onClick={() => setModalVideoIndex(index)}>{video.name}</button>
+                  ))}
+                </div>
+              )}
               <button
                 onClick={closeModal}
                 className="absolute -right-3 -top-3 w-9 h-9 rounded-full bg-white text-black flex items-center justify-center font-bold text-xl"
