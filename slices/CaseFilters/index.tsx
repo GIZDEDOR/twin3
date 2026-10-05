@@ -106,6 +106,21 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
     ? filteredByCategory.filter((c) => c.tags.includes(subfilter))
     : filteredByCategory;
 
+  // Reposition only Gazprombank within the active tag; preserve every other card's order.
+  if (subfilter === '3D-ПРОДАКШН' || subfilter === 'АВАТАРЫ') {
+    const bankIndex = filteredCases.findIndex(c => c.company.trim().toLowerCase() === 'газпромбанк');
+    if (bankIndex >= 0) {
+      const others = filteredCases.filter((_, index) => index !== bankIndex);
+      const anchorIndex = subfilter === 'АВАТАРЫ'
+        ? others.findIndex(c => c.company.trim().toLowerCase() === 'amazing red')
+        : -1;
+      if (subfilter === '3D-ПРОДАКШН' || anchorIndex >= 0) {
+        const [bank] = filteredCases.splice(bankIndex, 1);
+        filteredCases.splice(subfilter === '3D-ПРОДАКШН' ? Math.min(4, others.length) : anchorIndex + 1, 0, bank);
+      }
+    }
+  }
+
   useEffect(() => {
     if (subfilter && !activeSubfilters.includes(subfilter)) {
       setSubfilter(null);
