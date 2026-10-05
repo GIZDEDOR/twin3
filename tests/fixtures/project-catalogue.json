@@ -1,0 +1,3058 @@
+[
+  {
+    "title": "RuStore",
+    "logo": {
+      "dimensions": {
+        "width": 1538,
+        "height": 743
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/R7kyB2zALRTptzfW_LOGO.png?auto=format,compress",
+      "id": "R7kyB2zALRTptzfW",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "АВАТАРЫ",
+    "tags": "3D-ПРОДАКШН, АВАТАРЫ",
+    "video1": {
+      "link_type": "Web",
+      "key": "34d1d461-dddc-4ac9-bb84-003381320a3f",
+      "url": "https://videos.twin3d.ru/media/videos/RuStore.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "15c3260d-38b4-40e3-8a3b-6b6526fffd6f",
+      "url": "https://videos.twin3d.ru/media/videos/RuStore.webm"
+    },
+    "company": "RuStore",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Разработали маскота RuStore - медведя по имени Айс.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Взяли за основу 2D-образ RuStore и оживили его, превратив в объемного 3D-персонажа с его историей и характером.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Перед нами стояла задача создать не просто технологичного маскота, а настоящего доброго друга для пользователей.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Проработали объем, детализацию меха, ткани и мимику, чтобы он стал живым, мягким и отзывчивым.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 1538,
+        "height": 743
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/R7kyB2zALRTptzfW_LOGO.png?auto=format,compress",
+      "id": "R7kyB2zALRTptzfW",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 5504,
+        "height": 3072
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/jVmOjNxU7U70SPIo_RuStore.webp?auto=format,compress",
+      "id": "jVmOjNxU7U70SPIo",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Sensia",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "5afe5caf-4d33-407b-a2e6-cc6895f87c43",
+      "url": "https://videos.twin3d.ru/media/videos/Sensia.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "9cc2946a-04e2-48b2-a272-e5083e11d1c6",
+      "url": "https://videos.twin3d.ru/media/videos/Sensia.webm"
+    },
+    "company": "Sensia",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Собрали контент для линейки легких напитков Sensia",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Обошли долгий продакшн:",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Срезали косты и время на локациях. Фоны сгенерированы нейросетями. Отказались от выездов на натуру, аренды павильонов и тяжелого 3D-рендера.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Собрали гибридный композ. Бесшовно объединили в CGI-пайплайне живую актрису, 3D-графику и сгенерированные ИИ-пространства.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Результат: нейросети забрали рутину, мы уложились в сжатые сроки и выдали идеальный фотореал.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 702,
+        "height": 250
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/1q9wJIxkqFObrorp_logo_sensia1.png?auto=format,compress",
+      "id": "1q9wJIxkqFObrorp",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/uSo9Fm90iKBZb90X_Sensia-0-00-04-22-.png?auto=format,compress",
+      "id": "uSo9Fm90iKBZb90X",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Динопарк",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "1e729a53-8725-4bb6-a8fb-a4bc646d20f9",
+      "url": "https://videos.twin3d.ru/media/videos/dinopark.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "8aa430a2-a9be-462d-8d0e-d0326d2bd025",
+      "url": "https://videos.twin3d.ru/media/videos/dinopark.webm"
+    },
+    "company": "Динопарк",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "«Видно из Китая и из космоса!» \n\nИменно с таких новостей мы начинаем презентацию кейса, которым искренне гордимся. Совместно с холдингом GRATA Adv и учеными мы создали исторически достоверный проект для амурского Динопарка.\nЧто внутри:\nФасадный 3D-ролик (2 мин). Умная адаптация под время суток: днем — яркая динамика, собирающая толпы, вечером — таинственная атмосфера доисторического леса.\nИнтерактивный маскот. Главный гид парка, который встречает гостей, проводит экскурсии и затягивает в игры.",
+        "spans": [
+          {
+            "start": 136,
+            "end": 137,
+            "type": "strong"
+          },
+          {
+            "start": 146,
+            "end": 147,
+            "type": "strong"
+          },
+          {
+            "start": 261,
+            "end": 262,
+            "type": "strong"
+          },
+          {
+            "start": 412,
+            "end": 413,
+            "type": "strong"
+          }
+        ],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 3328,
+        "height": 1280
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aj07iFbRV8_Qf4Zq_DINOSAURUS_3328x1280_MASTER_h256-0-01-11-22-.png?auto=format,compress",
+      "id": "aj07iFbRV8_Qf4Zq",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "2e4e672c-5bc1-4561-8cf1-0cf55dfccfee",
+      "url": "https://www.behance.net/gallery/251553205/Amur-Dino-Park"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "КХЛ",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "2b008875-3091-4d0a-ba4a-93500193e34f",
+      "url": "https://videos.twin3d.ru/media/videos/KHL.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "60b8d51f-3042-4e4a-afe1-6933542ea47c",
+      "url": "https://videos.twin3d.ru/media/videos/KHL.webm"
+    },
+    "company": "КХЛ",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Собрали контент для одного из главных чемпионатов Европы — КХЛ. Отсканировали реальный Кубок Гагарина. Выдали чистый фотореал со всех ракурсов, что позволило сделать динамичные пролеты камеры вблизи кубка, демонстрируя все уникальные детали и блики оригинала. Сделали полный цикл от идеи до рендера с упором на качественный CG со спецэффектами. Наш 3D-Кубок забрал себе часть эфира на федеральном канале, а так же крутится на медиакубах стадионов.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 552,
+        "height": 578
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aiKcOQeQX7-eW17m_%D0%BA%D1%85%D0%BB_%D0%BB%D0%BE%D0%B3%D0%BE1.png?auto=format,compress",
+      "id": "aiKcOQeQX7-eW17m",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aiKXKQeQX7-eW1tL_KHL_1920x1080_V3-0-00-03-19-.png?auto=format,compress",
+      "id": "aiKXKQeQX7-eW1tL",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Космическая собака Лида",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "96a56c56-3129-4c2f-9c13-dfab5baf20f0",
+      "url": "https://videos.twin3d.ru/media/videos/Dog_cosmos_lida.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "81ec0c4f-7c8e-41f2-8fc9-8863d6d6c1c0",
+      "url": "https://videos.twin3d.ru/media/videos/Dog_cosmos_lida.webm"
+    },
+    "company": "Космическая собака Лида",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для комедии «Космическая собака Лида» мы оцифровали актера, чтобы помочь реализовать сцену встречи героя с самим собой из будущего.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ирония проекта в том, что наш математически точный 3D-аватар стал лишь базой для сложной графики, которая изменила артиста до полной неузнаваемости.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aiGZ5geQX7-eWvm3_%D0%9A%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B0_%D0%9B%D0%B8%D0%B4%D0%B0_%D0%A2%D1%80%D0%B5%D0%B9%D0%BB%D0%B5%D1%80_2026-0-00-06-16-.png?auto=format,compress",
+      "id": "aiGZ5geQX7-eWvm3",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Ханна - русская красавица",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "673a4bdf-cbf3-41d4-ae08-8eba5b5f3df8",
+      "url": "https://videos.twin3d.ru/media/videos/hanna_25_sec.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "fa874ff5-b7b1-45a1-ac7d-ec43bb3d5ce8",
+      "url": "https://videos.twin3d.ru/media/videos/hanna_25_sec.webm"
+    },
+    "company": "Ханна - русская красавица",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Новый клип Ханны — «Русская красавица» уже в сети!",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Мы создали для проекта атмосферные ИИ-лабиринты. Сделали быстро и технологично: ",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Наш пайплайн генерации фонов оптимизировал бюджет на графику. А с помощью сложного бесшовного композа мы соединили реальные съемки с виртуальным пространством.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 3840,
+        "height": 2160
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aiAyFgeQX7-eWqYE_HANNA_25_SEC_TEST_RENDER-0-00-03-19-.png?auto=format,compress",
+      "id": "aiAyFgeQX7-eWqYE",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "FreshBar",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "87ab7631-a3a9-404e-8c3f-af1912ccbbc1",
+      "url": "https://videos.twin3d.ru/media/videos/DILARA-2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "fc32d150-7c8c-4543-82af-2b8136133faf",
+      "url": "https://videos.twin3d.ru/media/videos/DILARA-2.webm"
+    },
+    "company": "FreshBar",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Дилара - топовый инфлюенсер,  и амбассадор FreshBar!",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Два ролика с Диларой за 5 дней! Весь процесс - от съемок на зеленом фоне до финального рендера - был завязан на интеграции нейросетей. С помощью ИИ мы создали кастомные фоны. Техническая часть: трекинг, клинап и композ выполнены на уровне топовых стандартов CGI.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 432,
+        "height": 578
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/afoY4sBOoF08xo0e_%D0%BB%D0%BE%D0%B3%D0%BE_%D1%84%D1%80%D0%B5%D1%88%D0%B1%D0%B0%D1%80.png?auto=format,compress",
+      "id": "afoY4sBOoF08xo0e",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/afoJ1cBOoF08xohz_D.jpg?auto=format,compress",
+      "id": "afoJ1cBOoF08xohz",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "23611606-faa2-480f-8e94-1d8631924f65",
+      "url": "https://www.behance.net/gallery/249710895/Fresh-Bar"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "FreshBar",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "e845a060-00dd-4069-aa6a-b13a0d7464a6",
+      "url": "https://videos.twin3d.ru/media/videos/MAXIM-2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "136aed8e-e3f4-4465-be52-16253c38bcb3",
+      "url": "https://videos.twin3d.ru/media/videos/MAXIM-2.webm"
+    },
+    "company": "FreshBar",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Максим Лутчак - блогер, и амбассадор FreshBar!",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Два ролика с Максимом за 5 дней! Это был настоящий челлендж. Сняли героев на хромакее, а дальше начался «магический» этап постпродакшена: трекинг, клинап и композ.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 432,
+        "height": 578
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/afoY4sBOoF08xo0e_%D0%BB%D0%BE%D0%B3%D0%BE_%D1%84%D1%80%D0%B5%D1%88%D0%B1%D0%B0%D1%80.png?auto=format,compress",
+      "id": "afoY4sBOoF08xo0e",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/afoKbsBOoF08xoiT_M.jpg?auto=format,compress",
+      "id": "afoKbsBOoF08xoiT",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "8da435d7-6fe6-4d8a-be41-06f62b9ae322",
+      "url": "https://www.behance.net/gallery/249710895/Fresh-Bar"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Ситидрайв Сберёга",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTsJgIvOtkhBT0R_CityDriveLow.png?auto=format,compress",
+      "id": "aWTsJgIvOtkhBT0R",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "4e0a382c-8bed-47f9-9990-d5d0d394c699",
+      "url": "https://videos.twin3d.ru/media/videos/SBERREGA.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "08454e13-ece5-4cfd-803d-3fbaa24eb6f4",
+      "url": "https://videos.twin3d.ru/media/videos/SBERREGA.webm"
+    },
+    "company": "СИТИДРАЙВ",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Разработали для Ситидрайва обучающий промо-ролик «Сберёга» о механике накопления баллов. Выполнили CG-продакшн «под ключ» — только классическая 3D-анимация и стопроцентно контролируемый коммерческий результат.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTsJgIvOtkhBT0R_CityDriveLow.png?auto=format,compress",
+      "id": "aWTsJgIvOtkhBT0R",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aarRBFxvIZEnjabO_image.png?auto=format,compress",
+      "id": "aarRBFxvIZEnjabO",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "COOLCOLA",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "АВАТАРЫ",
+    "tags": "3D-ПРОДАКШН, АВАТАРЫ",
+    "video1": {
+      "link_type": "Web",
+      "key": "e0c4f16b-ba31-4a58-9072-647d2a0d9289",
+      "url": "https://videos.twin3d.ru/media/videos/сс_chars_v2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "c0dc0d98-e3c4-4fad-9f96-4613af4385eb",
+      "url": "https://videos.twin3d.ru/media/videos/сс_chars_v2.webm"
+    },
+    "company": "Очаково",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Мы в Twin3D оживили бренд CoolCola — встречайте дерзкую красную Коалу и уверенную синюю Акулу. Два характера, один вайб — максимум энергии и фана.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "От идеи до финального 3D — сделали персонажей, которые качают айдентику и готовы зажигать в рекламе, диджитале и анимации.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aaf9KVxvIZEnjTlm_image.png?auto=format,compress",
+      "id": "aaf9KVxvIZEnjTlm",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "46e9da6f-230e-469e-80fa-27a1a4a38bdf",
+      "url": "https://www.behance.net/gallery/247576923/COOL-COLA-new-year-campaign"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Амбене",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, 3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "8396b327-93cc-440d-a534-7faeadf08873",
+      "url": "https://videos.twin3d.ru/media/videos/ambene.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "118c38d7-0ede-4d12-8883-6be1d1e75e22",
+      "url": "https://videos.twin3d.ru/media/videos/ambene.webm"
+    },
+    "company": "Амбене",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Кейс «Амбене»: создание графики на основе 3D-сканирования реального костюма для обеспечения максимальной точности и детализации.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aaiaRlxvIZEnjVXD_icon-2.png?auto=format,compress",
+      "id": "aaiaRlxvIZEnjVXD",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2541,
+        "height": 1199
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aYw0m90YXLCxVrG1_ambene.png?auto=format,compress",
+      "id": "aYw0m90YXLCxVrG1",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "VK Видео",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "8b8c103a-7f13-4a09-afea-05b0f225a24f",
+      "url": "https://videos.twin3d.ru/media/videos/VK_3.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "574d8846-26f7-46e3-98cd-eb11c615e4a8",
+      "url": "https://videos.twin3d.ru/media/videos/VK_3.webm"
+    },
+    "company": "ВК",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Финальный ролик завершил новогоднюю историю Глазиков, подводя итог их праздничным приключениям. Благодаря уникальному CGI-пайплайну производство трех роликов заняло 2 недели и обеспечило «ламповую» атмосферу и детализированную графику.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTkFQIvOtkhBToJ_5c094cfc-f640-4826-a7e0-a4779eb04a3e.png?auto=format,compress",
+      "id": "aWTkFQIvOtkhBToJ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "5d23bbbc-18f2-47eb-b7c0-69bd079aa77e",
+      "url": "https://www.behance.net/gallery/244317913/New-year-with-VK-VIDEO"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "VK Видео",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "b394244c-51c8-4dcd-bf22-a1fe721d1973",
+      "url": "https://videos.twin3d.ru/media/videos/VK_2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "d2a5261c-f118-407f-ae7c-6d886bec4ac6",
+      "url": "https://videos.twin3d.ru/media/videos/VK_2.webm"
+    },
+    "company": "ВК",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Второй ролик из новогодней серии для федеральной ТВ-кампании VK Видео. Ролик продолжает историю о праздничных приключениях. Благодаря уникальному CGI-пайплайну, создали все три ролика кампании за 2 недели, сохранив «ламповую» атмосферу и детализированную графику.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTerQIvOtkhBTeD_f92027a8-9927-4a11-b442-93e72d962601.png?auto=format,compress",
+      "id": "aWTerQIvOtkhBTeD",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "2ed2dea7-a23a-4da5-abb0-9c6882ec0dff",
+      "url": "https://www.behance.net/gallery/244317913/New-year-with-VK-VIDEO"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "COOLCOLA",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "dd686595-21ff-448e-be0b-241b0dc5664d",
+      "url": "https://videos.twin3d.ru/media/videos/CC3.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "3e4a4e46-8199-46de-83e7-a9613e85d2db",
+      "url": "https://videos.twin3d.ru/media/videos/CC3.webm"
+    },
+    "company": "Очаково",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Этот ролик завершил праздничную рекламную трилогию для COOLCOLA (Очаково). Как и предыдущие части, проект создан на стыке 3D-графики и нейросетей, что позволило сохранить единый цифровой стиль и ощущение одной большой истории.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTRkwIvOtkhBStF_CC3.png?auto=format,compress",
+      "id": "aWTRkwIvOtkhBStF",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "be1e1e45-8bac-4ad2-bd12-9f164fe23ff3",
+      "url": "https://www.behance.net/gallery/247576923/COOL-COLA-new-year-campaign"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "COOLCOLA",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "f68865ad-ce54-4d9b-a5ec-01167484ba19",
+      "url": "https://videos.twin3d.ru/media/videos/CoolColaBill.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "dd4646ff-e96b-41ce-adab-e5ba9cc7f658",
+      "url": "https://videos.twin3d.ru/media/videos/CoolColaBill.webm"
+    },
+    "company": "Очаково",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создали CG-ролики для новогодней кампании 360° бренда COOLCOLA (Очаково). Их разместили на медиафасадах и ключевых 3D-билбордах Москвы, где маскоты — Акула и Коала — эффектно «выходили» из плоскости.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVetLnNYClf9ou0b_image_2026-01-02_14-33-46.png?auto=format,compress",
+      "id": "aVetLnNYClf9ou0b",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "bc3a5f5b-7983-4fad-bec4-0bb8d172384e",
+      "url": "https://www.behance.net/gallery/247576923/COOL-COLA-new-year-campaign"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Буратино",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "64021297-547a-478f-8b9b-44ab6943e7a9",
+      "url": "https://videos.twin3d.ru/media/videos/Burat.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "1e26f3c1-b4d8-40ce-84fa-aa9ec3180ecc",
+      "url": "https://videos.twin3d.ru/media/videos/Burat.webm"
+    },
+    "company": "Буратино",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для кинокартины \"Буратино\" создали цифровых двойников актеров и локаций для сложной компьютерной графики, которая помогла оживить волшебный мир на экране",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWdm7AIvOtkhBfOl_Burat.jpg?auto=format,compress",
+      "id": "aWdm7AIvOtkhBfOl",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "VK Видео",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "35031b38-7f28-4455-a056-f3177043603f",
+      "url": "https://videos.twin3d.ru/media/videos/vk_federal.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "bb05cf35-9130-4572-aadb-59fc4ead7a39",
+      "url": "https://videos.twin3d.ru/media/videos/vk_federal.webm"
+    },
+    "company": "VK",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Первый ролик из предновогодней серии для федеральной ТВ-кампании VK Видео. Для его создания мы разработали уникальный CGI пайплайн. Это позволило сделать все три ролика всего за две недели, добившись «лампового», детализированного визуала с проработкой мельчайших частиц.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVJkBnNYClf9oq_r_96eb1e13-0b70-412e-a33d-f245d39e4102.png?auto=format,compress",
+      "id": "aVJkBnNYClf9oq_r",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "2e2368ea-52ef-4899-98e0-277c5c942e9d",
+      "url": "https://www.behance.net/gallery/244317913/New-year-with-VK-VIDEO"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "VK Музыка",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWT-jgIvOtkhBUgI_VK%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0628.png?auto=format,compress",
+      "id": "aWT-jgIvOtkhBUgI",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "АВАТАРЫ",
+    "tags": "ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "fd47c169-79e9-411a-92fd-34cc2022ac13",
+      "url": "https://videos.twin3d.ru/media/videos/VK_Music.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "dc585df8-1bc7-4976-99cb-b43a2174fa20",
+      "url": "https://videos.twin3d.ru/media/videos/VK_Music.webm"
+    },
+    "company": "VK",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создали тизер для эксклюзива VK Музыки и O₂ - аудиоверсии мегапопулярной корейской веб-новеллы «Точка зрения Всеведущего читателя»",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Весь ролик, включая персонажа, создан в нейросетях.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWT-jgIvOtkhBUgI_VK%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0628.png?auto=format,compress",
+      "id": "aWT-jgIvOtkhBUgI",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1012,
+        "height": 1267
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVJFsXNYClf9oq0N_image.png?auto=format,compress",
+      "id": "aVJFsXNYClf9oq0N",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "VK Видео",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "792f4789-f51e-4739-95ce-67b95af9cfd7",
+      "url": "https://videos.twin3d.ru/media/videos/VK_insta_v3.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "77735ec6-9183-4bbe-a6d3-b4d749f3f725",
+      "url": "https://videos.twin3d.ru/media/videos/VK_insta_v3.webm"
+    },
+    "company": "VK",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создали предновогодние ролики с Глазками для DOOH и Digital рекламной кампании в разных городах России",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9I9EMqNJQqHvTQ_vkthai.png?auto=format,compress",
+      "id": "aG9I9EMqNJQqHvTQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1264,
+        "height": 1267
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVJo4nNYClf9orA9_0d27f179-322b-4965-94b3-c9c404d11976.png?auto=format%2Ccompress&rect=165%2C292%2C973%2C975&w=1264&h=1267",
+      "id": "aVJo4nNYClf9orA9",
+      "edit": {
+        "x": 165,
+        "y": 292,
+        "zoom": 1.3,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "477fd24a-aa33-4373-83e3-398627b20815",
+      "url": "https://www.behance.net/gallery/244317913/New-year-with-VK-VIDEO"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "COOLCOLA",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "b09f95e6-159a-4419-913d-7bb297f18102",
+      "url": "https://videos.twin3d.ru/media/videos/CC2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "a164d4ed-0060-495b-a594-1139b09c76ef",
+      "url": "https://videos.twin3d.ru/media/videos/CC2.webm"
+    },
+    "company": "Очаково",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Один из трёх роликов праздничной рекламной кампании бренда COOLCOLA (Очаково) . В сцены с динамичной поездкой мы спрятали несколько смелых отсылок. Весь проект создан на стыке CG и ИИ. Все три ролика объединены единым цифровым стилем.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVJNVHNYClf9oq3O_9cea9ece-ab5a-47e9-b3da-cb61a71f767d.png?auto=format,compress",
+      "id": "aVJNVHNYClf9oq3O",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "ad038589-bc7c-41ce-9276-c1056867fae7",
+      "url": "https://www.behance.net/gallery/247576923/COOL-COLA-new-year-campaign"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "COOLCOLA",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "ab760706-18e3-4c9d-9544-190d4d685984",
+      "url": "https://videos.twin3d.ru/media/videos/СС1.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "4ce76df1-a5ad-47d4-ad8c-6ac456fd359e",
+      "url": "https://videos.twin3d.ru/media/videos/СС1.webm"
+    },
+    "company": "Очаково",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Данный ролик — один эпизод из праздничной рекламной кампании бренда COOLCOLA (Очаково). Ролик создан на стыке 3D-графики и нейросетей. Вся графика в трёх роликах сделана в едином цифровом стиле, чтобы они выглядели как главы одной истории.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTq4QIvOtkhBTxa_CC628%D1%85249Low.png?auto=format,compress",
+      "id": "aWTq4QIvOtkhBTxa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVJMDnNYClf9oq2e_c486d5f5-c0f5-460e-942d-006ffdcb566b.png?auto=format,compress",
+      "id": "aVJMDnNYClf9oq2e",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "0d0ddcd7-a417-46fb-806c-2d577be0087a",
+      "url": "https://www.behance.net/gallery/247576923/COOL-COLA-new-year-campaign"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "[КЕЙС АНВИМАКС]",
+    "logo": {
+      "dimensions": {
+        "width": 2368,
+        "height": 1028
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVO6tHNYClf9osOS_422ceffa-a01f-479e-871a-ba9a43631130.png?auto=format,compress",
+      "id": "aVO6tHNYClf9osOS",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "7214c4bb-8dfb-4113-8ff2-8b6ec9abb853",
+      "url": "https://videos.twin3d.ru/media/videos/anvimax_0001-0251.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "4ede1c30-6ec6-4870-b8a3-dc5d1c740999",
+      "url": "https://videos.twin3d.ru/media/videos/anvimax_0001-0251.webm"
+    },
+    "company": "Анвимакс",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для рекламы Анвимакс мы полностью сгенерировали окружение нейросетями, отказавшись от реальной съёмки. Это освободило от поиска локаций и зависимости от погоды, ускорило производство и дало полный контроль над атмосферой ролика.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 2368,
+        "height": 1028
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aVO6tHNYClf9osOS_422ceffa-a01f-479e-871a-ba9a43631130.png?auto=format,compress",
+      "id": "aVO6tHNYClf9osOS",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1276
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aRHtE7pReVYa4TQl_c89dd8b0-2cb2-4dd2-9f74-d90e08c1e6c8.png?auto=format,compress",
+      "id": "aRHtE7pReVYa4TQl",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Новый кейс: как мы увеличили градус харизмы у Ситидрайв",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTsJgIvOtkhBT0R_CityDriveLow.png?auto=format,compress",
+      "id": "aWTsJgIvOtkhBT0R",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "АВАТАРЫ, 3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "149357f3-cb44-46ec-9e15-39d3c843e130",
+      "url": "https://videos.twin3d.ru/media/videos/CITYDRIVE0001-0500.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "c2baa37f-8cbb-48df-85b8-4b7efbb463dd",
+      "url": "https://videos.twin3d.ru/media/videos/CITYDRIVE0001-0500.webm"
+    },
+    "company": "Ситидрайв",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для каршеринга Ситидрайв мы создали рекламный ролик с нуля: разработали персонажей в 3D и реализовали весь производственный цикл под ключ",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aWTsJgIvOtkhBT0R_CityDriveLow.png?auto=format,compress",
+      "id": "aWTsJgIvOtkhBT0R",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2485,
+        "height": 1151
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aQI1DrpReVYa3zUD_19381784-5cd3-4111-80c7-a910a1f1a3e9.png?auto=format,compress",
+      "id": "aQI1DrpReVYa3zUD",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "fb2b2640-6116-4f97-b08d-1cc4ed37f36f",
+      "url": "https://www.behance.net/gallery/242744159/Citydrive"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "ВК ГЛАЗКИ",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG8480MqNJQqHvQf_vkthai.png?auto=format,compress",
+      "id": "aG8480MqNJQqHvQf",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "АВАТАРЫ, 3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "cfec226f-caff-4c1b-9c0f-e906858354eb",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B2%D0%BA_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "2ff8ad6d-bd01-4792-9ece-5dfd8ebc3544",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B2%D0%BA%D1%82%D0%B0%D0%B9%D0%BB%D0%B0%D0%BD%D0%B4.webm"
+    },
+    "company": "VK",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Рекламный ролик с маскотами «VKВидео» для телеканала «ТНТ». Для визуализации статичных изображений и их последующей анимации мы использовали AI-инструменты, которые позволили создать “живые” локации в кратчайшие сроки\n",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG8480MqNJQqHvQf_vkthai.png?auto=format,compress",
+      "id": "aG8480MqNJQqHvQf",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG84JEMqNJQqHvQV_vkthai.webp?auto=format,compress",
+      "id": "aG84JEMqNJQqHvQV",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "2fe08ab3-aa5a-43d8-a92b-b0fdd56e0a73",
+      "url": "https://www.behance.net/gallery/230394091/Glaziki-THE-BIG-SCORE"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "AI-ролик «Movement» для PUMA от арт-директора Twin3D Сергея Жарова (концепт)",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "062779a2-6c5f-4130-b3bf-2c51d73e0c63",
+      "url": "https://videos.twin3d.ru/media/videos/Puma0001-0404.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "9bd8ad8d-85f9-48b5-8740-3aad4fdec49f",
+      "url": "https://videos.twin3d.ru/media/videos/Puma0001-0404.webm"
+    },
+    "company": "Twin3D",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "AI-ролик «Movement» для PUMA от арт-директора Twin3D Сергея Жарова (концепт). Музыка: Never Give Up — Tatami. \nЗолото Big Picture.",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "Дисклеймер: Этот анимационный видеоролик содержит ссылки на зарегистрированные торговые марки, дизайн и материалы, защищенные авторским правом, PUMA SE. Все торговые марки, дизайн и авторские права являются собственностью PUMA SE. Использование этих материалов предназначено исключительно для художественных и креативных целей и не подразумевает какой-либо принадлежности к PUMA SE или ее одобрения.",
+        "spans": [
+          {
+            "start": 0,
+            "end": 399,
+            "type": "em"
+          }
+        ],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9RrUMqNJQqHvWN_twin3d.png?auto=format,compress",
+      "id": "aG9RrUMqNJQqHvWN",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 714,
+        "height": 580
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aUJ4k3NYClf9oVp-_4a4ff314-37f5-46bb-a412-8cc88c23478e.png?auto=format,compress",
+      "id": "aUJ4k3NYClf9oVp-",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "YOTA",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-СКАНИРОВАНИЕ, АВАТАРЫ, 3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "a20b45a8-b8b6-463b-8ae1-1801f0852f9e",
+      "url": "https://videos.twin3d.ru/media/videos/center.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "b461c865-e663-49f0-a51b-cc3f6960e164",
+      "url": "https://videos.twin3d.ru/media/videos/yota.webm"
+    },
+    "company": "YOTA",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для серии рекламных роликов Yota мы оцифровали в 3D всю съёмочную сцену — от людей до локаций. Это позволило создать уникальные пролёты камеры с помощью ИИ в стиле bullet time. Результат: +13% к вовлечённости и узнаванию, +33% к конверсии и Золото Red Apple",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHApNkMqNJQqHxdx_yota.png?auto=format,compress",
+      "id": "aHApNkMqNJQqHxdx",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHApf0MqNJQqHxd1_yota.webp?auto=format,compress",
+      "id": "aHApf0MqNJQqHxd1",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "d4ef5583-1348-458a-9ded-52b135325316",
+      "url": "https://www.behance.net/gallery/205531607/Yota-All-to-Max"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Яндекс",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "АВАТАРЫ, 3D-СКАНИРОВАНИЕ, 3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "b7485510-218e-4c16-a7a5-ba5bba5be6a0",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "cb1d5946-bbaa-40d7-bbcf-a8d66f5e06ac",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%8F%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.webm"
+    },
+    "company": "YANDEX",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для производства ролика для Yandex Browser мы использовали 3D-скан Wylsacom’a для создания стилизованного ИИ-персонажа. Этот кейс вошёл в шорт-лист Red Apple.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9GikMqNJQqHvSa_yandex.png?auto=format,compress",
+      "id": "aG9GikMqNJQqHvSa",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9Gp0MqNJQqHvSc_yandex.webp?auto=format,compress",
+      "id": "aG9Gp0MqNJQqHvSc",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "956fd5cf-53c4-4172-a32a-86143474fef9",
+      "url": "https://www.behance.net/gallery/205535135/Yandex-Browser"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "DOKTOR DINOZAVRF",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "687b0cb5-58ef-4e37-a681-af18e6484672",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B4%D0%B8%D0%BD%D0%BE_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "3b3a8a28-810b-4790-989a-6acc93a4dd2d",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B4%D0%BE%D0%BA%D1%82%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%BE.webm"
+    },
+    "company": "DINO",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Рендеринг и лайтинг для полнометражного анимационного фильма",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9KckMqNJQqHvTn_Property1%3DVariant16.png?auto=format,compress",
+      "id": "aG9KckMqNJQqHvTn",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9LXEMqNJQqHvT5_dino.webp?auto=format,compress",
+      "id": "aG9LXEMqNJQqHvT5",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "'FEDUK FEAT AMAZING RED'",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-СКАНИРОВАНИЕ, АВАТАРЫ, 3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "72923f34-59c9-4f31-9312-3a4d0d2058b0",
+      "url": "https://videos.twin3d.ru/media/videos/hero-1.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "f7c7612b-3a66-467c-994b-f38faf3121ed",
+      "url": "https://videos.twin3d.ru/media/videos/feduk.webm"
+    },
+    "company": "AMAZING RED",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для ролика Amazing Red мы оцифровали Feduk и одежду Puma, создав динамичный визуал с артистом без его активного присутствия на площадке.\nРолик получил Бронзу Red Apple в категории лучшие визуальные эффекты и анимация",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHBG6kMqNJQqHxmi_amazingred.png?auto=format,compress",
+      "id": "aHBG6kMqNJQqHxmi",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1848,
+        "height": 1048
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHBHBUMqNJQqHxmj_amazingred.webp?auto=format,compress",
+      "id": "aHBHBUMqNJQqHxmj",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "f0af25d6-0103-4858-a0fc-50a84ecaaab2",
+      "url": "https://www.behance.net/gallery/183506745/Amazing-RED"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "ПЯТЁРОЧКА",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "10dbf55f-bd05-43ab-a559-6c19a9e410ff",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%BF%D1%8F%D1%82%D1%8C2.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "05264538-deb8-460e-bcc4-e6918988d9fa",
+      "url": "https://videos.twin3d.ru/media/videos/pyaterochka.webm"
+    },
+    "company": "X5",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "В проекте «Пятёрочка выручает пока ты AFK!» мы создали персонажей с помощью AI. Вместо 3D мы снимали актёров на зелёном фоне и стилизовали видео нейросетями. Это ускорило производство, а реклама показала высокую эффективность и получила Бронзу Effie и Золото Silver Mercury.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHBJRkMqNJQqHxm5_x5.png?auto=format,compress",
+      "id": "aHBJRkMqNJQqHxm5",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 608,
+        "height": 341
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHBJE0MqNJQqHxmy_news.png?auto=format,compress",
+      "id": "aHBJE0MqNJQqHxmy",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "MASTER",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "a8b137ba-9b82-41ac-9c80-ab0e3d26634a",
+      "url": "https://videos.twin3d.ru/media/videos/master_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "Мастер и Маргарита",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создание цифровых двойников актеров к/ф \"Мастер и Маргарита\"",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAnVkMqNJQqHxct_master.webp?auto=format,compress",
+      "id": "aHAnVkMqNJQqHxct",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "Союз спасения",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "72583298-3cd7-4f11-a6a9-a01e990f2c3f",
+      "url": "https://videos.twin3d.ru/media/videos/soyuz_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "Союз спасения",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создание цифровых двойников актеров, массовки и реквизита для к/ф  \"Союз Спасения\"",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAnw0MqNJQqHxc5_souz.webp?auto=format,compress",
+      "id": "aHAnw0MqNJQqHxc5",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "BetBoom",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9BB0MqNJQqHvRe_betboom.png?auto=format,compress",
+      "id": "aG9BB0MqNJQqHvRe",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-СКАНИРОВАНИЕ, 3D-ПРОДАКШН, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "5475f976-dffc-48fa-8708-d530fcb6e395",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B1%D0%B5%D1%82%D0%B1%D1%83%D0%BC_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "3ab1ddb1-286b-4ba8-ad81-18d62345b8b1",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B1%D0%B5%D1%82%D0%B1%D1%83%D0%BC.webm"
+    },
+    "company": "BetBoom",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Рекламный ролик BetBoom с участием цифровых двойников топовых киберспортсменов и стримеров: Maksim Pavlov, Donk, Nix, M. Khalilov, Anton Shkredov и Boombl4. ИИ-генерация стилизованного контента и анимации с персонажами.\n",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9BB0MqNJQqHvRe_betboom.png?auto=format,compress",
+      "id": "aG9BB0MqNJQqHvRe",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9DNkMqNJQqHvRk_betboom.webp?auto=format,compress",
+      "id": "aG9DNkMqNJQqHvRk",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "РЖД",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG8rXEMqNJQqHvPM_rzd.png?auto=format,compress",
+      "id": "aG8rXEMqNJQqHvPM",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "АВАТАРЫ, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "397c8575-df4e-40e6-87ce-701c12eb5af6",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%80%D0%B6%D0%B4_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "5d033099-6f34-44e4-8e38-82e8199bea80",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%80%D0%B6%D0%B4_1.webm"
+    },
+    "company": "РЖД",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Разработали с помощью AI и 3D маскотов для \"РЖД-Технологии\": от идеи до персонажей, готовых к продакшну. Премьера маскотов состоялась на ЦИПР - крупнейшей в России выставке по цифровым технологиям.\n",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG8rXEMqNJQqHvPM_rzd.png?auto=format,compress",
+      "id": "aG8rXEMqNJQqHvPM",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG8tJ0MqNJQqHvPX_rzhd.webp?auto=format,compress",
+      "id": "aG8tJ0MqNJQqHvPX",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "f52b598a-ea48-437f-af58-6d76a9efc5ca",
+      "url": "https://www.behance.net/gallery/206051075/RZD"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "OILMAN",
+    "logo": {},
+    "category": "АВАТАРЫ",
+    "tags": "АВАТАРЫ, ИИ-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "594eed82-b5b0-4ee6-b086-f930abfd41af",
+      "url": "https://videos.twin3d.ru/media/videos/oilman_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "RUSAGRO",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Мы разработали 3D-аватара Ярослава Русагровича, который с помощью ИИ оживает и общается, работая цифровым лицом бренда и виртуальным ведущим мероприятий. Это позволило привлечь новую аудиторию технологичным способом.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAerkMqNJQqHxZn_rusargo.png?auto=format,compress",
+      "id": "aHAerkMqNJQqHxZn",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAezkMqNJQqHxZy_oilman.webp?auto=format,compress",
+      "id": "aHAezkMqNJQqHxZy",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "3422cfe5-124b-4a88-94c4-ad246cb9c178",
+      "url": "https://www.behance.net/gallery/206051723/RUSAGRO-MASCOT"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "КРЭТ",
+    "logo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG82JEMqNJQqHvQB_kret.png?auto=format,compress",
+      "id": "aG82JEMqNJQqHvQB",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "category": "РЕКЛАМА",
+    "tags": "3D-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "48eec986-df54-4357-b173-fab9f76f72d2",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%BA%D1%80%D1%8D%D1%82_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "109d6f3b-42d3-416c-94b9-b920515214e6",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%BA%D1%80%D1%8D%D1%82.webm"
+    },
+    "company": "KRET",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Брендовый ролик для крупнейшего российского холдинга в радиоэлектронной отрасли АО \"КРЭТ\", показывающий весь спектр технологий и решений компании\n",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG82JEMqNJQqHvQB_kret.png?auto=format,compress",
+      "id": "aG82JEMqNJQqHvQB",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG83kkMqNJQqHvQQ_kret.webp?auto=format,compress",
+      "id": "aG83kkMqNJQqHvQQ",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "СИТИМОБИЛ",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "b1886e00-a0ee-407c-9d84-ab194843448a",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%81%D0%B8%D1%82%D0%B8%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "787c9ade-1f7e-4261-a68b-d4ca6a28eefb",
+      "url": "https://videos.twin3d.ru/media/videos/%D1%81%D0%B8%D1%82%D0%B8%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB_1.webm"
+    },
+    "company": "CITYMOBIL",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создание цифровых двойников актеров для спец. эффектов\n",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9EZUMqNJQqHvSA_citymobil.png?auto=format,compress",
+      "id": "aG9EZUMqNJQqHvSA",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9E70MqNJQqHvSG_citymobil.webp?auto=format,compress",
+      "id": "aG9E70MqNJQqHvSG",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "40cd823b-be42-4901-a1d6-e1c268529b9b",
+      "url": "https://www.behance.net/gallery/174261711/CITYMOBIL"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "ALVARES",
+    "logo": {},
+    "category": "АВАТАРЫ",
+    "tags": "АВАТАРЫ",
+    "video1": {
+      "link_type": "Web",
+      "key": "366376d4-86df-426e-b4c5-75fa9da0c16b",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B5%D1%81_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "9a27f6fb-65fe-4a9e-a478-1ec3ef8d0dcc",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D0%B5%D1%81_1.webm"
+    },
+    "company": "Hennessy",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Рекламный ролик Hennessy с чемпионом мира по бокус Канело Альваресом, сделанный для первого 3D билборда в аэропорту Лос-Анджелеса",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAcO0MqNJQqHxY7_henesy.png?auto=format,compress",
+      "id": "aHAcO0MqNJQqHxY7",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAc0EMqNJQqHxZG_alvares.webp?auto=format,compress",
+      "id": "aHAc0EMqNJQqHxZG",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "2ccd4baf-2138-4a0a-ac5f-37ad36733a6c",
+      "url": "https://www.behance.net/gallery/183508499/Canelo-Alvarez-3D-avatar"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "СБЕР АССИСТЕНТ",
+    "logo": {},
+    "category": "АВАТАРЫ",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "22b934aa-4f1e-4960-8e41-b3461281b5b8",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%BC%D0%B0%D0%BA%D1%81_%D1%85%D0%BE%D0%B2%D0%B5%D1%80.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "f649ef1a-0488-493a-8676-2f01ca767b07",
+      "url": "https://videos.twin3d.ru/media/videos/%D0%BC%D0%B0%D0%BA%D1%81%D1%81%D0%B1%D0%B5%D1%80.webm"
+    },
+    "company": "SBER",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Цифровой двойник руководителя лаборатории AR/VR SBER с интеграцией в диалоговый ассистент компании",
+        "spans": [],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9Nk0MqNJQqHvUl_sber.png?auto=format,compress",
+      "id": "aG9Nk0MqNJQqHvUl",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aG9N8kMqNJQqHvUn_maxsber.webp?auto=format,compress",
+      "id": "aG9N8kMqNJQqHvUn",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "e50a8eb9-3767-4478-8806-829d4b2b4042",
+      "url": "https://www.behance.net/gallery/206051413/SBERMarketing"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "GROM",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "0c03c0d3-f46b-46f9-87e4-38f842f4fe55",
+      "url": "https://videos.twin3d.ru/media/videos/grom_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "GROM",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создание цифровых двойников актеров к/ф \"Майор Гром\"",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1044
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAoLkMqNJQqHxdM_grom.webp?auto=format,compress",
+      "id": "aHAoLkMqNJQqHxdM",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "CAPITAN",
+    "logo": {},
+    "category": "АВАТАРЫ",
+    "tags": "АВАТАРЫ",
+    "video1": {
+      "link_type": "Web",
+      "key": "a483eaec-7b62-4f05-a927-fb0ab2862d6f",
+      "url": "https://videos.twin3d.ru/media/videos/fesko_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "FESCO",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Цифровой маскот одной из крупнейших российских транспортно-логистических компаний ФЕСКО, который был представлен на ПМЭФ в 2024 как диалоговый ассистент",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 628,
+        "height": 249
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAgUkMqNJQqHxaS_fesco.png?auto=format,compress",
+      "id": "aHAgUkMqNJQqHxaS",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAgh0MqNJQqHxaX_capitan.webp?auto=format,compress",
+      "id": "aHAgh0MqNJQqHxaX",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Web",
+      "key": "3f9586d1-9e52-4710-b935-8a1ee0f73c53",
+      "url": "https://www.behance.net/gallery/205530935/kapitan-FESCO"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "100LET",
+    "logo": {},
+    "category": "КИНО",
+    "tags": "3D-СКАНИРОВАНИЕ",
+    "video1": {
+      "link_type": "Web",
+      "key": "bfd12b9c-a64e-4337-a9ad-986a095786b1",
+      "url": "https://videos.twin3d.ru/media/videos/100let_hover.webm"
+    },
+    "fullVideo": {
+      "link_type": "Any"
+    },
+    "company": "100LET",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Создание цифровых двойников актеров, массовки и реквизита для к/ф \"Сто лет тому вперед\"",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {},
+    "poster": {
+      "dimensions": {
+        "width": 1839,
+        "height": 1043
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aHAmykMqNJQqHxcc_100LET.webp?auto=format,compress",
+      "id": "aHAmykMqNJQqHxcc",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  },
+  {
+    "title": "[CASE МХЛ]",
+    "logo": {},
+    "category": "РЕКЛАМА",
+    "tags": "АВАТАРЫ, 3D-СКАНИРОВАНИЕ, CG-ПРОДАКШН",
+    "video1": {
+      "link_type": "Web",
+      "key": "a2e6cc80-1e1f-4816-8dad-87aa8f472b81",
+      "url": "https://videos.twin3d.ru/media/videos/utkin___mhl0001-0250.webm"
+    },
+    "fullVideo": {
+      "link_type": "Web",
+      "key": "474625ad-b36b-4455-8922-dedb8b166bd2",
+      "url": "https://videos.twin3d.ru/media/videos/utkin___mhl0001-0250.webm"
+    },
+    "company": "MHL",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Для команды Медийной Хоккейной Лиги создали AI CGI промо-ролик. В основе — синтез технологий: Нейросети сгенерировали фоны, Цифровой 3D двойник капитана, созданный нашим 3D-сканером, оживил действие.",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "companyLogo": {
+      "dimensions": {
+        "width": 600,
+        "height": 478
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aSAglWGnmrmGqGo9_image.png?auto=format,compress",
+      "id": "aSAglWGnmrmGqGo9",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "poster": {
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/twin3/aSAl-WGnmrmGqGq8_image_2025-11-21_11-42-12.png?auto=format,compress",
+      "id": "aSAl-WGnmrmGqGq8",
+      "edit": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    },
+    "link": {
+      "link_type": "Any"
+    },
+    "award": {},
+    "project": {
+      "link_type": "Document"
+    }
+  }
+]
