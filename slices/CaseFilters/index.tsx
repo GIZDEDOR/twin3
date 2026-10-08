@@ -10,14 +10,18 @@ import { RichTextField } from '@prismicio/client';
 import { PrismicRichText } from '@prismicio/react';
 import React from 'react'; // ← добавили этот импорт
 import { ProjectLink } from '@/components/projects/ProjectNavigation';
-import { projectCardDestination } from '@/lib/project-card';
+import { legacyProjectSlug, projectCardDestination } from '@/lib/project-card';
 import styles from './case-filters.module.css';
+import { orderCatalogue } from '@/lib/catalogue-order';
+import type { CatalogueCaseContent } from '@/lib/catalogue-case-content';
 import { buildProjectCatalogue, caseCountLabel, type CatalogueVideo } from '@/lib/project-catalogue';
 
-export type CaseFiltersProps = SliceComponentProps<Content.CaseFiltersSlice, { projectLinks?: Record<string, string>; projectSlugs?: string[] }>;
+export type CaseFiltersProps = SliceComponentProps<Content.CaseFiltersSlice, { projectLinks?: Record<string, string>; projectSlugs?: string[]; caseContent?: CatalogueCaseContent }>;
 
 /* ---------------------- Типизация элемента items ---------------------- */
 type PrismicCaseItem = {
+  published_at?: string | null;
+  priority_all?: number | null; priority_3d?: number | null; priority_ai?: number | null; priority_scan?: number | null; priority_avatars?: number | null;
   project?: { id?: string; isBroken?: boolean };
   title: string | null;
   logo: { url: string } | null;
@@ -34,6 +38,9 @@ type PrismicCaseItem = {
 };
 
 export type Case = {
+  identity: string;
+  published_at?: string | null;
+  priorities: Record<string, number | null | undefined>;
   videos: CatalogueVideo[];
   projectUrl: string | null;
   title: string;
@@ -50,16 +57,24 @@ export type Case = {
   award: string | null;
 };
 
-const shortTag = (tag: string): string => {
-  const map: Record<string, string> = {
-    '3D-СКАНИРОВАНИЕ': '3D-СКАН',
-    'АВАТАРЫ': 'АВАТАР',
-    '3D-ПРОДАКШН': '3D-ПРОДАКШН',
-    'ИИ-АВАТАРЫ': 'ИИ-АВАТАРЫ',
-    'ИИ-ПРОДАКШН': 'ИИ-ПРОДАКШН',
-  };
-  return map[tag] || tag;
-};
+function splitDisclaimer(field: RichTextField): [RichTextField, RichTextField] {
+  const index = field.findIndex(node => 'text' in node && node.text.includes('Дисклеймер:'));
+  if (index < 0) return [field, []];
+  const node = field[index];
+  if (!('text' in node)) return [field, []];
+  const offset = node.text.indexOf('Дисклеймер:');
+  const part = (start: number, end: number) => ({
+    ...node,
+    text: node.text.slice(start, end),
+    spans: node.spans.filter(span => span.start < end && span.end > start).map(span => ({
+      ...span, start: Math.max(span.start, start) - start, end: Math.min(span.end, end) - start,
+    })),
+  });
+  return [
+    [...field.slice(0, index), ...(offset ? [part(0, offset)] : [])] as RichTextField,
+    [part(offset, node.text.length), ...field.slice(index + 1)],
+  ];
+}
 
 export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.Element {
   const { category, setCategory, subfilter, setSubfilter } = useCaseFilter();
@@ -67,18 +82,23 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
 
   const cases: Case[] = buildProjectCatalogue(items).map(({ item, videos, destinationSource, isFilm, synthetic }) => {
     const destination = projectCardDestination(destinationSource, context?.projectLinks, context?.projectSlugs);
+    const isLida = destinationSource.fullVideo?.url?.endsWith('/Dog_cosmos_lida.webm');
+    const identity = isLida ? 'lida' : isFilm ? `film:${destinationSource.fullVideo?.url || item.title}` : item.company?.trim().toLowerCase() === 'газпромбанк' ? 'gazprombank' : item.company?.trim().toLowerCase() === 'sensia' ? 'sensia' : destination.projectUrl?.split('/').pop() || legacyProjectSlug(destinationSource) || '';
+    const shared = (!isFilm || synthetic) ? context?.caseContent?.[identity] : undefined;
     const kinoUrl = context?.projectSlugs?.includes('kino') ? '/projects/kino' : null;
     return ({
+    identity, published_at: item.published_at,
+    priorities: { priority_all: item.priority_all, priority_3d: item.priority_3d, priority_ai: item.priority_ai, priority_scan: item.priority_scan, priority_avatars: item.priority_avatars },
     videos,
-    projectUrl: isFilm || synthetic ? kinoUrl : destination.projectUrl,
-    title: item.title || '',
+    projectUrl: isLida ? null : isFilm || synthetic ? kinoUrl : destination.projectUrl,
+    title: shared?.title || item.title || '',
     logo: item.logo?.url || null,
     category: item.category || '',
-    tags: item.tags?.split(',').map(t => t.trim()) || [],
+    tags: shared?.tags || item.tags?.split(',').map(t => t.trim()) || [],
     video1: item.video1?.url || null,
     fullVideo: item.fullVideo?.url || null,
     company: item.company || '',
-    description: item.description || '',
+    description: shared?.summary ? [{ type: 'paragraph', text: shared.summary, spans: [] }] : item.description || [],
     companyLogo: item.companyLogo?.url || null,
     poster: item.poster?.url || null,
     link: isFilm || synthetic ? null : destination.externalUrl || (!destination.projectUrl ? item.link?.url || null : null),
@@ -102,24 +122,11 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
   const activeSubfilters = subfilters.filter((tag) =>
     filteredByCategory.some((c) => c.tags.includes(tag))
   );
-  const filteredCases = subfilter
+  const matchingCases = subfilter
     ? filteredByCategory.filter((c) => c.tags.includes(subfilter))
     : filteredByCategory;
 
-  // Reposition only Gazprombank within the active tag; preserve every other card's order.
-  if (subfilter === '3D-ПРОДАКШН' || subfilter === 'АВАТАРЫ') {
-    const bankIndex = filteredCases.findIndex(c => c.company.trim().toLowerCase() === 'газпромбанк');
-    if (bankIndex >= 0) {
-      const others = filteredCases.filter((_, index) => index !== bankIndex);
-      const anchorIndex = subfilter === 'АВАТАРЫ'
-        ? others.findIndex(c => c.company.trim().toLowerCase() === 'amazing red')
-        : -1;
-      if (subfilter === '3D-ПРОДАКШН' || anchorIndex >= 0) {
-        const [bank] = filteredCases.splice(bankIndex, 1);
-        filteredCases.splice(subfilter === '3D-ПРОДАКШН' ? Math.min(4, others.length) : anchorIndex + 1, 0, bank);
-      }
-    }
-  }
+  const filteredCases = orderCatalogue(matchingCases, subfilter);
 
   useEffect(() => {
     if (subfilter && !activeSubfilters.includes(subfilter)) {
@@ -250,6 +257,8 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
           {filteredCases.map((item, i) => {
             const fullVideoSrc = item.fullVideo;
+            const [description, disclaimer]: [RichTextField, RichTextField] = fullVideoSrc?.endsWith('/Puma0001-0404.webm')
+              ? splitDisclaimer(item.description) : [item.description, []];
             return (
               <div
                 key={`${item.video1 || item.title}-${item.title}-${i}`}
@@ -259,20 +268,20 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
               >
                 <div className="relative w-full h-[240px] md:h-[345px] rounded-[18px] overflow-hidden mb-[20px]">
                   <CaseVideo src={item.video1 || ''} poster={item.poster || undefined} />
-                  <div className="absolute bottom-2 sm:bottom-5 right-2 sm:right-5 z-20 flex gap-1 sm:gap-2">
-                    <div className="flex bg-white/10 rounded-[6px]  sm:rounded-[12px] px-2 py-[3px] sm:px-5 sm:py-[9px] font-franklin text-[12px] sm:text-[18px] text-white/100 uppercase shadow-md gap-1 sm:gap-2 tracking-tight backdrop-blur-[1px]">
-                      {item.tags.map(shortTag).join(' | ')}
+                  <div className="absolute bottom-2 sm:bottom-5 right-2 sm:right-5 left-2 z-20 flex justify-end">
+                    <div className="flex bg-white/10 rounded-[6px]  sm:rounded-[12px] px-2 py-[3px] sm:px-5 sm:py-[9px] font-franklin text-[11px] sm:text-[14px] text-right flex-wrap justify-end text-white/100 uppercase shadow-md gap-1 sm:gap-2 tracking-tight backdrop-blur-[1px]">
+                      {item.tags.join(' | ')}
                     </div>
                   </div>
                 </div>
 
                 <div className="w-full text-left mb-[20px]">
-                  <div className="text-[#727272] font-proto text-[15px] mb-[2px] uppercase flex gap-2 leading-8">
-                    <span>[КЕЙС {item.company.toUpperCase()}]</span>
-                    
-                  </div>
-                  <div className="text-[16px] sm:text-[20px] text-[#8F8F8F] font-standard leading-[1.4] sm:leading-[1] break-words mb-[72px] whitespace-pre-line ml-[2px]">
-                    <PrismicRichText field={item.description} />
+                  <h2 className="text-[#E5E5E5] font-standard font-semibold text-[20px] sm:text-[24px] leading-[1.2] mb-3">{item.title}</h2>
+                  <div className="text-[16px] sm:text-[20px] text-[#8F8F8F] font-standard leading-[1.4] sm:leading-[1.4] break-words mb-[72px] whitespace-pre-line ml-[2px]">
+                    <PrismicRichText field={description} />
+                    {disclaimer.length > 0 && <div className={styles.disclaimer}>
+                      <PrismicRichText field={disclaimer} />
+                    </div>}
                   </div>
                 </div>
 
@@ -322,7 +331,7 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
 
                   </div>
                   {item.companyLogo && (
-                    <img src={item.companyLogo} alt={item.company} className="h-[40px] w-auto opacity-90" />
+                    <img src={item.companyLogo} alt={item.company} className={styles.companyLogo} />
                   )}
                 </div>
               </div>
@@ -437,7 +446,7 @@ function CaseVideo({ src, poster }: { src: string; poster?: string }) {
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
-      <video
+      {src ? <video
         ref={ref}
         src={src}
         poster={poster}
@@ -446,7 +455,7 @@ function CaseVideo({ src, poster }: { src: string; poster?: string }) {
         playsInline
         autoPlay={isMobile}        // start muted autoplay on mobile
         className="w-full h-full object-cover transition duration-300 ease-in-out"
-      />
+      /> : poster ? <img src={poster} alt="" className="w-full h-full object-cover" /> : null}
     </div>
   );
 }

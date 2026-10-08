@@ -90,17 +90,17 @@ export default function Footer() {
             {/* адрес */}
             <div className="flex flex-col leading-[0.9]">
               <p className="uppercase text-xl font-franklin">Москва,</p>
-              <p className="uppercase text-xl font-franklin">БОЛЬШОЙ&nbsp;БУЛЬВАР</p>
-              <p className="uppercase text-xl font-franklin">Д. 40&nbsp;К.&nbsp;4</p>
+              <p className="uppercase text-xl font-franklin">БОЛЬШОЙ&nbsp;БУЛЬВАР,</p>
+              <p className="uppercase text-xl font-franklin">Д. 40,&nbsp;К.&nbsp;4</p>
               <p className="text-white opacity-30 font-franklin text-sm">
-                (БЦ "АMAЛЬТЕЯ")
+                (БЦ &quot;АМАЛЬТЕЯ&quot;)
               </p>
             </div>
 
             {/* часы */}
             <div className="flex flex-col leading-[0.9]">
               <p className="uppercase text-xl font-franklin">Часы работы:</p>
-              <p className="uppercase text-xl font-franklin">Будни дни</p>
+              <p className="uppercase text-xl font-franklin">Будние дни</p>
               <p className="uppercase text-xl font-franklin">10:00–19:00</p>
               <p className="text-white opacity-30 font-franklin text-sm">
                 Сб, вс и праздники:<br />выходные дни
@@ -192,17 +192,17 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row gap-20 mx-auto ">                  
                 <div className="flex flex-col leading-tighter text-left ml-6 lg:ml-12 xl:ml-[72px]">
                   <span className="uppercase font-franklin text-xl">Москва,</span>
-                  <span className="uppercase font-franklin text-xl">БОЛЬШОЙ&nbsp;БУЛЬВАР</span>
-                  <span className="uppercase font-franklin text-xl">Д. 40&nbsp;К.&nbsp;4</span>
+                  <span className="uppercase font-franklin text-xl">БОЛЬШОЙ&nbsp;БУЛЬВАР,</span>
+                  <span className="uppercase font-franklin text-xl">Д. 40,&nbsp;К.&nbsp;4</span>
                   <span className="text-white opacity-30 font-franklin text-sm mt-1">
-                    (БЦ "АMAЛЬТЕЯ")
+                    (БЦ &quot;АМАЛЬТЕЯ&quot;)
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-20 items-start sm:items-end ml-6 lg:ml-12 xl:ml-[72px]">
                   <div className="flex flex-col gap-1">
                     <div className="flex flex-col leading-[0.9] mb-2">
-                      <p className="uppercase text-xl font-franklin leading-[1.1]">часы работы:</p>
-                      <p className="uppercase text-xl font-franklin leading-[1.1]">будни дни</p>
+                      <p className="uppercase text-xl font-franklin leading-[1.1]">Часы работы:</p>
+                      <p className="uppercase text-xl font-franklin leading-[1.1]">Будние дни</p>
                       <p className="uppercase text-xl font-franklin leading-[1.1]">10:00-19:00</p>
                       <p className="text-white uppercase opacity-30 font-franklin mb-0">сб,вс и праздники:</p>
                         <p className="text-white uppercase opacity-30 font-franklin">выходные дни</p>

@@ -523,7 +523,7 @@ function CaseCard({
   description,
   companyLogo,
   onShowCase,
-}: any & { onShowCase: () => void }) {
+}: (typeof CASES)[number] & { onShowCase: () => void }) {
   return (
     <div
       className="relative bg-[#1A1A1A] border border-[#767676] rounded-[20px] w-full px-[20px] pb-[23px] pt-[20px] flex flex-col shadow-lg"

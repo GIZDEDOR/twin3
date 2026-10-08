@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   hasProjectContent, projectContactUrl, projectDescription, projectPath,
-  projectVideos, projectVideoSchema, safeWebUrl,
+  projectVideos, projectVideoSchema, safeWebUrl, resultPresentation, participantFields, relatedProjects,
 } from '../lib/project-content.ts';
 import { previewProject } from '../dev/project-fixture.ts';
 
@@ -37,11 +37,14 @@ test('VideoObject requires real upload date and thumbnail, never substitutes doc
   project.data.videos[0].upload_date = '2024-08-01T12:00:00+0000';
   project.data.videos[0].duration_seconds = 42;
   const [schema] = projectVideoSchema(project);
-  assert.equal(schema.uploadDate, '2024-08-01T12:00:00+0000');
+  assert.equal(schema.uploadDate, '2024-08-01T12:00:00.000Z');
   assert.equal(schema.duration, 'PT42S');
   assert.equal(schema.url, 'https://twin3d.ru/projects/yota');
   assert.equal(schema.contentUrl, project.data.videos[0].video.url);
-  project.data.videos[0].poster = {};
+  assert.equal(schema.name,project.data.title);
+  assert.equal(schema.description,project.data.meta_description);
+  assert.deepEqual(schema.thumbnailUrl,[project.data.og_image.url]);
+  project.data.og_image = {};
   assert.deepEqual(projectVideoSchema(project), []);
 });
 
@@ -93,4 +96,81 @@ test('other VK and dinosaur projects keep their own links', () => {
 test('explicit Prismic relationship overrides legacy identification', () => {
   const card={title:'YOTA',project:{id:'new-document'}};
   assert.equal(projectCardDestination(card, {'new-document':'updated-yota'}, ['yota']).projectUrl,'/projects/updated-yota');
+});
+
+test('long legacy result stays readable and structured results use separate fields', () => {
+  const p=structuredClone(previewProject);
+  assert.equal(resultPresentation(p).headline,'');
+  assert.deepEqual(resultPresentation(p).details,p.data.result);
+  p.data.result_headline='Короткий результат';
+  p.data.result_details=[{type:'paragraph',text:'Подробности',spans:[]}];
+  assert.equal(resultPresentation(p).headline,'Короткий результат');
+  assert.deepEqual(resultPresentation(p).details,p.data.result_details);
+  p.data.result_details=[];p.data.result=[{type:'paragraph',text:p.data.result_headline,spans:[]}];
+  assert.deepEqual(resultPresentation(p).details,[]);
+});
+test('explicit VFX field and legacy labelled credits remain separate', () => {
+  const p=structuredClone(previewProject);p.data.agency='Instinct; VFX Clan';
+  assert.deepEqual(participantFields(p),{agency:'Instinct',vfx:'Clan'});
+  p.data.agency='Ozio';p.data.vfx='Clan';
+  assert.deepEqual(participantFields(p),{agency:'Ozio',vfx:'Clan'});
+});
+test('related projects use the first direction and exclude the current case', () => {
+  const p=structuredClone(previewProject);
+  const others=Array.from({length:5},(_,i)=>({...p,id:`id-${i}`,uid:`case-${i}`,data:{...p.data,noindex:false}}));
+  const result=relatedProjects(p,[p,...others]);
+  assert.equal(result.length,3);assert.ok(result.every(x=>x.uid!==p.uid));
+  assert.equal(relatedProjects({...p,data:{...p.data,directions:[{direction:'Аватары'}]}},others).length,0);
+});
+
+test('all case goals send slug to the configured Metrica counter', async () => {
+  const {sendCaseGoal}=await import('../lib/case-analytics.ts');
+  const oldWindow=globalThis.window, oldId=process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID;
+  try {
+    const calls=[];globalThis.window={ym:(...args)=>calls.push(args)};
+    process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID='123456';
+    for(const event of ['case_open','video_play','cta_click','behance_click']) assert.equal(sendCaseGoal(event,'yota'),true);
+    assert.deepEqual(calls.map(c=>c[3]),Array(4).fill({slug:'yota'}));
+    assert.ok(calls.every(c=>c[0]===123456&&c[1]==='reachGoal'));
+    globalThis.window={};assert.equal(sendCaseGoal('case_open','yota'),false);
+  } finally {
+    if(oldWindow===undefined) delete globalThis.window;else globalThis.window=oldWindow;
+    if(oldId===undefined) delete process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID;else process.env.NEXT_PUBLIC_YANDEX_METRIKA_ID=oldId;
+  }
+});
+
+test('global Metrica initializes once and tracks initial, query, case and back navigation', async () => {
+  const { trackMetrikaPage } = await import('../lib/yandex-metrika.ts');
+  const oldWindow = globalThis.window, oldDocument = globalThis.document;
+  const scripts = [];
+  try {
+    globalThis.window = {};
+    globalThis.document = {
+      scripts, title: 'Twin3D', referrer: 'https://example.com/',
+      createElement: () => ({}), head: { appendChild: script => scripts.push(script) },
+    };
+    trackMetrikaPage(NaN, 'https://twin3d.ru/');
+    assert.equal(scripts.length, 0);
+    const urls = ['/', '/projects', '/projects/yota', '/projects', '/blog', '/blog?page=2'];
+    for (const path of urls) {
+      trackMetrikaPage(90931287, `https://twin3d.ru${path}`);
+      trackMetrikaPage(90931287, `https://twin3d.ru${path}`);
+    }
+    const calls = globalThis.window.ym.a;
+    assert.equal(scripts.length, 1);
+    const init = calls.filter(c => c[1] === 'init');
+    assert.equal(init.length, 1);
+    assert.equal(init[0][2].defer, true);
+    const hits = calls.filter(c => c[1] === 'hit');
+    assert.deepEqual(hits.map(c => c[2]), urls.map(p => `https://twin3d.ru${p}`));
+    assert.equal(hits[0][3].referer, 'https://example.com/');
+    assert.equal(hits[3][3].referer, 'https://twin3d.ru/projects/yota');
+    delete globalThis.window.twin3Metrika;
+    trackMetrikaPage(90931287, 'https://twin3d.ru/about');
+    assert.equal(calls.filter(c => c[1] === 'init').length, 1);
+    assert.equal(scripts.length, 1);
+  } finally {
+    if (oldWindow === undefined) delete globalThis.window; else globalThis.window = oldWindow;
+    if (oldDocument === undefined) delete globalThis.document; else globalThis.document = oldDocument;
+  }
 });

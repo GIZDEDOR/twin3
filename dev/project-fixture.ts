@@ -15,7 +15,9 @@ export const previewProject: Content.ProjectDocument = {
   url: null, href: '', tags: [], slugs: ['preview-yota'], linked_documents: [], alternate_languages: [],
   first_publication_date: '', last_publication_date: '',
   data: {
+    result_headline: null, result_details: [], vfx: null,
     title: 'Yota: bullet time через 3D-скан всей съёмочной сцены',
+    card_title: null,
     summary: 'Оцифровали актёров и съёмочную сцену целиком и создали пролёты камеры с помощью ИИ.',
     cover, client_name: 'Yota', agency: null, year: null,
     formats: 'Серия роликов «Всё на максимум»', production_time: null, category: 'РЕКЛАМА',

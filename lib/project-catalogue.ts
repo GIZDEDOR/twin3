@@ -16,10 +16,10 @@ export type CatalogueVideo = { src: string; poster?: string; name: string };
 
 // Exact audited files, not array positions, brands, or approximate title matches.
 const groups = [
-  { main: 'vk_federal.webm', files: ['vk_federal.webm', 'VK_2.webm', 'VK_3.webm', 'VK_insta_v3.webm'], title: 'VK Видео: новогодняя ТВ-кампания — 3 ролика за 2 недели', description: 'Приключения Глазиков для федерального ТВ плюс адаптации для DOOH и digital. Собственный CGI-пайплайн, детализация до частиц.' },
-  { main: 'сс_chars_v2.webm', files: ['сс_chars_v2.webm', 'СС1.webm', 'CC2.webm', 'CC3.webm', 'CoolColaBill.webm'], title: 'CoolCola: маскоты и новогодняя кампания 360°', description: 'Создали Коалу и Акулу и трилогию новогодних роликов на стыке CG и ИИ — для ТВ, digital и 3D-билбордов Москвы.' },
-  { main: 'DILARA-2.webm', files: ['DILARA-2.webm', 'MAXIM-2.webm'], title: 'FreshBar: 4 ролика с амбассадорами за 10 дней', description: 'Дилара и Максим Лутчак — по два ролика с каждым за 5 дней. Съёмка на хромакее, ИИ-фоны, трекинг, клинап и композ.' },
-  { main: 'SBERREGA.webm', files: ['SBERREGA.webm', 'CITYDRIVE0001-0500.webm'], title: 'Ситидрайв: 3D-персонажи и серия роликов', description: 'Разработали персонажей и сделали рекламный ролик под ключ, а также обучающий ролик «Сберёга» о механике накопления баллов. Классическая 3D-анимация с полностью контролируемым результатом.' },
+  { main: 'vk_federal.webm', files: ['vk_federal.webm', 'VK_2.webm', 'VK_3.webm', 'VK_insta_v3.webm'] },
+  { main: 'сс_chars_v2.webm', files: ['сс_chars_v2.webm', 'СС1.webm', 'CC2.webm', 'CC3.webm', 'CoolColaBill.webm'] },
+  { main: 'DILARA-2.webm', files: ['DILARA-2.webm', 'MAXIM-2.webm'] },
+  { main: 'SBERREGA.webm', files: ['SBERREGA.webm', 'CITYDRIVE0001-0500.webm'] },
 ];
 const films = new Set(['Dog_cosmos_lida.webm', 'Burat.webm', 'master_hover.webm', 'soyuz_hover.webm', 'grom_hover.webm', '100let_hover.webm']);
 const videoNames: Record<string, string> = {
@@ -35,13 +35,15 @@ export function catalogueFile(item: CatalogueSource): string {
     return decodeURIComponent(url.pathname.split('/').pop() || '');
   } catch { return ''; }
 }
+export const catalogueTags = ['3D-ПРОДАКШН', 'ИИ-ПРОДАКШН', '3D-СКАНИРОВАНИЕ', 'АВАТАРЫ'];
 export function normalizeCatalogueTags(tags: string | null): string[] {
-  return [...new Set((tags || '').split(',').map(t => t.trim()).filter(Boolean).map(t => {
-    if (['АВАТАР', 'АВАТАРЫ', 'ИИ-АВАТАРЫ'].includes(t)) return 'АВАТАРЫ';
-    if (['3D-СКАН', '3D-СKАН', '3D-СКАНИРОВАНИЕ'].includes(t)) return '3D-СКАНИРОВАНИЕ';
+  return [...new Set((tags || '').split(',').map(t => {
+    t = t.trim().toUpperCase();
+    if (['АВАТАР', 'ИИ-АВАТАРЫ'].includes(t)) return 'АВАТАРЫ';
+    if (['3D-СКАН', '3D-СKАН', '3D-СKАНИРОВАНИЕ'].includes(t)) return '3D-СКАНИРОВАНИЕ';
     if (t === 'CG-ПРОДАКШН') return '3D-ПРОДАКШН';
     return t;
-  }))];
+  }).filter(t => catalogueTags.includes(t)))];
 }
 export function caseCountLabel(n: number): string {
   const last100 = n % 100;
@@ -55,7 +57,6 @@ export function buildProjectCatalogue<T extends CatalogueSource>(items: T[]) {
   }] : [];
   const cards = items.flatMap(item => {
     const file = catalogueFile(item);
-    if (file === 'VK_Music.webm') return [];
     const group = groups.find(g => g.files.includes(file));
     // Never swallow a member if its approved main card is missing.
     const mainExists = group && items.some(x => catalogueFile(x) === group.main);
@@ -66,10 +67,7 @@ export function buildProjectCatalogue<T extends CatalogueSource>(items: T[]) {
     const tags = [...new Set(sources.flatMap(s => normalizeCatalogueTags(s.tags)))];
     const firstLink = sources.find(s => s.link?.url)?.link || item.link;
     return [{
-      item: group && mainExists ? { ...item, title: group.title, company: group.title,
-        description: [{ type: 'paragraph', text: group.description, spans: [] }] as RichTextField,
-        tags: tags.join(', '), link: firstLink,
-      } : { ...item, tags: tags.join(', ') },
+      item: { ...item, tags: tags.join(', '), link: firstLink },
       // Retain original descriptions, images, links and all other source fields.
       sources, videos, isFilm: films.has(file), synthetic: false,
       destinationSource: item,

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { createClient } from '@/prismicio';
 import { getProjects } from '@/lib/projects';
+import { catalogueCaseContent } from '@/lib/catalogue-case-content';
 import ProjectsClient from '@/components/projects/ProjectsClient';
 import ProjectCatalogue from '@/components/projects/ProjectCatalogue';
 import { ProjectNavigation } from '@/components/projects/ProjectNavigation';
@@ -18,7 +19,7 @@ export default async function ProjectsLayout({ children }: { children: ReactNode
   return (
     <ProjectNavigation>
       <ProjectCatalogue>
-        <ProjectsClient slices={page.data.slices} projectLinks={projectLinks} projectSlugs={projectSlugs} />
+        <ProjectsClient slices={page.data.slices} projectLinks={projectLinks} projectSlugs={projectSlugs} caseContent={catalogueCaseContent(projects)} />
         <Footer />
       </ProjectCatalogue>
       {children}

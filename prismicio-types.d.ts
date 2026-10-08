@@ -275,6 +275,50 @@ export interface ProjectDocumentDataGalleryItem {
  */
 interface ProjectDocumentData {
   /**
+   * Короткий заголовок карточки field in *Кейс*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Не меняет SEO H1 страницы
+   * - **API ID Path**: project.card_title
+   * - **Tab**: Основное
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  card_title: prismic.KeyTextField;
+
+  /**
+   * Короткий результат (до 60 символов) field in *Кейс*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.result_headline
+   * - **Tab**: Основное
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  result_headline: prismic.KeyTextField;
+
+  /**
+   * Подробности результата field in *Кейс*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.result_details
+   * - **Tab**: Основное
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  result_details: prismic.RichTextField;
+
+  /**
+   * VFX field in *Кейс*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.vfx
+   * - **Tab**: Основное
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  vfx: prismic.KeyTextField;
+
+  /**
    * Заголовок H1 field in *Кейс*
    *
    * - **Field Type**: Text
@@ -655,6 +699,66 @@ export type AllDocumentTypes =
  * Primary content in *CaseFilters → Items*
  */
 export interface CaseFiltersSliceDefaultItem {
+  /**
+   * Дата проекта (для сортировки) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].published_at
+   * - **Documentation**: https://prismic.io/docs/fields/date
+   */
+  published_at: prismic.DateField;
+
+  /**
+   * Приоритет: Все (1 — первый, пусто — по умолчанию) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].priority_all
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  priority_all: prismic.NumberField;
+
+  /**
+   * Приоритет: 3D-продакшн (1 — первый, пусто — по умолчанию) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].priority_3d
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  priority_3d: prismic.NumberField;
+
+  /**
+   * Приоритет: ИИ-продакшн (1 — первый, пусто — по умолчанию) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].priority_ai
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  priority_ai: prismic.NumberField;
+
+  /**
+   * Приоритет: 3D-сканирование (1 — первый, пусто — по умолчанию) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].priority_scan
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  priority_scan: prismic.NumberField;
+
+  /**
+   * Приоритет: Аватары (1 — первый, пусто — по умолчанию) field in *CaseFilters → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: case_filters.items[].priority_avatars
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  priority_avatars: prismic.NumberField;
+
   /**
    * Заголовок (title) field in *CaseFilters → Items*
    *

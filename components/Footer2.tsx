@@ -46,7 +46,7 @@ export default function FooterWithMap() {
               <p className="font-franklin text-xl uppercase">Большой бульвар</p>
               <p className="font-franklin text-xl uppercase">д.40 к. 4</p>
               <p className="text-white/50 text-sm leading-[1.1]">
-                (БЦ "Амальтея")
+                (БЦ &quot;Амальтея&quot;)
               </p>
             </div>
 
@@ -169,9 +169,9 @@ export default function FooterWithMap() {
 
   {/* ПРАВО — реально у правого края */}
   <div className="space-y-[2px] w-[55%] text-right text-white/50">
-    <p>Москва, БЦ "Амальтея", Большой </p>
+    <p>Москва, БЦ &quot;Амальтея&quot;, Большой </p>
     <p>бульвар, д. 40, Инновационный центр</p>
-    <p>"Сколково", 4 этаж, помещение XXXIV</p>
+    <p>&quot;Сколково&quot;, 4 этаж, помещение XXXIV</p>
   </div>
 
 </div>
