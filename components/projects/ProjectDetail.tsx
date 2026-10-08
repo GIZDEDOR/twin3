@@ -4,6 +4,8 @@ import { projectContactUrl, projectPath, projectVideos, projectVideoSchema, safe
 import { ProjectLink } from './ProjectNavigation';
 import ProjectVideos from './ProjectVideos';
 import styles from './project.module.css';
+import { resultPresentation, participantFields } from '@/lib/project-content';
+import ProjectAnalytics from './ProjectAnalytics';
 
 function TextSection({ title, field }: { title: string; field: RichTextField }) {
   if (!asText(field).trim()) return null;
@@ -15,14 +17,17 @@ export default function ProjectDetail({ project, related }: { project: Content.P
   const videos = projectVideos(project);
   const schema = projectVideoSchema(project);
   const behance = safeWebUrl(data.behance_link);
+  const result = resultPresentation(project);
+  const participants = participantFields(project);
   const passport = [
-    ['Клиент', data.client_name], ['Агентство', data.agency], ['Год', data.year],
+    ['Клиент', data.client_name], ['Агентство', participants.agency], ['VFX', participants.vfx], ['Год', data.year],
     ['Формат', data.formats], ['Срок', data.production_time],
   ].filter(([, value]) => value !== null && value !== undefined && String(value).trim());
   const gallery = (data.gallery || []).filter((frame) => isFilled.image(frame.image));
 
   return (
     <article className={styles.article}>
+      <ProjectAnalytics slug={project.uid!} />
       {schema.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />}
       <header className={styles.heading}>
         <h1 id="project-title">{data.title}</h1>
@@ -41,8 +46,12 @@ export default function ProjectDetail({ project, related }: { project: Content.P
 
       <div className={styles.story}>
         <TextSection title="Задача" field={data.task} />
-        <TextSection title="Решение" field={data.solution} />
-        <TextSection title="Результат" field={data.result} />
+        <TextSection title={project.uid === 'kino' ? 'Фильмы' : 'Решение'} field={data.solution} />
+        {(result.headline || asText(result.details).trim()) && <section className={styles.textSection} data-section="Результат">
+          <h2>Результат</h2>
+          {result.headline && <p className={styles.resultHeadline}>{result.headline}</p>}
+          {asText(result.details).trim() && <div className={styles.resultDetails}><PrismicRichText field={result.details} /></div>}
+        </section>}
       </div>
 
       {gallery.length > 0 && <section className={styles.gallerySection}>
@@ -57,8 +66,8 @@ export default function ProjectDetail({ project, related }: { project: Content.P
       </section>}
 
       <div className={styles.actions}>
-        <a className={styles.cta} href={projectContactUrl(project)} target="_blank" rel="noopener noreferrer">Хочу похожий проект</a>
-        {behance && <a className={styles.behance} href={behance} target="_blank" rel="noopener noreferrer">Полная версия на Behance ↗</a>}
+        <a data-case-goal="cta_click" className={styles.cta} href={projectContactUrl(project)} target="_blank" rel="noopener noreferrer">Хочу похожий проект</a>
+        {behance && <a data-case-goal="behance_click" className={styles.behance} href={behance} target="_blank" rel="noopener noreferrer">Полная версия на Behance ↗</a>}
       </div>
 
       {related.length > 0 && <section className={styles.related}>

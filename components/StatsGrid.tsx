@@ -64,6 +64,7 @@ const indicesToRender = isMobile
   ? [0, 6, 2, 4, 8] // мобильный набор, упорядоченный
   : Array.from({ length: 9 }, (_, idx) => idx); // десктоп — все кейсы
   const marqueeRef = useRef<HTMLDivElement>(null);
+  const { containerRef, repeatCount } = useAutoRepeat(AWARD_IMAGES.length, 96);
 
   return (
     <section  className="relative z-0 bg-[#141414] text-white py-16">
@@ -92,7 +93,7 @@ const indicesToRender = isMobile
       <div className="mt-16 grid grid-cols-3 gap-1 md:gap-4 px-4 max-w-6xl mx-auto">
         {indicesToRender.map((idx) => {
           // 1,3,5,7 — видео-слоты
-          if (VIDEO_SLOTS.includes(idx as any)) {
+          if (VIDEO_SLOTS.some(slot => slot === idx)) {
             const vid = VIDEO_FILES[idx as keyof typeof VIDEO_FILES];
             return (
               <div
@@ -118,8 +119,6 @@ const indicesToRender = isMobile
           }
 
           // 8 — награды
-          const imageSize = 96; // 80px + padding/margin
-          const { containerRef, repeatCount } = useAutoRepeat(AWARD_IMAGES.length, imageSize);
 
           if (idx === 8) {
   return (

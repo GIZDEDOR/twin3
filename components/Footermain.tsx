@@ -85,7 +85,7 @@ const mobileSocials = [
       <p className="uppercase text-xl font-franklin leading-[1.1]">БОЛЬШОЙ БУЛЬВАР</p>
       <p className="uppercase text-xl font-franklin leading-[1.1]">д.40 к. 4</p>
       <p className="text-white uppercase opacity-30 font-franklin mb-0"></p>
-        <p className="text-white uppercase opacity-30 font-franklin">(БЦ "АMAЛЬТЕЯ")</p>
+        <p className="text-white uppercase opacity-30 font-franklin">(БЦ &quot;АMAЛЬТЕЯ&quot;)</p>
     </div>
     <div className="flex flex-col leading-[0.9] mb-2">
       <p className="uppercase text-xl font-franklin leading-[1.1]">часы работы:</p>
@@ -258,7 +258,7 @@ const mobileSocials = [
       <p className="uppercase text-xl font-franklin leading-[1.1]">БОЛЬШОЙ БУЛЬВАР</p>
       <p className="uppercase text-xl font-franklin leading-[1.1]">д.40 к. 4</p>
       <p className="text-white opacity-30 font-franklin mb-0"></p>
-        <p className="text-white opacity-30 font-franklin">(БЦ "АMAЛЬТЕЯ")</p>
+        <p className="text-white opacity-30 font-franklin">(БЦ &quot;АMAЛЬТЕЯ&quot;)</p>
     </div>
     {/* Соцсети */}
     <div className="flex flex-col gap-[11.5px] items-start">

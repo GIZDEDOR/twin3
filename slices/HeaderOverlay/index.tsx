@@ -128,7 +128,7 @@ export default function HeaderOverlay({
   const socialLinks: Record<string, string> = {
     bh: 'https://behance.net/twin3dproduction',
     tg: 'https://t.me/twin_3d',
-    wa: 'https://api.whatsapp.com/send?phone=79067244645',
+    ma: 'https://max.ru/u/f9LHodD0cOL5ySNgO2iRRxzkGSN6aIMu3_r3wUEeI71lOKt5GLyqXRNo7qY',
   };
 
   return (
@@ -271,10 +271,12 @@ export default function HeaderOverlay({
           className="flex flex-col gap-[25px] mt-auto text-sm w-full"
         >
           <div className="flex flex-col xl:flex-row gap-2 xl:gap-[11.5px] justify-center sm:justify-start items-center sm:items-start">
-            {(['bh', 'tg', 'wa'] as const).map((icon) => (
+            {(['bh', 'tg', 'ma'] as const).map((icon) => (
               <a
                 key={icon}
                 href={socialLinks[icon]}
+                target={icon === 'ma' ? '_blank' : undefined}
+                rel={icon === 'ma' ? 'noopener noreferrer' : undefined}
                 className="flex items-center justify-center gap-2 px-5 py-2 w-[140px] border border-white/20 rounded-[10.61px] font-normal text-white/70 hover:bg-white/10 hover:text-white transition"
               >
                 <img src={`/icons/${icon}-icon.svg`} alt={icon} className="w-5 h-5" />
@@ -283,7 +285,7 @@ export default function HeaderOverlay({
                     ? 'BEHANCE'
                     : icon === 'tg'
                     ? 'TELEGRAM'
-                    : 'WHATSAPP'}
+                    : 'MAX'}
                 </span>
               </a>
             ))}

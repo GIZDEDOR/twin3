@@ -1,4 +1,4 @@
-import { asText, isFilled, type Content, type LinkField } from '@prismicio/client';
+import { asText, isFilled, type Content, type RichTextField, type LinkField } from '@prismicio/client';
 
 export const SITE_URL = 'https://twin3d.ru';
 export const projectPath = (uid: string) => `/projects/${encodeURIComponent(uid)}`;
@@ -38,21 +38,17 @@ export function projectVideos(project: Content.ProjectDocument) {
 }
 
 export function projectVideoSchema(project: Content.ProjectDocument) {
-  return projectVideos(project).flatMap((video) => {
-    // Never invent publication dates or emit incomplete VideoObject markup.
-    if (!video.poster || !video.description || !video.uploadDate) return [];
+  const image = isFilled.image(project.data.og_image) ? project.data.og_image.url : null;
+  const description = projectDescription(project);
+  return projectVideos(project).slice(0, 1).flatMap((video) => {
+    if (!image || !description || !video.uploadDate || !Number.isFinite(Date.parse(video.uploadDate))) return [];
     return [{
-      '@context': 'https://schema.org',
-      '@type': 'VideoObject',
-      name: video.name,
-      description: video.description,
-      thumbnailUrl: [video.poster],
-      uploadDate: video.uploadDate,
-      contentUrl: video.src,
-      url: `${SITE_URL}${projectPath(project.uid!)}`,
-      ...(video.durationSeconds && video.durationSeconds > 0
-        ? { duration: `PT${Math.round(video.durationSeconds)}S` }
-        : {}),
+      '@context': 'https://schema.org', '@type': 'VideoObject',
+      name: project.data.title,
+      description, thumbnailUrl: [image],
+      uploadDate: new Date(video.uploadDate).toISOString(),
+      contentUrl: video.src, url: `${SITE_URL}${projectPath(project.uid!)}`,
+      ...(video.durationSeconds && video.durationSeconds > 0 ? { duration: `PT${Math.round(video.durationSeconds)}S` } : {}),
     }];
   });
 }
@@ -66,4 +62,26 @@ export function projectContactUrl(project: Content.ProjectDocument): string {
     url.searchParams.set('project', project.uid!);
   }
   return url.href;
+}
+
+export function resultPresentation(project: Content.ProjectDocument) {
+  const data = project.data;
+  const legacy = asText(data.result).trim();
+  const headline = data.result_headline?.trim() || (legacy.length <= 60 ? legacy : '');
+  const details = asText(data.result_details || []).trim() ? data.result_details
+    : legacy !== headline ? data.result : [] as RichTextField;
+  return { headline, details };
+}
+export function participantFields(project: Content.ProjectDocument) {
+  const data = project.data;
+  if (data.vfx?.trim()) return { agency: data.agency, vfx: data.vfx };
+  // Legacy combined field remains intact in Prismic; split only explicit role labels.
+  const parts = data.agency?.split(/;\s*(?:VFX\s*:?|креатив и постпродакшн)\s*/i);
+  return { agency: parts?.[0], vfx: parts?.[1] };
+}
+export function relatedProjects(project: Content.ProjectDocument, projects: Content.ProjectDocument[]) {
+  const first = project.data.directions?.find(d => d.direction)?.direction;
+  if (!first) return [];
+  return projects.filter(p => p.uid !== project.uid && p.id !== project.id && !p.data.noindex
+    && p.data.directions?.some(d => d.direction === first)).slice(0, 3);
 }

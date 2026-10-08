@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import React from 'react';
+import React, { Suspense } from 'react';
+import YandexMetrika from '@/components/YandexMetrika';
 import type { ReactNode } from 'react';
 import { PrismicPreview } from '@prismicio/next';
 import { repositoryName, createClient } from '@/prismicio';
@@ -33,6 +34,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ru" suppressHydrationWarning>
       <body className="font-druk antialiased">
+        <Suspense fallback={null}><YandexMetrika /></Suspense>
         <VhSetter />
          <KoalaIntro />
         {/* dedicated portal root for overlays */}

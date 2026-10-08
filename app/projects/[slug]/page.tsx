@@ -3,7 +3,7 @@ import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { isFilled } from '@prismicio/client';
 import { getProject, getProjects } from '@/lib/projects';
-import { projectDescription, projectPath, SITE_URL } from '@/lib/project-content';
+import { projectDescription, projectPath, SITE_URL, relatedProjects } from '@/lib/project-content';
 import ProjectOverlay from '@/components/projects/ProjectOverlay';
 import ProjectDetail from '@/components/projects/ProjectDetail';
 
@@ -35,8 +35,6 @@ export default async function ProjectPage({ params }: Props) {
   const project = await getProject(slug);
   if (!project) notFound();
   const projects = await getProjects();
-  const related = projects.filter((item) =>
-    item.id !== project.id && !item.data.noindex && project.data.category && item.data.category === project.data.category,
-  ).slice(0, 3);
+  const related = relatedProjects(project, projects);
   return <ProjectOverlay key={slug} slug={slug}><ProjectDetail project={project} related={related} /></ProjectOverlay>;
 }

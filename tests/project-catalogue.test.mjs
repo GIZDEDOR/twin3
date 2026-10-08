@@ -11,10 +11,10 @@ test('audited catalogue: only approved members disappear; raw data is untouched'
   const copy = structuredClone(sources);
   buildProjectCatalogue(sources);
   assert.equal(sources.length, 43);
-  assert.equal(cards.length, 33);
+  assert.equal(cards.length, 34);
   assert.equal(cards.filter(c => c.synthetic).length, 0);
   assert.deepEqual(sources, copy);
-  const absorbed = new Set(['VK_3.webm','VK_2.webm','VK_insta_v3.webm','CC3.webm','CoolColaBill.webm','CC2.webm','СС1.webm','MAXIM-2.webm','CITYDRIVE0001-0500.webm','VK_Music.webm']);
+  const absorbed = new Set(['VK_3.webm','VK_2.webm','VK_insta_v3.webm','CC3.webm','CoolColaBill.webm','CC2.webm','СС1.webm','MAXIM-2.webm','CITYDRIVE0001-0500.webm']);
   assert.deepEqual(cards.filter(c=>!c.synthetic).map(c=>catalogueFile(c.destinationSource)), sources.filter(s=>!absorbed.has(catalogueFile(s))).map(catalogueFile));
 });
 test('all grouped source fields, video URLs, posters, and Behance links are retained', () => {
@@ -41,17 +41,17 @@ test('unrelated VK, dinosaur, transport and avatar projects remain separate', ()
   }
 });
 test('matching is independent of order and brand; extra projects are never truncated', () => {
-  assert.equal(buildProjectCatalogue([...sources].reverse()).length,33);
+  assert.equal(buildProjectCatalogue([...sources].reverse()).length,34);
   const extra={...sources[16],fullVideo:{url:'https://videos.twin3d.ru/media/videos/another-vk.webm'}};
-  const result=buildProjectCatalogue([...sources,extra]);assert.equal(result.length,34);
+  const result=buildProjectCatalogue([...sources,extra]);assert.equal(result.length,35);
   assert.ok(result.some(c=>c.destinationSource===extra));
   const noMain=sources.filter(s=>catalogueFile(s)!=='vk_federal.webm');
   assert.equal(buildProjectCatalogue(noMain).filter(c=>['VK_2.webm','VK_3.webm','VK_insta_v3.webm'].includes(catalogueFile(c.destinationSource))).length,3);
 });
 test('category counts and tag intersections use visible projects only', () => {
   const counts=Object.fromEntries([...new Set(cards.map(c=>c.item.category))].map(cat=>[cat,cards.filter(c=>c.item.category===cat).length]));
-  assert.deepEqual(counts,{'АВАТАРЫ':6,'РЕКЛАМА':21,'КИНО':6});
-  assert.equal(Object.values(counts).reduce((a,b)=>a+b,0),33);
+  assert.deepEqual(counts,{'АВАТАРЫ':7,'РЕКЛАМА':21,'КИНО':6});
+  assert.equal(Object.values(counts).reduce((a,b)=>a+b,0),34);
   const tags=[...new Set(cards.flatMap(c=>normalizeCatalogueTags(c.item.tags)))];
   assert.deepEqual(tags.sort(),['3D-ПРОДАКШН','3D-СКАНИРОВАНИЕ','АВАТАРЫ','ИИ-ПРОДАКШН'].sort());
   for(const category of Object.keys(counts)) for(const tag of tags) {
@@ -72,4 +72,51 @@ test('existing cases resolve; FreshBar and Citydrive retain Behance', () => {
     const link=destination.externalUrl || card.item.link?.url;
     assert.ok(link.includes(`/gallery/${gallery}/`));
   }
+});
+
+const { orderCatalogue, pinnedProjects } = await import('../lib/catalogue-order.ts');
+test('VK Music and Lida are retained, and Lida does not lead to kino', () => {
+  assert.ok(byFile('VK_Music.webm'));
+  assert.ok(byFile('Dog_cosmos_lida.webm'));
+  assert.equal(projectCardDestination(byFile('Dog_cosmos_lida.webm').destinationSource,{},['kino']).projectUrl,null);
+  assert.equal(projectCardDestination({title:'Цифровые двойники для кино'}, {}, ['kino']).projectUrl,'/projects/kino');
+});
+test('all five priority lists, bank placement, date order and stable counts', () => {
+  for(const [filter,pinned] of Object.entries(pinnedProjects)) {
+    const input=[{identity:'new',published_at:'2026-10-07'},...pinned.map(identity=>({identity})).reverse(),{identity:'old',published_at:'2020-01-01'}];
+    const before=structuredClone(input);
+    const ordered=orderCatalogue(input,filter==='all'?null:filter);
+    assert.deepEqual(ordered.slice(0,pinned.length).map(c=>c.identity),pinned);
+    assert.equal(ordered.length,input.length);
+    assert.equal(new Set(ordered.map(c=>c.identity)).size,input.length);
+    assert.deepEqual(input,before);
+    assert.ok(ordered.findIndex(c=>c.identity==='new')<ordered.findIndex(c=>c.identity==='old'));
+    if(filter==='3D-ПРОДАКШН'||filter==='АВАТАРЫ') assert.equal(ordered[4].identity,'gazprombank');
+  }
+  const all=orderCatalogue([{identity:'old',published_at:'2020-01-01'},{identity:'gazprombank',published_at:'2026-10-01'}],null);
+  assert.equal(all[0].identity,'gazprombank');
+  assert.equal(orderCatalogue([{identity:'yota'},{identity:'other',priorities:{priority_all:0.5}}],null)[0].identity,'other');
+});
+test('normalization accepts only the four tags, including old spelling and case', () => {
+  assert.deepEqual(normalizeCatalogueTags('3D-продакшн, ИИ-продакшн, 3D-СKАН, АВАТАР, другое'),['3D-ПРОДАКШН','ИИ-ПРОДАКШН','3D-СКАНИРОВАНИЕ','АВАТАРЫ']);
+});
+
+test('a real Prismic kino card coexists with Lida and does not merge films', () => {
+  const kino={...sources[4],title:'Цифровые двойники для кино',company:'Цифровые двойники для кино',video1:null,fullVideo:null};
+  const result=buildProjectCatalogue([...sources,kino]);
+  assert.equal(result.length,35);
+  assert.equal(result.filter(c=>c.isFilm).length,6);
+  const general=result.find(c=>c.destinationSource===kino);
+  assert.ok(general && !general.isFilm);
+  assert.equal(projectCardDestination(general.destinationSource,{},['kino']).projectUrl,'/projects/kino');
+  assert.equal(result.filter(c=>catalogueFile(c.destinationSource)==='Dog_cosmos_lida.webm').length,1);
+});
+
+test('Case card_title is independent of H1; shared directions include Dinopark in 3D', async () => {
+  const {catalogueCaseContent}=await import('../lib/catalogue-case-content.ts');
+  const project={uid:'dinopark',data:{title:'Принятый SEO H1',card_title:'Короткое название',summary:'Описание',directions:[{direction:'3D-продакшн'},{direction:'ИИ-продакшн'},{direction:'Аватары'}]}};
+  const before=structuredClone(project);
+  assert.deepEqual(catalogueCaseContent([project]).dinopark,{title:'Короткое название',summary:'Описание',tags:['3D-ПРОДАКШН','ИИ-ПРОДАКШН','АВАТАРЫ']});
+  assert.deepEqual(project,before);
+  assert.equal(catalogueCaseContent([{...project,data:{...project.data,card_title:null}}]).dinopark.title,'');
 });

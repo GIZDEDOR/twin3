@@ -95,7 +95,7 @@ export default function CaseGrid() {
   );
 }
 
-function CaseRow({ title, video1, video2, tags, borderColor, logo }: any) {
+function CaseRow({ title, video1, video2, tags, borderColor, logo }: (typeof ALL_CASES)[number]) {
   const textColor = borderColor.replace('border-', 'text-');
 
   const isYota = title === 'YOTA';

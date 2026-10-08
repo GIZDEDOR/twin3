@@ -20,6 +20,13 @@
           "placeholder": "Yota: bullet time через 3D-скан всей сцены"
         }
       },
+      "card_title": {
+        "type": "Text",
+        "config": {
+          "label": "Короткий заголовок карточки",
+          "placeholder": "Не меняет SEO H1 страницы"
+        }
+      },
       "summary": {
         "type": "Text",
         "config": {
@@ -122,6 +129,25 @@
           "label": "Результат",
           "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,heading3",
           "allowTargetBlank": true
+        }
+      },
+      "result_headline": {
+        "type": "Text",
+        "config": {
+          "label": "Короткий результат (до 60 символов)"
+        }
+      },
+      "result_details": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Подробности результата",
+          "multi": "paragraph,strong,em,hyperlink,list-item"
+        }
+      },
+      "vfx": {
+        "type": "Text",
+        "config": {
+          "label": "VFX"
         }
       }
     },

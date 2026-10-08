@@ -108,6 +108,42 @@
               "project"
             ]
           }
+        },
+        "published_at": {
+          "type": "Date",
+          "config": {
+            "label": "Дата проекта (для сортировки)"
+          }
+        },
+        "priority_all": {
+          "type": "Number",
+          "config": {
+            "label": "Приоритет: Все (1 — первый, пусто — по умолчанию)"
+          }
+        },
+        "priority_3d": {
+          "type": "Number",
+          "config": {
+            "label": "Приоритет: 3D-продакшн (1 — первый, пусто — по умолчанию)"
+          }
+        },
+        "priority_ai": {
+          "type": "Number",
+          "config": {
+            "label": "Приоритет: ИИ-продакшн (1 — первый, пусто — по умолчанию)"
+          }
+        },
+        "priority_scan": {
+          "type": "Number",
+          "config": {
+            "label": "Приоритет: 3D-сканирование (1 — первый, пусто — по умолчанию)"
+          }
+        },
+        "priority_avatars": {
+          "type": "Number",
+          "config": {
+            "label": "Приоритет: Аватары (1 — первый, пусто — по умолчанию)"
+          }
         }
       }
     }
