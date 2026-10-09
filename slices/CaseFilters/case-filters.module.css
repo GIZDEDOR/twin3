@@ -43,3 +43,9 @@
   overflow-wrap: anywhere;
 }
 .disclaimer strong { font-weight: inherit; }
+
+@media (max-width: 639px) {
+  .coolcolaTitle {
+    overflow-wrap: anywhere;
+  }
+}

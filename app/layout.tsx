@@ -1,3 +1,4 @@
+import { observePrismic } from '@/lib/prismic-diagnostics';
 import type { Metadata } from 'next';
 import './globals.css';
 import React, { Suspense } from 'react';
@@ -25,7 +26,7 @@ interface RootLayoutProps {
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   const client = createClient();
-  const settings = await client.getSingle('extramenu');
+  const settings = await observePrismic('document extramenu', () => client.getSingle('extramenu'));
   const headerSlice = settings.data.slices.find(
     (s): s is Content.HeaderOverlaySlice =>
       s.slice_type === 'header_overlay'

@@ -1,3 +1,4 @@
+import { diagnosticPrismicFetch } from './lib/prismic-diagnostics';
 import {
   createClient as baseCreateClient,
   type ClientConfig,
@@ -36,6 +37,7 @@ export const createClient = (config: ClientConfig = {}) => {
     : { next: { revalidate: 5 } }) satisfies RequestInit;
   const client = baseCreateClient(repositoryName, {
     routes,
+    fetch: diagnosticPrismicFetch,
     fetchOptions,
     ...config,
   });

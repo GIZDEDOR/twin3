@@ -1,20 +1,24 @@
+import { diagnosticPrismicFetch, observePrismic } from './prismic-diagnostics';
 import { cache } from 'react';
 import { createClient as createPublicClient, type Content } from '@prismicio/client';
 import { createClient, repositoryName } from '@/prismicio';
 import { hasProjectContent, safeWebUrl } from './project-content';
 import { legacyProjectSlug } from './project-card';
 
+export const getProjectCatalogue = cache(() => observePrismic('document projects', () =>
+  createClient({ fetchOptions: { cache: 'no-store' } }).getSingle('projects')));
+
 export const getProjects = cache(async (publicOnly = false): Promise<Content.ProjectDocument[]> => {
   // Public sitemap must never include documents from a Prismic preview cookie.
   const client = publicOnly
-    ? createPublicClient(repositoryName, { fetchOptions: { cache: 'no-store' } })
+    ? createPublicClient(repositoryName, { fetch: diagnosticPrismicFetch, fetchOptions: { cache: 'no-store' } })
     : createClient({ fetchOptions: { cache: 'no-store' } });
-  const repository = await client.getRepository();
+  const repository = await observePrismic('repository for project list', () => client.getRepository());
   // The existing catalogue remains usable before the new model is pushed.
   if (!repository.types.project) return [];
-  const documents = await client.getAllByType('project', {
+  const documents = await observePrismic('documents project', () => client.getAllByType('project', {
     orderings: [{ field: 'document.first_publication_date', direction: 'desc' }],
-  });
+  }));
   return documents.filter(hasProjectContent);
 });
 
@@ -30,7 +34,7 @@ export const getProject = cache(async (uid: string) => {
   }
   if (safeWebUrl(project.data.behance_link)) return project;
   // Keep the existing Behance destination inside the case during migration.
-  const catalogue = await createClient({ fetchOptions: { cache: 'no-store' } }).getSingle('projects');
+  const catalogue = await getProjectCatalogue();
   for (const slice of catalogue.data.slices) {
     if (slice.slice_type !== 'case_filters') continue;
     for (const card of slice.items) {
