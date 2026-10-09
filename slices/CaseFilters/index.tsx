@@ -1,5 +1,7 @@
 'use client';
 
+import { projectLogoAlt } from '@/lib/project-logo-alt';
+
 import { Content } from '@prismicio/client';
 import { SliceComponentProps } from '@prismicio/react';
 import { useEffect, useRef, useState } from 'react';
@@ -276,7 +278,7 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
                 </div>
 
                 <div className="w-full text-left mb-[20px]">
-                  <h2 className="text-[#E5E5E5] font-standard font-semibold text-[20px] sm:text-[24px] leading-[1.2] mb-3">{item.title}</h2>
+                  <h2 className={`text-[#E5E5E5] font-standard font-semibold text-[20px] sm:text-[24px] leading-[1.2] mb-3 ${item.identity === 'coolcola' ? styles.coolcolaTitle : ''}`}>{item.title}</h2>
                   <div className="text-[16px] sm:text-[20px] text-[#8F8F8F] font-standard leading-[1.4] sm:leading-[1.4] break-words mb-[72px] whitespace-pre-line ml-[2px]">
                     <PrismicRichText field={description} />
                     {disclaimer.length > 0 && <div className={styles.disclaimer}>
@@ -331,7 +333,7 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
 
                   </div>
                   {item.companyLogo && (
-                    <img src={item.companyLogo} alt={item.company} className={styles.companyLogo} />
+                    <img src={item.companyLogo} alt={projectLogoAlt(item.identity, item.company, item.fullVideo)} className={styles.companyLogo} />
                   )}
                 </div>
               </div>

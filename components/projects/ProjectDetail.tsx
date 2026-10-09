@@ -78,7 +78,7 @@ export default function ProjectDetail({ project, related }: { project: Content.P
               // eslint-disable-next-line @next/next/no-img-element
               <img src={item.data.cover.url} alt={item.data.cover.alt || ''} width={item.data.cover.dimensions.width} height={item.data.cover.dimensions.height} loading="lazy" />
             )}
-            <h3>{item.data.title}</h3>
+            <h3>{item.data.card_title || item.data.title}</h3>
           </ProjectLink>
         ))}</div>
       </section>}

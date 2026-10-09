@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
-import { createClient } from '@/prismicio';
-import { getProjects } from '@/lib/projects';
+import { getProjects, getProjectCatalogue } from '@/lib/projects';
 import { catalogueCaseContent } from '@/lib/catalogue-case-content';
 import ProjectsClient from '@/components/projects/ProjectsClient';
 import ProjectCatalogue from '@/components/projects/ProjectCatalogue';
@@ -10,8 +9,7 @@ import Footer from '@/components/Footer';
 export const dynamic = 'force-dynamic';
 
 export default async function ProjectsLayout({ children }: { children: ReactNode }) {
-  const client = createClient({ fetchOptions: { cache: 'no-store' } });
-  const [page, projects] = await Promise.all([client.getSingle('projects'), getProjects()]);
+  const [page, projects] = await Promise.all([getProjectCatalogue(), getProjects()]);
   const projectLinks = Object.fromEntries(projects.map((project) => [project.id, project.uid!]));
   const projectSlugs = projects.map((project) => project.uid!);
   if (process.env.NODE_ENV === 'development' && !projectSlugs.includes('yota')) projectSlugs.push('yota');
