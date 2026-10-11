@@ -269,7 +269,11 @@ export default function CaseFilters({ slice, context }: CaseFiltersProps): JSX.E
                 style={{ boxShadow: '0 0 0 1.2px #363636' }}
               >
                 <div className="relative w-full h-[240px] md:h-[345px] rounded-[18px] overflow-hidden mb-[20px]">
-                  <CaseVideo src={item.video1 || ''} poster={item.poster || undefined} />
+                  <CaseVideo
+                    src={item.video1 || ''}
+                    poster={item.poster || undefined}
+                    posterAlt={item.identity === 'kino' ? projectLogoAlt(item.identity, item.company, item.fullVideo) : ''}
+                  />
                   <div className="absolute bottom-2 sm:bottom-5 right-2 sm:right-5 left-2 z-20 flex justify-end">
                     <div className="flex bg-white/10 rounded-[6px]  sm:rounded-[12px] px-2 py-[3px] sm:px-5 sm:py-[9px] font-franklin text-[11px] sm:text-[14px] text-right flex-wrap justify-end text-white/100 uppercase shadow-md gap-1 sm:gap-2 tracking-tight backdrop-blur-[1px]">
                       {item.tags.join(' | ')}
@@ -402,7 +406,7 @@ function CaseButton({
   );
 }
 
-function CaseVideo({ src, poster }: { src: string; poster?: string }) {
+function CaseVideo({ src, poster, posterAlt = '' }: { src: string; poster?: string; posterAlt?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -457,7 +461,7 @@ function CaseVideo({ src, poster }: { src: string; poster?: string }) {
         playsInline
         autoPlay={isMobile}        // start muted autoplay on mobile
         className="w-full h-full object-cover transition duration-300 ease-in-out"
-      /> : poster ? <img src={poster} alt="" className="w-full h-full object-cover" /> : null}
+      /> : poster ? <img src={poster} alt={posterAlt} className="w-full h-full object-cover" /> : null}
     </div>
   );
 }
