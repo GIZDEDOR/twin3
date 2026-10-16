@@ -155,12 +155,12 @@ const mobileSocials = [
       {/* Девушка */}
 <div
   className="
-    absolute z-20
+    relative sm:absolute z-20 mt-6 sm:mt-0
     left-1/2 -translate-x-1/2
     sm:left-[18vw] sm:translate-x-0
 
     /* Ширина — сначала % от экрана, но не больше 880-px на very-large */
-    w-[90vw]                /* < 640 px   */
+    w-[110vw]               /* < 640 px   */
     sm:w-[45vw]             /* 640-1023   */
     md:w-[40vw]             /* 768-1023   */
     lg:w-[38vw]             /* 1024-1279  */
@@ -168,14 +168,14 @@ const mobileSocials = [
     2xl:max-w-[880px]       /* ≥1536, но ограничиваем пикселями */
 
     /* Отступ снизу подгоняем так, чтобы руки не обрезались */
-    bottom-[30vw]           /* мобилка   */
+    bottom-0                /* мобилка   */
     sm:bottom-[0vw]        /* ≥640 px   */
     lg:bottom-[0vw]        /* ≥1024 px  */
   "
 >
   {/* desktop */}
   <Image
-    src="/images/image77.webp"
+    src="/images/image76.webp"
     alt="Character"
     width={1024}
     height={1536}
@@ -183,10 +183,11 @@ const mobileSocials = [
   />
   {/* mobile */}
   <Image
-    src="/images/image100.webp"
+    src="/images/image76.webp"
     alt="Character mobile"
-    width={400}
-    height={600}
+    width={2484}
+    height={3255}
+    sizes="(max-width: 639px) 110vw, 1px"
     className="sm:hidden w-full h-auto"
   />
 </div>
@@ -213,7 +214,7 @@ const mobileSocials = [
 </div>
 
       {/* Контент футера */}
-      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-6 sm:px-10 pt-10 pb-64 flex flex-col lg:flex-row items-start justify-center gap-10">
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-6 sm:px-10 pt-10 pb-64 hidden sm:flex flex-col lg:flex-row items-start justify-center gap-10">
         {/* Левая пустая часть — заменена девушкой (absolute) */}
 
         {/* Правая колонка с контентом */}
