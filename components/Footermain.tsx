@@ -155,7 +155,7 @@ const mobileSocials = [
   className="
     relative sm:absolute z-20 mt-6 sm:mt-0 mb-[calc(25vw+5px)] sm:mb-0
     left-1/2 -translate-x-1/2
-    sm:left-auto sm:right-[calc(50%+8px)] sm:translate-x-0
+    sm:left-auto sm:right-[calc(50%-11px)] sm:translate-x-0
 
     /* Ширина — сначала % от экрана, но не больше 880-px на very-large */
     w-[96vw]               /* < 640 px   */
