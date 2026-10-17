@@ -54,7 +54,7 @@ const mobileSocials = [
       <div className="absolute left-0 w-full overflow-hidden z-0 h-[32vw] sm:h-[14vw] bottom-0">
         <div
           ref={marqueeRef}
-          className="flex whitespace-nowrap w-max absolute text-[40vw] sm:text-[18vw]"
+          className="flex whitespace-nowrap w-max absolute -bottom-[8vw] sm:-bottom-[3.6vw] text-[40vw] sm:text-[18vw]"
           style={{
             backgroundImage: 'linear-gradient(90deg, #C3C3C3, #999999)',
             WebkitBackgroundClip: 'text',
@@ -64,9 +64,7 @@ const mobileSocials = [
             textTransform: 'uppercase',
             lineHeight: 1,
             opacity: 0.2,
-            bottom: 0,
             position: 'absolute',
-            transform: 'translateY(20%)',
           }}
         >
           TWIN 3D CGI PRODUCTION&nbsp;TWIN 3D CGI PRODUCTION&nbsp;TWIN 3D CGI PRODUCTION
@@ -155,9 +153,9 @@ const mobileSocials = [
       {/* Девушка */}
 <div
   className="
-    relative sm:absolute z-20 mt-6 sm:mt-0 mb-[23vw] sm:mb-0
+    relative sm:absolute z-20 mt-6 sm:mt-0 mb-[calc(25vw+5px)] sm:mb-0
     left-1/2 -translate-x-1/2
-    sm:left-auto sm:right-[calc(50%+32px)] sm:translate-x-0
+    sm:left-auto sm:right-[calc(50%+8px)] sm:translate-x-0
 
     /* Ширина — сначала % от экрана, но не больше 880-px на very-large */
     w-[96vw]               /* < 640 px   */
