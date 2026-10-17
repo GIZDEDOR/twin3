@@ -153,12 +153,12 @@ const mobileSocials = [
       {/* Девушка */}
 <div
   className="
-    relative sm:absolute z-20 mt-6 sm:mt-0 mb-[calc(25vw+62px)] sm:mb-0
+    relative sm:absolute z-20 mt-6 sm:mt-0 mb-[calc(25vw+24px)] sm:mb-0
     left-1/2 -translate-x-1/2
     sm:left-auto sm:right-[calc(50%-11px)] sm:translate-x-0
 
     /* Ширина — сначала % от экрана, но не больше 880-px на very-large */
-    w-[90vw]               /* < 640 px   */
+    w-[96vw]               /* < 640 px   */
     sm:w-[45vw]             /* 640-1023   */
     md:w-[40vw]             /* 768-1023   */
     lg:w-[38vw]             /* 1024-1279  */
@@ -185,7 +185,7 @@ const mobileSocials = [
     alt="Character mobile"
     width={2484}
     height={3255}
-    sizes="(max-width: 639px) 90vw, 1px"
+    sizes="(max-width: 639px) 96vw, 1px"
     className="sm:hidden w-full h-auto"
   />
 </div>
