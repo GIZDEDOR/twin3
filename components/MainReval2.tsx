@@ -12,11 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Пути к аватарам и бейджам
 const avatars = [
-  '/girl.webp',
-  '/ded.webp',
-  '/redgirl.webp',
-  '/oilman.webp',
-  '/alvares.webp'
+  '/girl-v2.webp',
+  '/ded-v2.webp',
+  '/redgirl-v2.webp',
+  '/oilman-v2.webp',
+  '/alvares-v2.webp'
 ];
 const badges = [
   { icon: '/scan.svg',   label: 'СКАНИРОВАНИЕ' },
