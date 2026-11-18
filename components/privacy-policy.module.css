@@ -1,0 +1,16 @@
+.block { min-width: 0; color: #a5a5a5; }
+.content { border-top: 1px solid #363636; padding-top: 14px; }
+.label { margin: 0 0 4px; font-family: 'ProtoMono', monospace; font-size: 10px; line-height: 1.5; letter-spacing: .04em; color: #8f8f8f; }
+.link { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 44px; padding: 8px 0; font-family: 'Standard', sans-serif; font-size: 14px; line-height: 1.45; transition: color 180ms ease; }
+.link span { min-width: 0; overflow-wrap: anywhere; }
+.arrow { flex: 0 0 18px; transition: transform 180ms ease; }
+.link:hover, .link:focus-visible { color: #eee; }
+.link:hover .arrow, .link:focus-visible .arrow { transform: translate(2px, -2px); }
+.link:focus-visible { outline: 2px solid #a5a5a5; outline-offset: 5px; }
+.footer { padding: 20px 16px; background: #141414; }
+.footer .content { max-width: 1200px; margin: 0 auto; }
+.contacts { position: absolute; top: 100%; left: 20px; width: calc(200% - 20px); margin-top: 12px; }
+/* The requisites container already supplies a 30px gap. Keep 20px here. */
+.details { margin-top: -10px; max-width: 560px; }
+@media (max-width: 639px) { .details { max-width: none; padding: 0 16px; } }
+@media (prefers-reduced-motion: reduce) { .link, .arrow { transition: none; } .link:hover .arrow, .link:focus-visible .arrow { transform: none; } }
