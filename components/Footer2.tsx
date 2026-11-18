@@ -1,6 +1,8 @@
 /* components/FooterWithMap.tsx */
 'use client';
 
+import PrivacyPolicyLink from './PrivacyPolicyLink';
+
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -31,7 +33,7 @@ export default function FooterWithMap() {
   }, []);
 
   return (
-    <footer className="bg-[#141414] text-white px-4 md:px-[59px] pt-[80px] pb-[40px]">
+    <footer className="bg-[#141414] text-white px-4 md:px-[59px] pt-[80px] pb-[20px]">
       <div className="max-w-[1152px] mx-auto flex flex-col gap-[30px]">
 
         {/* =============== Mobile-секция (до 640 px) =============== */}
@@ -235,6 +237,7 @@ export default function FooterWithMap() {
             className="object-contain"
           />
         </div>
+        <PrivacyPolicyLink placement="details" />
       </div>
     </footer>
   );

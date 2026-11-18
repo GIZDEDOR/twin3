@@ -1,5 +1,7 @@
 'use client';
 
+import PrivacyPolicyLink from './PrivacyPolicyLink';
+
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
@@ -282,6 +284,7 @@ export default function Footer() {
           </div>
         </footer>
       </div>
+      <PrivacyPolicyLink />
     </>
   );
 }

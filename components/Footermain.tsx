@@ -1,10 +1,14 @@
 'use client';
 
+import PrivacyPolicyLink from './PrivacyPolicyLink';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 
 export default function Footermain() {
+  const isMobile = useMediaQuery('(max-width: 639px)', false);
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -49,6 +53,7 @@ const mobileSocials = [
 
 
   return (
+    <>
     <footer className="relative w-full bg-dark min-h-screen text-white overflow-hidden">
       {/* Бегущая строка (в фоне, за девушкой) */}
       <div className="absolute left-0 w-full overflow-hidden z-0 h-[32vw] sm:h-[14vw] bottom-0">
@@ -260,7 +265,7 @@ const mobileSocials = [
         <p className="text-white opacity-30 font-franklin">(БЦ &quot;АMAЛЬТЕЯ&quot;)</p>
     </div>
     {/* Соцсети */}
-    <div className="flex flex-col gap-[11.5px] items-start">
+    <div className="relative flex flex-col gap-[11.5px] items-start">
       {desktopSocials.map((item, idx) => (
         <a
           key={idx}
@@ -277,6 +282,7 @@ const mobileSocials = [
       >
         <img src="/icons/sk-icon.png" alt="Skolkovo" className="h-15 w-32" />
       </a>
+      {!isMobile && <PrivacyPolicyLink placement="contacts" />}
     </div>
     
 
@@ -299,5 +305,7 @@ const mobileSocials = [
     </div>
       </div>
     </footer>
+    {isMobile && <PrivacyPolicyLink />}
+    </>
   );
 }
